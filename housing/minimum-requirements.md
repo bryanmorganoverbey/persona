@@ -2,15 +2,10 @@
 
 The minimum square footage for a property I would reside in is 700sqft (approximately 65m²).
 
-## feng shui
+## no bugs
+no palapa roofs. no open design. the walls/roof/floor/windows all need to be sealed so that no bugs can enter.
 
-Houses must include feng shui concepts. Specifically:
-- The front entrance should not directly align with the back door or a staircase (prevents qi from rushing through).
-- The kitchen should not face or be directly visible from the front door.
-- The primary bedroom should support a commanding position — the bed can be placed so the door is visible without being directly in line with it.
-- Adequate natural light and cross-ventilation throughout the home to support healthy qi flow.
-- Bathrooms should not be located at the center of the home or directly above the front entrance.
-- The home should allow for a clear, unobstructed entryway (no cramped or cluttered foyer).
+Check pillows, blankets, mattresses to be sure there are no bed bugs.
 
 ## yard
 
@@ -112,3 +107,14 @@ In the USA the maximum I would like to pay is $2,000 a month and in any other co
 ## appliances
 
 There needs to be a washing machine and a way to dry clothes on the property.
+
+
+## feng shui
+
+Houses must include feng shui concepts. Specifically:
+- The front entrance should not directly align with the back door or a staircase (prevents qi from rushing through).
+- The kitchen should not face or be directly visible from the front door.
+- The primary bedroom should support a commanding position — the bed can be placed so the door is visible without being directly in line with it.
+- Adequate natural light and cross-ventilation throughout the home to support healthy qi flow.
+- Bathrooms should not be located at the center of the home or directly above the front entrance.
+- The home should allow for a clear, unobstructed entryway (no cramped or cluttered foyer).
