@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Property Inspection Checklist
 
 Use this when touring a property in person. Go room by room and check everything.

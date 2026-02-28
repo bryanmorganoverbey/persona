@@ -2,6 +2,12 @@
 
 Preferences related to food, cooking, and dining. Covers dietary restrictions, cuisine preferences, favorite restaurants, meal planning habits, and grocery shopping.
 
+## Related Categories
+
+- [Health](../health/) — nutrition supports overall well-being
+- [Shopping](../shopping/) — grocery shopping habits and preferences
+- [Sustainability](../sustainability/) — value-first purchasing, sustainability as bonus
+
 ## Files
 
 | File | Description |

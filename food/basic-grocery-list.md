@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 ## When in Latin America
 
 ### Lista del Mercado - Ideas de Recetas

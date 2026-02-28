@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Minimum Requirements (Shared Baseline)
 
 These apply to any property regardless of country. See [us-requirements.md](./us-requirements.md) and [mexico-requirements.md](./mexico-requirements.md) for country-specific overrides.

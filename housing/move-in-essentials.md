@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Move-In Essentials
 
 Items the property must provide or that need to be acquired on day one. Broken down by what's expected from the property vs. what to bring or buy.

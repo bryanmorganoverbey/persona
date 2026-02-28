@@ -2,6 +2,13 @@
 
 Preferences related to residential properties. Covers minimum requirements for size, layout, amenities, and other factors considered when evaluating a place to live. Splits time between the US (mid-April to Nov 1) and Mexico (Nov 1 to mid-April).
 
+## Related Categories
+
+- [Home Decor](../home-decor/) — bohemian-Japanese interior style for any space
+- [Pets](../pets/) — pet-friendly housing is a hard requirement
+- [Travel](../travel/) — housing criteria overlap with travel accommodation criteria
+- [Finance](../finance/) — house purchase is a major 2026 goal
+
 ## Files
 
 | File | Description |

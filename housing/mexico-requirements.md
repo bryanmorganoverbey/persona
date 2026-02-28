@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Mexico Housing Requirements
 
 Overrides and additions to [minimum-requirements.md](./minimum-requirements.md) that apply specifically to Mexico properties.

@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Deal-Breakers
 
 Instant disqualifiers. If any of these are present, walk away.
@@ -62,3 +67,7 @@ Instant disqualifiers. If any of these are present, walk away.
 - [ ] Rent or mortgage exceeds budget ($2,000 US / $1,600 Mexico)
 - [ ] Excessive deposits with unclear refund terms
 - [ ] Hidden fees not disclosed upfront
+
+## yard
+
+- [ ] Include a fenced in yard for a dog. If it doesn't suit a 40 lbs dog it wouldn't suit us.

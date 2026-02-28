@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # Moroccan Chickpea Stew
 
 - [ ] Olive oil

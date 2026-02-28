@@ -1,0 +1,59 @@
+name: Check for stale preference files
+
+on:
+  schedule:
+    - cron: '0 9 1 * *' # 1st of every month at 9am UTC
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  check-staleness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history needed for git log dates
+
+      - name: Find stale files
+        id: stale
+        run: |
+          threshold=$(date -d '6 months ago' +%s 2>/dev/null || date -v-6m +%s)
+          stale_files=""
+
+          while IFS= read -r file; do
+            # skip index files, README, and non-content files
+            if [[ "$file" == */index.md ]] || [[ "$file" == "README.md" ]] || [[ "$file" == "profile.md" ]]; then
+              continue
+            fi
+
+            last_commit=$(git log -1 --format="%ct" -- "$file" 2>/dev/null)
+            if [ -n "$last_commit" ] && [ "$last_commit" -lt "$threshold" ]; then
+              last_date=$(git log -1 --format="%ci" -- "$file" | cut -d' ' -f1)
+              stale_files="${stale_files}- \`${file}\` (last updated: ${last_date})\n"
+            fi
+          done < <(find . -name '*.md' -not -path './.github/*' -not -path './vision_boards/*' | sed 's|^\./||' | sort)
+
+          if [ -n "$stale_files" ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "files<<EOF" >> "$GITHUB_OUTPUT"
+            echo -e "$stale_files" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create issue for stale files
+        if: steps.stale.outputs.found == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `Review stale preference files (${new Date().toISOString().slice(0, 7)})`;
+            const body = `The following preference files haven't been updated in over 6 months. Consider reviewing them to make sure they're still accurate.\n\n${process.env.STALE_FILES}\n\nTo update a file, review its content and update the \`last_reviewed\` frontmatter field — even if no content changes are needed.`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['maintenance']
+            });
+        env:
+          STALE_FILES: ${{ steps.stale.outputs.files }}

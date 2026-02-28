@@ -1,3 +1,8 @@
+---
+last_reviewed: 2026-02-28
+confidence: high
+---
+
 # US Housing Requirements
 
 Overrides and additions to [minimum-requirements.md](./minimum-requirements.md) that apply specifically to US properties.
@@ -43,3 +48,7 @@ No HOA or landlord restrictions on pets. Yard should be suitable for pets. Proxi
 ## accessibility
 
 Single-story preference. Step-free entry and wide doorways are a plus for long-term livability.
+
+## preferences but not required
+
+We prefer a kitchen to have a bar-top style counter space for sitting at bar stools and working or hanging out.

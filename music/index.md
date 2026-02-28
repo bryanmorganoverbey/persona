@@ -2,6 +2,11 @@
 
 Preferences related to music and audio. Covers preferred genres, artists, listening habits, and streaming services.
 
+## Related Categories
+
+- [Entertainment](../entertainment/) — Spotify subscription and streaming habits
+- [Education](../education/) — music theory and production as a learning interest
+
 ## Files
 
 | File | Description |
