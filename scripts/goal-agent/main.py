@@ -8,6 +8,7 @@ reports results back to the repo, and notifies via Telegram.
 import json
 import os
 import sys
+import time
 import traceback
 from datetime import datetime, timezone
 
@@ -65,7 +66,11 @@ def run(repo_root: str, month: str | None = None) -> dict:
     # Step 3: Execute each task
     stats = {"attempted": 0, "completed": 0, "failed": 0, "blocked": 0}
 
-    for task in queue:
+    for i, task in enumerate(queue):
+        if i > 0:
+            print(f"\n  Cooling down 15s between tasks...")
+            time.sleep(15)
+
         task_dict = {
             "description": task.description,
             "goal_name": task.goal_name,

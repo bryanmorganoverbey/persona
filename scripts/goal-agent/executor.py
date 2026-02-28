@@ -6,6 +6,7 @@ to execute it, and returns the results.
 import os
 import anthropic
 from pathlib import Path
+from rate_limiter import limiter
 
 
 MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
@@ -85,6 +86,9 @@ def execute_task(task: dict) -> dict:
     goal_context = load_goal_context(task["goal_index_path"])
     user_prompt = build_task_prompt(task, goal_context)
 
+    limiter.wait_if_needed()
+    print(f"  Rate limiter: {limiter.status()}")
+
     response = client.messages.create(
         model=MODEL,
         max_tokens=MAX_TOKENS,
@@ -95,6 +99,9 @@ def execute_task(task: dict) -> dict:
         ],
         messages=[{"role": "user", "content": user_prompt}],
     )
+
+    total_tokens = response.usage.input_tokens + response.usage.output_tokens
+    limiter.record_call(tokens_used=total_tokens)
 
     # Extract text blocks from the response
     result_text = ""
