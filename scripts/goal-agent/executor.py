@@ -8,7 +8,7 @@ import anthropic
 from pathlib import Path
 
 
-MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6-20260209")
+MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = int(os.environ.get("GOAL_AGENT_MAX_TOKENS", "8192"))
 
 SYSTEM_PROMPT = """You are an autonomous goal execution agent working on tasks from a personal vision board.
