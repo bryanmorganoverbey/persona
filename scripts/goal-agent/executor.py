@@ -92,7 +92,6 @@ def execute_task(task: dict) -> dict:
         tools=[
             {"type": "web_search_20260209", "name": "web_search"},
             {"type": "web_fetch_20260209", "name": "web_fetch"},
-            {"type": "code_execution_20250825", "name": "code_execution"},
         ],
         messages=[{"role": "user", "content": user_prompt}],
     )
