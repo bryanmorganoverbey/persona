@@ -9,11 +9,16 @@ Season: [Spring](../spring/index.md) | Transition month
 
 ## Focus
 
-Wrapping up Mexico and preparing for Tennessee. Start planning robotics projects — research components, order parts, design first prototypes.
+Wrapping up Mexico and preparing for Tennessee. Finalize Nashville housing, continue Remi's training, start planning robotics projects, and build an autonomous agent system that executes goals from this repo.
 
 ## Goals
 
-- Plan the move / trip back to Tennessee
-- Research autonomous RC solar glider plane components and design
-- Research humanoid robot frameworks and hardware
-- Say goodbye to Mexico community, plan to stay connected
+| Goal | Status | Deadline |
+|------|--------|----------|
+| [Finalize Nashville-area housing](./goals/nashville-housing/) | In progress | April 12 |
+| [Remi public behavior training](./goals/remi-training/) | In progress | Ongoing |
+| [Research RC solar glider plane](./goals/solar-glider-research/) | Not started | — |
+| [Research humanoid robot](./goals/humanoid-robot-research/) | Not started | — |
+| [Plan move logistics](./goals/move-logistics/) | Not started | April 12 |
+| [Build autonomous goal execution system](./goals/autonomous-agent-system/) | Not started | — |
+| [Say goodbye to Mexico community](./goals/mexico-goodbye/) | Not started | — |
