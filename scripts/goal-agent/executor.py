@@ -90,9 +90,9 @@ def execute_task(task: dict) -> dict:
         max_tokens=MAX_TOKENS,
         system=SYSTEM_PROMPT,
         tools=[
-            {"type": "web_search_20260209"},
-            {"type": "web_fetch_20260209"},
-            {"type": "code_execution_20250825"},
+            {"type": "web_search_20260209", "name": "web_search"},
+            {"type": "web_fetch_20260209", "name": "web_fetch"},
+            {"type": "code_execution_20250825", "name": "code_execution"},
         ],
         messages=[{"role": "user", "content": user_prompt}],
     )

@@ -95,13 +95,13 @@ def ask_clarification(task: dict, question: str) -> bool:
     return send_message(text)
 
 
-def notify_run_summary(tasks_attempted: int, tasks_completed: int, tasks_failed: int, tasks_blocked: int) -> bool:
+def notify_run_summary(attempted: int, completed: int, failed: int, blocked: int) -> bool:
     """Send a summary of the entire run."""
     text = (
         f"*Goal Agent — Run Complete*\n\n"
-        f"Attempted: {tasks_attempted}\n"
-        f"Completed: {tasks_completed}\n"
-        f"Failed: {tasks_failed}\n"
-        f"Blocked (need input): {tasks_blocked}"
+        f"Attempted: {attempted}\n"
+        f"Completed: {completed}\n"
+        f"Failed: {failed}\n"
+        f"Blocked (need input): {blocked}"
     )
     return send_message(text)
