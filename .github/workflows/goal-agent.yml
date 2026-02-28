@@ -1,0 +1,56 @@
+name: Goal Agent — Execute Vision Board Tasks
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # every 2 hours
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to process (01-12). Defaults to current month.'
+        required: false
+        type: string
+      max_tasks:
+        description: 'Max tasks to execute per run'
+        required: false
+        default: '3'
+        type: string
+
+concurrency:
+  group: goal-agent
+  cancel-in-progress: false
+
+jobs:
+  execute-goals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      GOAL_AGENT_MAX_TASKS: ${{ github.event.inputs.max_tasks || '3' }}
+      GOAL_AGENT_MODEL: 'claude-sonnet-4-6-20260209'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scripts/goal-agent/requirements.txt
+
+      - name: Run goal agent
+        working-directory: ${{ github.workspace }}
+        run: |
+          MONTH_ARG=""
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            MONTH_ARG="${{ github.event.inputs.month }}"
+          fi
+          python scripts/goal-agent/main.py "${{ github.workspace }}" $MONTH_ARG

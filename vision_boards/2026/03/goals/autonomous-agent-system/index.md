@@ -1,40 +1,83 @@
 ---
 last_reviewed: 2026-02-28
 confidence: high
-status: not_started
+status: in_progress
 ---
 
 # Build Autonomous Goal Execution System
 
 ## Goal
 
-Create a continuously running autonomous system that pulls tasks from the vision board and goals in this persona repo, executes them, provides feedback, and updates the data here — running in a recursive loop.
+Create a continuously running autonomous system that polls for incomplete goals in the persona repo's vision boards, autonomously attempts to complete them, asks clarifying questions via messaging when needed, and writes results back to the repo.
+
+## Architecture: Proposal A (GitHub Actions + Claude API)
+
+Selected architecture. See [proposal-a-github-actions-claude.md](./proposal-a-github-actions-claude.md) for the full design.
+
+```
+GitHub Actions (cron every 2 hours)
+  └── scripts/goal-agent/main.py
+       ├── scanner.py  — parse goal files, build prioritized work queue
+       ├── executor.py — call Claude API with web search + code execution
+       ├── reporter.py — write attempt files, update goals, commit to repo
+       └── telegram.py — send notifications and clarification questions
+```
+
+## Implementation
+
+| Component | File | Status |
+|-----------|------|--------|
+| Scanner | `scripts/goal-agent/scanner.py` | Done |
+| Executor | `scripts/goal-agent/executor.py` | Done |
+| Reporter | `scripts/goal-agent/reporter.py` | Done |
+| Telegram | `scripts/goal-agent/telegram.py` | Done |
+| Orchestrator | `scripts/goal-agent/main.py` | Done |
+| Workflow | `.github/workflows/goal-agent.yml` | Done |
+| Dependencies | `scripts/goal-agent/requirements.txt` | Done |
+
+## Setup Required (Secrets)
+
+Before the agent can run, add these GitHub repository secrets:
+
+| Secret | Purpose | How to Get |
+|--------|---------|------------|
+| `ANTHROPIC_API_KEY` | Claude API access | [console.anthropic.com](https://console.anthropic.com/) |
+| `TELEGRAM_BOT_TOKEN` | Telegram bot | Message [@BotFather](https://t.me/BotFather) on Telegram |
+| `TELEGRAM_CHAT_ID` | Your Telegram chat ID | Message [@userinfobot](https://t.me/userinfobot) on Telegram |
 
 ## How It Works
 
-1. **Queue:** The system reads goals and tasks from the vision boards (e.g., `vision_boards/2026/03/goals/*/index.md`) and builds a work queue from unchecked task items
-2. **Execute:** An AI agent picks up a task, executes it autonomously (research, writing, code, outreach, data gathering, etc.)
-3. **Feedback:** The agent writes results, findings, and status updates back into the goal folder (new files, updated checklists, data)
-4. **Update persona:** If execution reveals new preferences, constraints, or information, the agent updates the relevant persona files
-5. **Loop:** The system continuously polls for new or updated tasks and repeats
+1. **Every 2 hours**, GitHub Actions triggers `goal-agent.yml`
+2. **Scanner** reads `vision_boards/2026/MM/goals/*/index.md` for the current month
+3. Tasks are prioritized by deadline (urgent first) and status (in-progress before not-started)
+4. **Work queue** is capped at 3 tasks per run (configurable via `GOAL_AGENT_MAX_TASKS`)
+5. For each task:
+   - Creates an **attempt file** with the plan, commits it
+   - **Executes** via Claude Sonnet 4.6 API with web search, web fetch, and code execution tools
+   - If blocked, sends a **Telegram message** asking for clarification
+   - If successful, writes results back, **checks off the task**, and updates goal status
+   - **Commits** all changes to the repo
+6. Sends a **run summary** via Telegram
 
-## Architecture Questions to Resolve
+## Other Proposals
 
-- **Runtime:** Where does this run? Local machine, cloud server, GitHub Actions, or a dedicated service?
-- **Agent framework:** Cursor agents, Claude API, LangChain, CrewAI, custom orchestrator?
-- **Task format:** How are tasks structured so the agent knows what "done" looks like?
-- **Permissions:** What can the agent do autonomously vs. what requires approval?
-- **Feedback format:** How does the agent report back? Commit to the repo? Create issues? Notify via Slack/WhatsApp?
-- **Safety:** How do we prevent the agent from making bad updates to the persona or taking destructive actions?
+| Proposal | File |
+|----------|------|
+| B: Claude Code CLI | [proposal-b-claude-code-cli.md](./proposal-b-claude-code-cli.md) |
+| C: AWS Step Functions | [proposal-c-aws-step-functions.md](./proposal-c-aws-step-functions.md) |
+| D: Codex GitHub Action | [proposal-d-codex-action.md](./proposal-d-codex-action.md) |
+| Comparison | [comparison.md](./comparison.md) |
 
 ## Tasks
 
-- [ ] Define the task schema — how goals/tasks are structured so an agent can parse and execute them
-- [ ] Choose the agent framework and runtime environment
-- [ ] Build a task queue reader that scans vision board goal files for unchecked items
-- [ ] Build the execution loop — agent picks up a task, works on it, writes results
-- [ ] Build the feedback mechanism — agent commits updates back to the repo
-- [ ] Define permission boundaries — what the agent can do without asking
-- [ ] Add a notification system — alert me when tasks complete or need approval
-- [ ] Test with a low-risk goal first (e.g., research tasks) before letting it touch higher-stakes goals
-- [ ] Add logging and audit trail so I can review what the agent did and why
+- [x] Choose architecture (review proposals A-D)
+- [ ] Set up Telegram bot for clarification questions
+- [x] Define task schema and parsing logic
+- [x] Implement the scanner (find incomplete goals for current month)
+- [x] Implement the planner (create attempt files)
+- [x] Implement the executor (spin up LLM agent)
+- [x] Implement the reporter (write results back, commit)
+- [x] Implement safety boundaries and permission checks
+- [ ] Add GitHub secrets (ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+- [ ] Test with a low-risk goal (e.g., research task)
+- [ ] Deploy and monitor first autonomous run
