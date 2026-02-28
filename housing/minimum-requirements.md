@@ -20,6 +20,9 @@ I would only consider a house if it has a fenced in yard and patio.
 
 Proximity to work, transit, groceries, healthcare, and other daily essentials. Includes maximum acceptable commute time and preferred neighborhoods or regions.
 
+The preference here would be that there are many social activities and sports and events and coffee shops all within a close five minute walk.
+
+
 ## safety
 
 Crime rate thresholds, neighborhood watch presence, street lighting, and natural disaster zone status (flood, fire, earthquake). The property and surrounding area should feel safe at all hours.
