@@ -6,3 +6,4 @@ Preferences related to clothing and personal style. Covers preferred brands, siz
 
 | File | Description |
 |------|-------------|
+| [style.md](./style.md) | Day-to-day clothing style and aesthetic. |

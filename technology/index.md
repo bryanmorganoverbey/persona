@@ -6,3 +6,5 @@ Preferences related to devices, software, and digital services. Covers operating
 
 | File | Description |
 |------|-------------|
+| [devices.md](./devices.md) | Preferred operating systems, phone, and hardware. |
+| [tools.md](./tools.md) | Must-have apps and tools beyond Cursor. |

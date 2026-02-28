@@ -6,3 +6,4 @@ Preferences related to how I communicate and prefer to be communicated with. Cov
 
 | File | Description |
 |------|-------------|
+| [channels.md](./channels.md) | Preferred communication channels for personal life. |

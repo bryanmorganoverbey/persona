@@ -6,3 +6,4 @@ Preferences related to interior design and furnishing. Covers aesthetic style, c
 
 | File | Description |
 |------|-------------|
+| [style.md](./style.md) | Interior decoration style and color palette preferences. |

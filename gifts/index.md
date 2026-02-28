@@ -6,3 +6,4 @@ Preferences related to giving and receiving gifts. Covers budget ranges, preferr
 
 | File | Description |
 |------|-------------|
+| [preferences.md](./preferences.md) | Preferred types of gifts to give and receive. |

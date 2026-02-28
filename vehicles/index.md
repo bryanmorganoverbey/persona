@@ -6,3 +6,4 @@ Preferences related to cars and transportation. Covers vehicle type, brand prefe
 
 | File | Description |
 |------|-------------|
+| [preferences.md](./preferences.md) | Preferred vehicle types and transportation modes. |

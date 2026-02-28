@@ -6,3 +6,5 @@ Preferences related to money management and spending. Covers budgeting philosoph
 
 | File | Description |
 |------|-------------|
+| [philosophy.md](./philosophy.md) | General approach to saving, investing, and financial growth. |
+| [investments.md](./investments.md) | Types of investments of interest. |

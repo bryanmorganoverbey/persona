@@ -6,3 +6,4 @@ Preferences related to exercise and physical activity. Covers workout routines, 
 
 | File | Description |
 |------|-------------|
+| [activities.md](./activities.md) | Preferred types of exercise and physical activity. |

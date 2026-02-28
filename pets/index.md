@@ -6,3 +6,4 @@ Preferences related to animals and pet ownership. Covers preferred animals, care
 
 | File | Description |
 |------|-------------|
+| [current.md](./current.md) | Current pets owned. |

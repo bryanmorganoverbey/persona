@@ -49,6 +49,8 @@ There needs to be plenty of room for storing clothes in a closet for at least tw
 
 Central air conditioning and heating requirements, insulation standards, and energy efficiency rating preferences.
 
+Any form of air conditioning is required (window unit, mini-split, central — any will do).
+
 ## natural light
 
 Window count, orientation preferences (e.g. south-facing), and minimum number of rooms with exterior windows. Rooms should not feel dark or cave-like during the day.
@@ -56,6 +58,8 @@ Window count, orientation preferences (e.g. south-facing), and minimum number of
 ## noise
 
 Maximum acceptable ambient noise level. Minimum distance from highways, airports, railways, or high-traffic commercial zones.
+
+Moderate noise tolerance — some city noise is fine, but not directly on a main road. No highways, airports, or railways nearby.
 
 ## age and condition
 
@@ -68,6 +72,8 @@ Single-story preference, doorway widths, step-free entry, and aging-in-place fea
 ## internet connectivity
 
 Minimum broadband speed available at the address and fiber availability. Essential for remote work and general quality of life.
+
+Minimum acceptable internet speed is 100 Mbps — comfortable for remote work with video calls and multiple devices.
 
 ## pet-friendliness
 
