@@ -106,11 +106,24 @@ def run(repo_root: str, month: str | None = None) -> dict:
             )
 
             # Execute via Claude API
-            result = execute_task(task_dict)
+            remaining = MAX_BUDGET_USD - cumulative_cost
+            result = execute_task(task_dict, remaining_budget=remaining)
             task_cost = result.get("cost_usd", 0.0)
             cumulative_cost += task_cost
             print(f"  Tokens used: {result['tokens_used']}")
             print(f"  Task cost: ${task_cost:.4f} | Cumulative: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
+
+            # Check if task was skipped due to budget
+            if result.get("budget_exceeded", False):
+                print(f"  BUDGET LIMIT REACHED — task skipped, saving progress")
+                update_attempt_with_results(attempt_path, result, status="budget_exceeded")
+                
+                # Commit progress and stop processing more tasks
+                git_commit_and_push(
+                    repo_root,
+                    f"goal-agent: budget limit reached, saving progress",
+                )
+                break
 
             if result["needs_clarification"]:
                 # Blocked — needs user input
@@ -178,4 +191,5 @@ if __name__ == "__main__":
 
     # Exit with error if all tasks failed
     if stats["attempted"] > 0 and stats["completed"] == 0 and stats["blocked"] == 0:
+        print("ERROR: No tasks completed successfully")
         sys.exit(1)

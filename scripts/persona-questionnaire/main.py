@@ -111,9 +111,15 @@ def run_generate_toc(repo_root: str) -> None:
             print(f"  generate-toc.sh failed: {e}")
 
 
-def handle_replies(repo_root: str, state: dict) -> dict:
+def handle_replies(repo_root: str, state: dict, remaining_budget: float) -> dict:
     """
     Poll for replies, integrate answers, commit changes.
+    
+    Args:
+        repo_root: Repository root directory
+        state: Current state with pending questions
+        remaining_budget: Remaining budget in USD
+        
     Returns stats dict.
     """
     stats = {"answers_received": 0, "files_modified": 0, "cost_usd": 0.0}
@@ -160,7 +166,7 @@ def handle_replies(repo_root: str, state: dict) -> dict:
 
     # Generate file updates via Claude
     print("Generating file updates from answers...")
-    operations, cost = generate_file_updates(matched, repo_root)
+    operations, cost = generate_file_updates(matched, repo_root, remaining_budget=remaining_budget)
     stats["cost_usd"] += cost
     print(f"  Generated {len(operations)} file operations (cost: ${cost:.4f})")
 
@@ -200,9 +206,14 @@ def handle_replies(repo_root: str, state: dict) -> dict:
     return stats
 
 
-def handle_questions(repo_root: str) -> dict:
+def handle_questions(repo_root: str, remaining_budget: float) -> dict:
     """
     Scan categories, generate questions, send via Telegram, save state.
+    
+    Args:
+        repo_root: Repository root directory
+        remaining_budget: Remaining budget in USD
+        
     Returns stats dict.
     """
     stats = {"questions_sent": 0, "cost_usd": 0.0}
@@ -224,7 +235,7 @@ def handle_questions(repo_root: str) -> dict:
 
     # Generate questions
     print("Generating questions via Claude...")
-    questions, cost = generate_questions(summary, profile, history)
+    questions, cost = generate_questions(summary, profile, history, remaining_budget=remaining_budget)
     stats["cost_usd"] += cost
     print(f"Generated {len(questions)} questions (cost: ${cost:.4f})")
 
@@ -289,7 +300,8 @@ def run(repo_root: str) -> dict:
     if state:
         print(f"\nPending questions found (sent at {state.get('sent_at', 'unknown')})")
         stats["mode"] = "reply"
-        reply_stats = handle_replies(repo_root, state)
+        remaining = MAX_BUDGET_USD - cumulative_cost
+        reply_stats = handle_replies(repo_root, state, remaining_budget=remaining)
         cumulative_cost += reply_stats.get("cost_usd", 0.0)
         stats["answers_received"] = reply_stats.get("answers_received", 0)
         stats["files_modified"] = reply_stats.get("files_modified", 0)
@@ -299,13 +311,17 @@ def run(repo_root: str) -> dict:
         refreshed_state = load_state(repo_root)
         if refreshed_state is None and cumulative_cost < MAX_BUDGET_USD:
             print("\nState cleared — generating new questions...")
-            q_stats = handle_questions(repo_root)
+            remaining = MAX_BUDGET_USD - cumulative_cost
+            q_stats = handle_questions(repo_root, remaining_budget=remaining)
             cumulative_cost += q_stats.get("cost_usd", 0.0)
             stats["questions_sent"] = q_stats.get("questions_sent", 0)
+        elif refreshed_state is None and cumulative_cost >= MAX_BUDGET_USD:
+            print(f"\nBudget limit reached (${cumulative_cost:.4f} >= ${MAX_BUDGET_USD:.2f}) - skipping new questions")
     else:
         print("\nNo pending questions — generating new batch")
         stats["mode"] = "question"
-        q_stats = handle_questions(repo_root)
+        remaining = MAX_BUDGET_USD - cumulative_cost
+        q_stats = handle_questions(repo_root, remaining_budget=remaining)
         cumulative_cost += q_stats.get("cost_usd", 0.0)
         stats["questions_sent"] = q_stats.get("questions_sent", 0)
 
@@ -316,7 +332,10 @@ def run(repo_root: str) -> dict:
     print(f"Answers received: {stats['answers_received']}")
     print(f"Files modified: {stats['files_modified']}")
     print(f"Questions sent: {stats['questions_sent']}")
-    print(f"Total cost: ${cumulative_cost:.4f}")
+    print(f"Total cost: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
+    
+    if cumulative_cost >= MAX_BUDGET_USD:
+        print(f"Budget limit reached - progress saved")
 
     return stats
 
