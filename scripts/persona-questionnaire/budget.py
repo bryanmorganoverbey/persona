@@ -8,7 +8,7 @@ class BudgetExceededException(Exception):
     pass
 
 
-def check_budget_before_call(remaining_budget: float, estimated_cost: float = 0.05) -> None:
+def check_budget_before_call(remaining_budget: float, estimated_cost: float = 0.05) -> bool:
     """
     Check if we have sufficient budget remaining before making an API call.
     
@@ -16,15 +16,13 @@ def check_budget_before_call(remaining_budget: float, estimated_cost: float = 0.
         remaining_budget: Amount of budget remaining in USD
         estimated_cost: Estimated cost of the upcoming API call in USD
         
-    Raises:
-        BudgetExceededException: If estimated cost would exceed remaining budget
+    Returns:
+        True if sufficient budget, False if would exceed budget
     """
     if remaining_budget <= 0:
-        raise BudgetExceededException(
-            f"Budget exhausted: ${remaining_budget:.4f} remaining"
-        )
+        return False
     
     if estimated_cost > remaining_budget:
-        raise BudgetExceededException(
-            f"Estimated cost ${estimated_cost:.4f} exceeds remaining budget ${remaining_budget:.4f}"
-        )
+        return False
+    
+    return True

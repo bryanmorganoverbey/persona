@@ -17,7 +17,6 @@ from pathlib import Path
 
 from scanner import scan_categories, build_category_summary
 from generator import generate_questions
-from budget import BudgetExceededException
 from integrator import (
     parse_numbered_replies,
     match_answers_to_questions,
@@ -298,41 +297,33 @@ def run(repo_root: str) -> dict:
     # Check for pending state
     state = load_state(repo_root)
 
-    try:
-        if state:
-            print(f"\nPending questions found (sent at {state.get('sent_at', 'unknown')})")
-            stats["mode"] = "reply"
-            remaining = MAX_BUDGET_USD - cumulative_cost
-            reply_stats = handle_replies(repo_root, state, remaining_budget=remaining)
-            cumulative_cost += reply_stats.get("cost_usd", 0.0)
-            stats["answers_received"] = reply_stats.get("answers_received", 0)
-            stats["files_modified"] = reply_stats.get("files_modified", 0)
+    if state:
+        print(f"\nPending questions found (sent at {state.get('sent_at', 'unknown')})")
+        stats["mode"] = "reply"
+        remaining = MAX_BUDGET_USD - cumulative_cost
+        reply_stats = handle_replies(repo_root, state, remaining_budget=remaining)
+        cumulative_cost += reply_stats.get("cost_usd", 0.0)
+        stats["answers_received"] = reply_stats.get("answers_received", 0)
+        stats["files_modified"] = reply_stats.get("files_modified", 0)
 
-            # If we processed replies (state was cleared), also send new questions
-            # unless we're over budget
-            refreshed_state = load_state(repo_root)
-            if refreshed_state is None and cumulative_cost < MAX_BUDGET_USD:
-                print("\nState cleared — generating new questions...")
-                remaining = MAX_BUDGET_USD - cumulative_cost
-                q_stats = handle_questions(repo_root, remaining_budget=remaining)
-                cumulative_cost += q_stats.get("cost_usd", 0.0)
-                stats["questions_sent"] = q_stats.get("questions_sent", 0)
-        else:
-            print("\nNo pending questions — generating new batch")
-            stats["mode"] = "question"
+        # If we processed replies (state was cleared), also send new questions
+        # unless we're over budget
+        refreshed_state = load_state(repo_root)
+        if refreshed_state is None and cumulative_cost < MAX_BUDGET_USD:
+            print("\nState cleared — generating new questions...")
             remaining = MAX_BUDGET_USD - cumulative_cost
             q_stats = handle_questions(repo_root, remaining_budget=remaining)
             cumulative_cost += q_stats.get("cost_usd", 0.0)
             stats["questions_sent"] = q_stats.get("questions_sent", 0)
-
-    except BudgetExceededException as e:
-        print(f"\nBUDGET EXCEEDED: {e}")
-        send_status(f"Budget exceeded: {e}")
-        stats["cost_usd"] = cumulative_cost
-        print(f"\n=== Run Terminated (Budget Exceeded) ===")
-        print(f"Total cost: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
-        print(f"ERROR: Budget exceeded")
-        sys.exit(1)
+        elif refreshed_state is None and cumulative_cost >= MAX_BUDGET_USD:
+            print(f"\nBudget limit reached (${cumulative_cost:.4f} >= ${MAX_BUDGET_USD:.2f}) - skipping new questions")
+    else:
+        print("\nNo pending questions — generating new batch")
+        stats["mode"] = "question"
+        remaining = MAX_BUDGET_USD - cumulative_cost
+        q_stats = handle_questions(repo_root, remaining_budget=remaining)
+        cumulative_cost += q_stats.get("cost_usd", 0.0)
+        stats["questions_sent"] = q_stats.get("questions_sent", 0)
 
     stats["cost_usd"] = cumulative_cost
 
@@ -341,7 +332,10 @@ def run(repo_root: str) -> dict:
     print(f"Answers received: {stats['answers_received']}")
     print(f"Files modified: {stats['files_modified']}")
     print(f"Questions sent: {stats['questions_sent']}")
-    print(f"Total cost: ${cumulative_cost:.4f}")
+    print(f"Total cost: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
+    
+    if cumulative_cost >= MAX_BUDGET_USD:
+        print(f"Budget limit reached - progress saved")
 
     return stats
 

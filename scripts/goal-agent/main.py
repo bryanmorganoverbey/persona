@@ -14,7 +14,6 @@ from datetime import datetime, timezone
 
 from scanner import scan_goals, build_work_queue
 from executor import execute_task
-from budget import BudgetExceededException
 from reporter import (
     create_attempt_file,
     update_attempt_with_results,
@@ -114,6 +113,18 @@ def run(repo_root: str, month: str | None = None) -> dict:
             print(f"  Tokens used: {result['tokens_used']}")
             print(f"  Task cost: ${task_cost:.4f} | Cumulative: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
 
+            # Check if task was skipped due to budget
+            if result.get("budget_exceeded", False):
+                print(f"  BUDGET LIMIT REACHED — task skipped, saving progress")
+                update_attempt_with_results(attempt_path, result, status="budget_exceeded")
+                
+                # Commit progress and stop processing more tasks
+                git_commit_and_push(
+                    repo_root,
+                    f"goal-agent: budget limit reached, saving progress",
+                )
+                break
+
             if result["needs_clarification"]:
                 # Blocked — needs user input
                 print(f"  BLOCKED — needs clarification")
@@ -146,18 +157,6 @@ def run(repo_root: str, month: str | None = None) -> dict:
                 repo_root,
                 f"goal-agent: results for [{task.goal_name}] {task.description}",
             )
-
-        except BudgetExceededException as e:
-            print(f"  BUDGET EXCEEDED: {e}")
-            notify_task_failed(task_dict, f"Budget exceeded: {e}")
-            stats["failed"] += 1
-            
-            # Commit partial results and break
-            git_commit_and_push(
-                repo_root,
-                f"goal-agent: budget exceeded at [{task.goal_name}] {task.description}",
-            )
-            break
 
         except Exception as e:
             print(f"  FAILED: {e}")

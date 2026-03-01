@@ -156,6 +156,7 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
         "tokens_used": {"input": input_tok, "output": output_tok},
         "cost_usd": cost,
         "model": MODEL,
+        "budget_exceeded": False,
     }
 
 
