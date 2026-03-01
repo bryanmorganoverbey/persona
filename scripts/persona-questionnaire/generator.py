@@ -1,6 +1,6 @@
 """
-Question Generator — uses Claude to produce ~20 persona questions:
-~15 enriching existing categories, ~5 suggesting new categories.
+Question Generator — uses Claude to produce persona questions,
+split between enriching existing categories and suggesting new ones.
 """
 
 import json
@@ -12,6 +12,7 @@ from rate_limiter import limiter
 from budget import check_budget_before_call
 
 MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
+NUM_QUESTIONS = int(os.environ.get("QUESTIONNAIRE_NUM_QUESTIONS", "5"))
 MAX_TOKENS = 4096
 
 COST_PER_MTOK = {
@@ -30,13 +31,13 @@ SYSTEM_PROMPT = """You are a persona-building assistant. Your job is to generate
 specific questions that help build a detailed personal preference profile.
 
 You will receive a summary of existing persona categories and their current depth.
-Generate questions in two groups:
+The user will tell you exactly how many questions to generate, split between two groups:
 
-1. ENRICH questions (~15): Questions that add depth to existing categories, especially
+1. ENRICH questions: Questions that add depth to existing categories, especially
    sparse ones. Target specific gaps — don't ask about things already well-documented.
    Focus on actionable preferences that an AI agent could use.
 
-2. NEW CATEGORY questions (~5): Suggest new categories that aren't covered yet,
+2. NEW CATEGORY questions: Suggest new categories that aren't covered yet,
    framed as questions. For example, if there's no "hobbies" category, ask about
    hobbies and interests.
 
@@ -69,7 +70,7 @@ def generate_questions(
     remaining_budget: float | None = None,
 ) -> tuple[list[dict], float]:
     """
-    Generate ~20 persona questions using Claude.
+    Generate persona questions using Claude.
 
     Args:
         category_summary: Summary of existing categories
@@ -84,10 +85,15 @@ def generate_questions(
         # Estimate: ~4K tokens at Sonnet-4-6 rates = ~$0.06 typical
         estimated_cost = 0.06
         if not check_budget_before_call(remaining_budget, estimated_cost):
-            print(f"  Budget insufficient (${remaining_budget:.4f} remaining, ${estimated_cost:.2f} needed) - skipping question generation")
+            print(
+                f"  Budget insufficient (${remaining_budget:.4f} remaining, ${estimated_cost:.2f} needed) - skipping question generation"
+            )
             return [], 0.0
-    
+
     client = anthropic.Anthropic()
+
+    n_new = max(1, round(NUM_QUESTIONS * 0.4))
+    n_enrich = NUM_QUESTIONS - n_new
 
     previous_note = ""
     if previous_questions:
@@ -108,8 +114,8 @@ def generate_questions(
 
 ## Instructions
 
-Generate exactly 20 questions: 15 to enrich existing categories (prioritize sparse ones)
-and 5 suggesting new categories. Return as a JSON array.
+Generate exactly {NUM_QUESTIONS} questions: {n_enrich} to enrich existing categories (prioritize sparse ones)
+and {n_new} suggesting new categories. Return as a JSON array.
 """
 
     limiter.wait_if_needed()
