@@ -13,7 +13,7 @@ Plan and prepare all logistics for the move from Mexico back to Tennessee by Apr
 
 ## Tasks
 
-- [ ] Book flights (for two people + Remi)
+- [ ] Book flights (for one person + Remi)
 - [ ] Research Remi's travel requirements (airline pet policy, crate, health certificate)
 - [ ] Decide what to pack vs. leave behind vs. ship
 - [ ] Coordinate arrival with Nashville housing timeline
