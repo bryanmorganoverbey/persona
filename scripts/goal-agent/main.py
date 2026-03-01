@@ -31,7 +31,7 @@ from telegram import (
 )
 
 
-MAX_TASKS_PER_RUN = int(os.environ.get("GOAL_AGENT_MAX_TASKS", "3"))
+MAX_TASKS_PER_RUN = int(os.environ.get("GOAL_AGENT_MAX_TASKS", "1"))
 
 
 def run(repo_root: str, month: str | None = None) -> dict:

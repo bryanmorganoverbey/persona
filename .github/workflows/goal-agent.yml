@@ -6,13 +6,14 @@ on:
   workflow_dispatch:
     inputs:
       month:
-        description: 'Month to process (01-12). Defaults to current month.'
+        description: 'Month to process (01-12). Defaults to 03.'
         required: false
+        default: '03'
         type: string
       max_tasks:
         description: 'Max tasks to execute per run'
         required: false
-        default: '3'
+        default: '1'
         type: string
 
 # Requires "Read and write permissions" enabled in repo Settings > Actions > General > Workflow permissions.
@@ -35,7 +36,7 @@ jobs:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      GOAL_AGENT_MAX_TASKS: ${{ github.event.inputs.max_tasks || '3' }}
+      GOAL_AGENT_MAX_TASKS: ${{ github.event.inputs.max_tasks || '1' }}
       GOAL_AGENT_MODEL: 'claude-sonnet-4-6'
       GOAL_AGENT_MAX_CALLS_PER_MIN: '5'
       GOAL_AGENT_MAX_TOKENS_PER_MIN: '10000'
@@ -57,8 +58,5 @@ jobs:
       - name: Run goal agent
         working-directory: ${{ github.workspace }}
         run: |
-          MONTH_ARG=""
-          if [ -n "${{ github.event.inputs.month }}" ]; then
-            MONTH_ARG="${{ github.event.inputs.month }}"
-          fi
+          MONTH_ARG="${{ github.event.inputs.month || '03' }}"
           python scripts/goal-agent/main.py "${{ github.workspace }}" $MONTH_ARG
