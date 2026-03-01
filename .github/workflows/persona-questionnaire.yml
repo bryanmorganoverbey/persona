@@ -1,0 +1,48 @@
+name: Persona Questionnaire — Enrich Profile via Telegram Q&A
+
+on:
+  schedule:
+    # Every 2 hours, 9am–11pm Central Time (CDT / UTC-5)
+    # 9am=14, 11am=16, 1pm=18, 3pm=20, 5pm=22, 7pm=0, 9pm=2, 11pm=4
+    - cron: '0 0,2,4,14,16,18,20,22 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: persona-questionnaire
+  cancel-in-progress: false
+
+jobs:
+  questionnaire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      QUESTIONNAIRE_MAX_BUDGET_USD: '2.0'
+      QUESTIONNAIRE_MODEL: 'claude-sonnet-4-6'
+      QUESTIONNAIRE_MAX_CALLS_PER_MIN: '5'
+      QUESTIONNAIRE_MAX_TOKENS_PER_MIN: '10000'
+      QUESTIONNAIRE_STALE_HOURS: '24'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scripts/persona-questionnaire/requirements.txt
+
+      - name: Run persona questionnaire agent
+        working-directory: ${{ github.workspace }}
+        run: python scripts/persona-questionnaire/main.py "${{ github.workspace }}"

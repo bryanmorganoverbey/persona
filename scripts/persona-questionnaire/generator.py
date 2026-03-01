@@ -1,0 +1,137 @@
+"""
+Question Generator — uses Claude to produce ~20 persona questions:
+~15 enriching existing categories, ~5 suggesting new categories.
+"""
+
+import json
+import os
+
+import anthropic
+
+from rate_limiter import limiter
+
+MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
+MAX_TOKENS = 4096
+
+COST_PER_MTOK = {
+    "claude-sonnet-4-6": {"input": 3.0, "output": 15.0},
+    "claude-haiku-4-5": {"input": 0.80, "output": 4.0},
+}
+DEFAULT_COST = {"input": 3.0, "output": 15.0}
+
+
+def estimate_cost(input_tokens: int, output_tokens: int) -> float:
+    rates = COST_PER_MTOK.get(MODEL, DEFAULT_COST)
+    return (input_tokens * rates["input"] + output_tokens * rates["output"]) / 1_000_000
+
+
+SYSTEM_PROMPT = """You are a persona-building assistant. Your job is to generate thoughtful,
+specific questions that help build a detailed personal preference profile.
+
+You will receive a summary of existing persona categories and their current depth.
+Generate questions in two groups:
+
+1. ENRICH questions (~15): Questions that add depth to existing categories, especially
+   sparse ones. Target specific gaps — don't ask about things already well-documented.
+   Focus on actionable preferences that an AI agent could use.
+
+2. NEW CATEGORY questions (~5): Suggest new categories that aren't covered yet,
+   framed as questions. For example, if there's no "hobbies" category, ask about
+   hobbies and interests.
+
+## Output Format
+
+Return ONLY a JSON array. Each element:
+{
+  "number": 1,
+  "text": "The question text",
+  "category": "existing-category-name or suggested-new-category",
+  "type": "enrich" or "new",
+  "target_file": "suggested filename for the answer, e.g. morning-routine.md"
+}
+
+## Question Quality Guidelines
+
+- Be SPECIFIC, not generic. "What's your go-to order at a coffee shop?" not "Tell me about beverages."
+- Ask about actionable preferences an AI could use to help.
+- Vary the style: some multiple choice, some open-ended, some "rank these."
+- Don't re-ask things already covered in existing files.
+- Questions should feel conversational, like a friend getting to know you better.
+- Each question should stand alone — don't reference other questions.
+"""
+
+
+def generate_questions(
+    category_summary: str,
+    profile_text: str,
+    previous_questions: list[str] | None = None,
+) -> tuple[list[dict], float]:
+    """
+    Generate ~20 persona questions using Claude.
+
+    Returns (questions_list, cost_usd).
+    """
+    client = anthropic.Anthropic()
+
+    previous_note = ""
+    if previous_questions:
+        recent = previous_questions[-40:]
+        previous_note = (
+            "\n\n## Previously Asked Questions (avoid repeating)\n\n"
+            + "\n".join(f"- {q}" for q in recent)
+        )
+
+    user_prompt = f"""## Current Profile Summary
+
+{profile_text}
+
+## Category Inventory
+
+{category_summary}
+{previous_note}
+
+## Instructions
+
+Generate exactly 20 questions: 15 to enrich existing categories (prioritize sparse ones)
+and 5 suggesting new categories. Return as a JSON array.
+"""
+
+    limiter.wait_if_needed()
+
+    response = client.messages.create(
+        model=MODEL,
+        max_tokens=MAX_TOKENS,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+
+    total_tokens = response.usage.input_tokens + response.usage.output_tokens
+    limiter.record_call(tokens_used=total_tokens)
+    cost = estimate_cost(response.usage.input_tokens, response.usage.output_tokens)
+
+    result_text = ""
+    for block in response.content:
+        if block.type == "text":
+            result_text += block.text
+
+    # Parse JSON from the response, handling markdown code fences
+    cleaned = result_text.strip()
+    if cleaned.startswith("```"):
+        lines = cleaned.split("\n")
+        lines = lines[1:]  # remove opening fence
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        cleaned = "\n".join(lines)
+
+    try:
+        questions = json.loads(cleaned)
+    except json.JSONDecodeError as e:
+        print(f"Failed to parse questions JSON: {e}")
+        print(f"Raw response:\n{result_text[:500]}")
+        questions = []
+
+    # Ensure numbering is sequential
+    for i, q in enumerate(questions, 1):
+        q["number"] = i
+
+    return questions, cost
