@@ -9,7 +9,7 @@ import os
 import anthropic
 
 from rate_limiter import limiter
-from budget import check_budget_before_call, BudgetExceededException
+from budget import check_budget_before_call
 
 MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = 4096

@@ -7,7 +7,7 @@ import os
 import anthropic
 from pathlib import Path
 from rate_limiter import limiter
-from budget import check_budget_before_call, BudgetExceededException
+from budget import check_budget_before_call
 
 
 MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
@@ -101,9 +101,18 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     """
     # Check budget before making API call
     if remaining_budget is not None:
-        # Estimate: ~8K tokens at Sonnet-4-6 rates = ~$0.10 typical
         estimated_cost = 0.10
-        check_budget_before_call(remaining_budget, estimated_cost)
+        if not check_budget_before_call(remaining_budget, estimated_cost):
+            print(f"  Budget insufficient (${remaining_budget:.4f} remaining) — skipping task")
+            return {
+                "result": "",
+                "needs_clarification": False,
+                "clarification_question": None,
+                "tokens_used": {"input": 0, "output": 0},
+                "cost_usd": 0.0,
+                "model": MODEL,
+                "budget_exceeded": True,
+            }
     
     client = anthropic.Anthropic()
 

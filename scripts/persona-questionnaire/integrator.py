@@ -13,7 +13,7 @@ from pathlib import Path
 import anthropic
 
 from rate_limiter import limiter
-from budget import check_budget_before_call, BudgetExceededException
+from budget import check_budget_before_call
 
 MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = 4096
@@ -292,7 +292,7 @@ def update_index_files_table(category_dir: str, new_files: list[str]) -> None:
 
 
 def git_commit_and_push(repo_root: str, message: str) -> bool:
-    """Stage all changes, commit, and push."""
+    """Stage all changes, pull latest, commit, and push."""
     try:
         subprocess.run(
             ["git", "config", "user.name", "Persona Questionnaire Agent"],
@@ -302,6 +302,13 @@ def git_commit_and_push(repo_root: str, message: str) -> bool:
             ["git", "config", "user.email", "questionnaire-agent@persona.local"],
             cwd=repo_root, check=True, capture_output=True,
         )
+
+        # Pull latest to avoid push conflicts with other agents
+        subprocess.run(
+            ["git", "pull", "origin", "main", "--rebase"],
+            cwd=repo_root, check=True, capture_output=True,
+        )
+
         subprocess.run(
             ["git", "add", "-A"],
             cwd=repo_root, check=True, capture_output=True,

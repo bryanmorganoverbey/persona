@@ -15,7 +15,6 @@ class CategoryFile:
     path: str
     name: str
     word_count: int
-    content: str
 
 
 @dataclass
@@ -94,7 +93,6 @@ def scan_categories(repo_root: str) -> list[Category]:
                 path=str(md_file),
                 name=md_file.relative_to(entry).as_posix(),
                 word_count=wc,
-                content=content,
             ))
             cat.total_words += wc
 
