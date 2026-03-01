@@ -194,8 +194,3 @@ if __name__ == "__main__":
     if stats["attempted"] > 0 and stats["completed"] == 0 and stats["blocked"] == 0:
         print("ERROR: No tasks completed successfully")
         sys.exit(1)
-    
-    # Exit with error if budget was exceeded
-    if cumulative_cost > MAX_BUDGET_USD:
-        print(f"ERROR: Budget exceeded (${cumulative_cost:.4f} > ${MAX_BUDGET_USD:.2f})")
-        sys.exit(1)

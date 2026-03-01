@@ -352,8 +352,3 @@ if __name__ == "__main__":
 
     if stats["questions_sent"] == 0 and stats["answers_received"] == 0:
         print("Nothing happened this run (waiting for replies or no questions generated)")
-    
-    # Exit with error if budget was exceeded
-    if stats.get("cost_usd", 0.0) > MAX_BUDGET_USD:
-        print(f"ERROR: Budget exceeded (${stats['cost_usd']:.4f} > ${MAX_BUDGET_USD:.2f})")
-        sys.exit(1)
