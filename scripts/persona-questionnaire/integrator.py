@@ -292,7 +292,7 @@ def update_index_files_table(category_dir: str, new_files: list[str]) -> None:
 
 
 def git_commit_and_push(repo_root: str, message: str) -> bool:
-    """Stage all changes, pull latest, commit, and push."""
+    """Stage all changes, commit locally, rebase on remote, and push."""
     try:
         subprocess.run(
             ["git", "config", "user.name", "Persona Questionnaire Agent"],
@@ -300,12 +300,6 @@ def git_commit_and_push(repo_root: str, message: str) -> bool:
         )
         subprocess.run(
             ["git", "config", "user.email", "questionnaire-agent@persona.local"],
-            cwd=repo_root, check=True, capture_output=True,
-        )
-
-        # Pull latest to avoid push conflicts with other agents
-        subprocess.run(
-            ["git", "pull", "origin", "main", "--rebase"],
             cwd=repo_root, check=True, capture_output=True,
         )
 
@@ -323,6 +317,12 @@ def git_commit_and_push(repo_root: str, message: str) -> bool:
 
         subprocess.run(
             ["git", "commit", "-m", message],
+            cwd=repo_root, check=True, capture_output=True,
+        )
+
+        # Rebase our commit on top of any remote changes, then push
+        subprocess.run(
+            ["git", "pull", "origin", "main", "--rebase"],
             cwd=repo_root, check=True, capture_output=True,
         )
         subprocess.run(

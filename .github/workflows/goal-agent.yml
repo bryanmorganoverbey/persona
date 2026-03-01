@@ -56,9 +56,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/goal-agent/requirements.txt
 
-      - name: Pull remote changes
-        run: git pull origin main
-
       - name: Run goal agent
         working-directory: ${{ github.workspace }}
         run: |
