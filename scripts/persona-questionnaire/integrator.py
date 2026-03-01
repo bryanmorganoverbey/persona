@@ -130,7 +130,7 @@ def generate_file_updates(
         # Estimate: ~4K tokens at Sonnet-4-6 rates = ~$0.06 typical
         estimated_cost = 0.06
         if not check_budget_before_call(remaining_budget, estimated_cost):
-            print(f"  Budget insufficient (${remaining_budget:.4f} < ${estimated_cost:.2f}) - skipping file update generation")
+            print(f"  Budget insufficient (${remaining_budget:.4f} remaining, ${estimated_cost:.2f} needed) - skipping file update generation")
             return [], 0.0
 
     client = anthropic.Anthropic()
