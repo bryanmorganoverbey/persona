@@ -13,6 +13,7 @@ from pathlib import Path
 import anthropic
 
 from rate_limiter import limiter
+from budget import check_budget_before_call, BudgetExceededException
 
 MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = 4096
@@ -109,14 +110,26 @@ def match_answers_to_questions(
 
 
 def generate_file_updates(
-    matched_qa: list[dict], repo_root: str
+    matched_qa: list[dict], repo_root: str, remaining_budget: float | None = None
 ) -> tuple[list[dict], float]:
     """
     Use Claude to generate file operations from matched Q&A pairs.
+    
+    Args:
+        matched_qa: List of matched question-answer pairs
+        repo_root: Root directory of the repository
+        remaining_budget: Remaining budget in USD. If provided, will check before API call.
+    
     Returns (operations_list, cost_usd).
     """
     if not matched_qa:
         return [], 0.0
+
+    # Check budget before making API call
+    if remaining_budget is not None:
+        # Estimate: ~4K tokens at Sonnet-4-6 rates = ~$0.06 typical
+        estimated_cost = 0.06
+        check_budget_before_call(remaining_budget, estimated_cost)
 
     client = anthropic.Anthropic()
 

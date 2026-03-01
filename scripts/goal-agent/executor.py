@@ -7,6 +7,7 @@ import os
 import anthropic
 from pathlib import Path
 from rate_limiter import limiter
+from budget import check_budget_before_call, BudgetExceededException
 
 
 MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
@@ -82,9 +83,13 @@ def load_goal_context(goal_index_path: str) -> str:
         return "(Goal context file not found)"
 
 
-def execute_task(task: dict) -> dict:
+def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     """
     Execute a single task using the Claude API with tool use.
+
+    Args:
+        task: Task dictionary with description, goal info, etc.
+        remaining_budget: Remaining budget in USD. If provided, will check before API call.
 
     Returns a dict with:
         - result: the markdown output from the agent
@@ -92,7 +97,14 @@ def execute_task(task: dict) -> dict:
         - clarification_question: str or None
         - tokens_used: dict with input/output counts
         - model: which model was used
+        - cost_usd: estimated cost of this task
     """
+    # Check budget before making API call
+    if remaining_budget is not None:
+        # Estimate: ~8K tokens at Sonnet-4-6 rates = ~$0.10 typical
+        estimated_cost = 0.10
+        check_budget_before_call(remaining_budget, estimated_cost)
+    
     client = anthropic.Anthropic()
 
     goal_context = load_goal_context(task["goal_index_path"])

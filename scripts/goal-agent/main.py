@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 
 from scanner import scan_goals, build_work_queue
 from executor import execute_task
+from budget import BudgetExceededException
 from reporter import (
     create_attempt_file,
     update_attempt_with_results,
@@ -106,7 +107,8 @@ def run(repo_root: str, month: str | None = None) -> dict:
             )
 
             # Execute via Claude API
-            result = execute_task(task_dict)
+            remaining = MAX_BUDGET_USD - cumulative_cost
+            result = execute_task(task_dict, remaining_budget=remaining)
             task_cost = result.get("cost_usd", 0.0)
             cumulative_cost += task_cost
             print(f"  Tokens used: {result['tokens_used']}")
@@ -145,6 +147,18 @@ def run(repo_root: str, month: str | None = None) -> dict:
                 f"goal-agent: results for [{task.goal_name}] {task.description}",
             )
 
+        except BudgetExceededException as e:
+            print(f"  BUDGET EXCEEDED: {e}")
+            notify_task_failed(task_dict, f"Budget exceeded: {e}")
+            stats["failed"] += 1
+            
+            # Commit partial results and break
+            git_commit_and_push(
+                repo_root,
+                f"goal-agent: budget exceeded at [{task.goal_name}] {task.description}",
+            )
+            break
+
         except Exception as e:
             print(f"  FAILED: {e}")
             traceback.print_exc()
@@ -178,4 +192,10 @@ if __name__ == "__main__":
 
     # Exit with error if all tasks failed
     if stats["attempted"] > 0 and stats["completed"] == 0 and stats["blocked"] == 0:
+        print("ERROR: No tasks completed successfully")
+        sys.exit(1)
+    
+    # Exit with error if budget was exceeded
+    if cumulative_cost > MAX_BUDGET_USD:
+        print(f"ERROR: Budget exceeded (${cumulative_cost:.4f} > ${MAX_BUDGET_USD:.2f})")
         sys.exit(1)

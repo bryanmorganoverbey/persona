@@ -9,6 +9,7 @@ import os
 import anthropic
 
 from rate_limiter import limiter
+from budget import check_budget_before_call, BudgetExceededException
 
 MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = 4096
@@ -65,12 +66,25 @@ def generate_questions(
     category_summary: str,
     profile_text: str,
     previous_questions: list[str] | None = None,
+    remaining_budget: float | None = None,
 ) -> tuple[list[dict], float]:
     """
     Generate ~20 persona questions using Claude.
 
+    Args:
+        category_summary: Summary of existing categories
+        profile_text: User profile content
+        previous_questions: List of previously asked questions to avoid
+        remaining_budget: Remaining budget in USD. If provided, will check before API call.
+
     Returns (questions_list, cost_usd).
     """
+    # Check budget before making API call
+    if remaining_budget is not None:
+        # Estimate: ~4K tokens at Sonnet-4-6 rates = ~$0.06 typical
+        estimated_cost = 0.06
+        check_budget_before_call(remaining_budget, estimated_cost)
+    
     client = anthropic.Anthropic()
 
     previous_note = ""
