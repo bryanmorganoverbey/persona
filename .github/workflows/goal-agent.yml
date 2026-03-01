@@ -37,6 +37,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       GOAL_AGENT_MAX_TASKS: ${{ github.event.inputs.max_tasks || '1' }}
+      GOAL_AGENT_MAX_BUDGET_USD: '5.0'
       GOAL_AGENT_MODEL: 'claude-sonnet-4-6'
       GOAL_AGENT_MAX_CALLS_PER_MIN: '5'
       GOAL_AGENT_MAX_TOKENS_PER_MIN: '10000'

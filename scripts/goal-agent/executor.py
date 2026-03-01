@@ -12,6 +12,18 @@ from rate_limiter import limiter
 MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
 MAX_TOKENS = int(os.environ.get("GOAL_AGENT_MAX_TOKENS", "8192"))
 
+COST_PER_MTOK = {
+    "claude-sonnet-4-6": {"input": 3.0, "output": 15.0},
+    "claude-haiku-4-5": {"input": 0.80, "output": 4.0},
+}
+DEFAULT_COST = {"input": 3.0, "output": 15.0}
+
+
+def estimate_cost(input_tokens: int, output_tokens: int, model: str = MODEL) -> float:
+    """Estimate USD cost from token counts."""
+    rates = COST_PER_MTOK.get(model, DEFAULT_COST)
+    return (input_tokens * rates["input"] + output_tokens * rates["output"]) / 1_000_000
+
 SYSTEM_PROMPT = """You are an autonomous goal execution agent working on tasks from a personal vision board.
 
 ## Your Role
@@ -121,14 +133,16 @@ def execute_task(task: dict) -> dict:
         if match:
             clarification_question = match.group(1).strip()
 
+    input_tok = response.usage.input_tokens
+    output_tok = response.usage.output_tokens
+    cost = estimate_cost(input_tok, output_tok)
+
     return {
         "result": result_text,
         "needs_clarification": needs_clarification,
         "clarification_question": clarification_question,
-        "tokens_used": {
-            "input": response.usage.input_tokens,
-            "output": response.usage.output_tokens,
-        },
+        "tokens_used": {"input": input_tok, "output": output_tok},
+        "cost_usd": cost,
         "model": MODEL,
     }
 

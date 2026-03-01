@@ -32,6 +32,7 @@ from telegram import (
 
 
 MAX_TASKS_PER_RUN = int(os.environ.get("GOAL_AGENT_MAX_TASKS", "1"))
+MAX_BUDGET_USD = float(os.environ.get("GOAL_AGENT_MAX_BUDGET_USD", "5.0"))
 
 
 def run(repo_root: str, month: str | None = None) -> dict:
@@ -46,6 +47,7 @@ def run(repo_root: str, month: str | None = None) -> dict:
     print(f"=== Goal Agent Run: {datetime.now(timezone.utc).isoformat()} ===")
     print(f"Repo root: {repo_root}")
     print(f"Max tasks per run: {MAX_TASKS_PER_RUN}")
+    print(f"Budget limit: ${MAX_BUDGET_USD:.2f}")
 
     # Step 1: Scan
     goals = scan_goals(repo_root, month=month)
@@ -65,8 +67,13 @@ def run(repo_root: str, month: str | None = None) -> dict:
 
     # Step 3: Execute each task
     stats = {"attempted": 0, "completed": 0, "failed": 0, "blocked": 0}
+    cumulative_cost = 0.0
 
     for i, task in enumerate(queue):
+        if cumulative_cost >= MAX_BUDGET_USD:
+            print(f"\n  Budget exhausted (${cumulative_cost:.4f} >= ${MAX_BUDGET_USD:.2f}). Stopping.")
+            break
+
         if i > 0:
             print(f"\n  Cooling down 15s between tasks...")
             time.sleep(15)
@@ -100,7 +107,10 @@ def run(repo_root: str, month: str | None = None) -> dict:
 
             # Execute via Claude API
             result = execute_task(task_dict)
+            task_cost = result.get("cost_usd", 0.0)
+            cumulative_cost += task_cost
             print(f"  Tokens used: {result['tokens_used']}")
+            print(f"  Task cost: ${task_cost:.4f} | Cumulative: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
 
             if result["needs_clarification"]:
                 # Blocked — needs user input
@@ -153,6 +163,7 @@ def run(repo_root: str, month: str | None = None) -> dict:
     print(f"Completed: {stats['completed']}")
     print(f"Failed: {stats['failed']}")
     print(f"Blocked: {stats['blocked']}")
+    print(f"Total cost: ${cumulative_cost:.4f} / ${MAX_BUDGET_USD:.2f}")
 
     notify_run_summary(**stats)
 
