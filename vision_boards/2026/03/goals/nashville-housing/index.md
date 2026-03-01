@@ -34,7 +34,7 @@ In progress — actively searching.
 
 ## Tasks
 
-- [ ] Search listings in target areas
+- [x] Search listings in target areas
 - [ ] Shortlist 3-5 options
 - [ ] Virtual tours or contact landlords
 - [ ] Confirm pet policy for top picks
