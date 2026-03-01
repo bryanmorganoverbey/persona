@@ -1,3 +1,6 @@
+import subprocess
+
+
 def git_commit_and_push(repo_root: str, message: str) -> bool:
     """Stage all changes, pull latest changes before committing, and push."""
     try:
