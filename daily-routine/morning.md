@@ -7,8 +7,8 @@ confidence: high
 
 - Wake up around 7-9am.
 - Coffee first thing.
-- Straight into work.
-- Breakfast around 10am.
+- Straight into work — catch up on coding my programs
+- Breakfast around 11am.
 
 ## See Also
 

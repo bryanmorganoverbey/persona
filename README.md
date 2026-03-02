@@ -17,6 +17,7 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | Folder | Description |
 |--------|-------------|
 | [beverages](./beverages/) | Preferences related to drinks and hydration. Covers daily go-to drinks, coffee orders, and beverage habits. |
+| [climate-preferences](./climate-preferences/) | Preferences related to weather, temperature, and environmental conditions. Covers comfort ranges, seasonal preferences, and ideal living environments. |
 | [communication](./communication/) | Preferences related to how I communicate and prefer to be communicated with. Covers tone, preferred channels, response time expectations, and formality levels. |
 | [daily-routine](./daily-routine/) | Preferences related to daily structure and habits. Covers morning routines, evening wind-down, and general rhythm of the day. |
 | [education](./education/) | Preferences related to learning and personal development. Covers learning style, subject interests, course platforms, and self-improvement goals. |
@@ -41,10 +42,10 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [sustainability](./sustainability/) | Preferences related to environmental consciousness and ethical purchasing. Covers how sustainability factors into buying decisions, lifestyle choices, and brand preferences. |
 | [technology](./technology/) | Preferences related to devices, software, and digital services. Covers operating systems, hardware brands, development tools, apps, subscriptions, and smart home setup. |
 | [travel](./travel/) | Preferences related to travel and vacations. Covers destination preferences, accommodation standards, airline and seating choices, packing habits, and trip planning style. |
+| [vacation-preferences](./vacation-preferences/) | Preferences related to travel, time off, and recreation. Covers trip planning styles, activity preferences, and ideal break activities. |
 | [values](./values/) | Core personal values and guiding principles. These inform decision-making across all other preference categories. |
 | [vehicles](./vehicles/) | Preferences related to cars and transportation. Covers vehicle type, brand preferences, features, fuel type, and commute preferences. |
 | [work](./work/) | Preferences related to productivity and work environment. Covers scheduling, tooling, workspace setup, meeting preferences, and workflow habits. |
-
 ## Improvement Roadmap
 
 Recommendations for making this repository more useful to AI agents, roughly ordered by impact.

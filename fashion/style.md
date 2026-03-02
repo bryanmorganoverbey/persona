@@ -13,4 +13,5 @@ Day-to-day clothing style: **athleisure** — comfortable, athletic-inspired clo
 - **Avoid:** Formal wear, dress shoes, button-downs, and anything that requires dry cleaning — unless I specifically ask for an occasion.
 - **Climate context:** I live in warm, walkable places (see [travel/destinations.md](../travel/destinations.md)), so prioritize breathable, lightweight fabrics.
 - **Brands:** No strong brand loyalty. Prioritize comfort and fit over labels.
+- **Brand affiliation** — clothes that signal group identity, such as drift racing scene apparel or items representing specific towns like Puerto Escondido
 - **Secondhand is fine** — see [shopping/habits.md](../shopping/habits.md).

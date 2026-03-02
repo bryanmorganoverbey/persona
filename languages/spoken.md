@@ -8,6 +8,14 @@ confidence: high
 - **English** — fluent (native)
 - **Spanish** — fluent or conversational
 
+## Learning Preferences
+
+Currently learning Spanish through:
+- **In-person conversation** — talking to native speakers to learn new words
+- **Music** — listening to Spanish-language music including cumbia, reggaeton, and corridos
+
+This immersion-based approach works better than structured grammar drills or apps.
+
 ## Agent Guidelines
 
 - **Default to English** for all written communication and content.
