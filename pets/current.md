@@ -7,7 +7,8 @@ confidence: high
 
 I have a dog named **Remi**.
 
-- **Size:** Medium breed
+- **Size:** Medium (40 lbs)
+- **Breed:** Pit bull and Jack Russell Terrier mix.
 - **Activity level:** Active — needs lots of exercise and outdoor time
 - **Diet:** Standard dog food
 

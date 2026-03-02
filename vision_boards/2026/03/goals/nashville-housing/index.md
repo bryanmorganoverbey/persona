@@ -1,7 +1,7 @@
 ---
 last_reviewed: 2026-02-28
 confidence: high
-status: in_progress
+status: not_started
 deadline: 2026-04-12
 ---
 
@@ -9,7 +9,10 @@ deadline: 2026-04-12
 
 ## Goal
 
-Have a signed lease on a house in the Nashville area before the April 12 departure from Mexico.
+Have a signed 6 month (maximum time) lease on a house in the Nashville area before the April 12 departure from Mexico.
+Do not consider properties with 1 year leases.
+
+Do consider vacant land, alternatives to leasing, and propose solutions that would allow me to stay until just November. Lease takeovers are good too.
 
 ## Target Areas
 
@@ -34,8 +37,8 @@ In progress — actively searching.
 
 ## Tasks
 
-- [x] Search listings in target areas
-- [x] Shortlist 3-5 options
-- [x] Virtual tours or contact landlords
+- [ ] Search listings in target areas (furnished finder, facebook, craigslist, etc.)
+- [ ] Shortlist 3-5 options
+- [ ] Virtual tours or contact landlords
 - [ ] Confirm pet policy for top picks
 - [ ] Sign lease before April 12
