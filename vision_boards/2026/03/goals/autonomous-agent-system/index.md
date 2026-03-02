@@ -1,7 +1,7 @@
 ---
 last_reviewed: 2026-02-28
 confidence: high
-status: in_progress
+status: maintenance
 ---
 
 # Build Autonomous Goal Execution System
@@ -60,15 +60,6 @@ Before the agent can run, add these GitHub repository secrets:
    - **Commits** all changes to the repo
 6. Sends a **run summary** via Telegram
 
-## Other Proposals
-
-| Proposal | File |
-|----------|------|
-| B: Claude Code CLI | [proposal-b-claude-code-cli.md](./proposal-b-claude-code-cli.md) |
-| C: AWS Step Functions | [proposal-c-aws-step-functions.md](./proposal-c-aws-step-functions.md) |
-| D: Codex GitHub Action | [proposal-d-codex-action.md](./proposal-d-codex-action.md) |
-| Comparison | [comparison.md](./comparison.md) |
-
 ## Tasks
 
 - [x] Choose architecture (review proposals A-D)
@@ -79,6 +70,6 @@ Before the agent can run, add these GitHub repository secrets:
 - [x] Implement the executor (spin up LLM agent)
 - [x] Implement the reporter (write results back, commit)
 - [x] Implement safety boundaries and permission checks
-- [ ] Add GitHub secrets (MINIMAX_API_KEY, BRAVE_SEARCH_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
-- [ ] Test with a low-risk goal (e.g., research task)
-- [ ] Deploy and monitor first autonomous run
+- [x] Add GitHub secrets (MINIMAX_API_KEY, BRAVE_SEARCH_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+- [x] Test with a low-risk goal (e.g., research task)
+- [x] Deploy and monitor first autonomous run
