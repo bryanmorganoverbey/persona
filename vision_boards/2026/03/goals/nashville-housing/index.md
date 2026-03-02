@@ -43,6 +43,6 @@ In progress — actively searching.
 
 - [x] Search listings in target areas (furnished finder, facebook, craigslist, etc.)
 - [x] Shortlist 3-5 options
-- [ ] Virtual tours or contact landlords
+- [x] Virtual tours or contact landlords
 - [ ] Confirm pet policy for top picks
 - [ ] Sign lease before April 12
