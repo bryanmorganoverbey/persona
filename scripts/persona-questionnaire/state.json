@@ -1,41 +1,41 @@
 {
-  "message_id": 133,
+  "message_id": 147,
   "questions": [
     {
       "number": 1,
-      "text": "What does your daily movement or exercise routine look like these days? Do you have a specific workout you do, like running, CrossFit, yoga, swimming, or something else? Do you prefer working out alone or with others?",
-      "category": "fitness",
+      "text": "What's your go-to order at a coffee shop? Like, when you need caffeine and a change of scenery \u2014 do you get something consistent every time, or do you mix it up based on mood/season? Any specific drink that hits different?",
+      "category": "beverages",
       "type": "enrich",
-      "target_file": "fitness-routine.md"
+      "target_file": "coffee-orders.md"
     },
     {
       "number": 2,
-      "text": "When you're buying something \u2014 whether it's a new gadget, a piece of furniture, or even groceries \u2014 how do you factor in sustainability? Are there specific brands you prefer for being more ethical, or types of products where sustainability matters more to you?",
-      "category": "sustainability",
+      "text": "When you're shopping for yourself \u2014 not gifts for someone else \u2014 how do you prefer to do it? Are you someone who researches the hell out of something before buying, or do you more like to see it in person and decide on the spot? Online vs. in-store for different types of things?",
+      "category": "shopping",
       "type": "enrich",
-      "target_file": "purchasing-decisions.md"
+      "target_file": "personal-shopping-habits.md"
     },
     {
       "number": 3,
-      "text": "What's your approach to transportation when you're living somewhere? Do you typically rent a car, buy one, rely on public transit, or just use bikes/scooters and ride-shares? Any preferences around car type or features?",
-      "category": "vehicles",
+      "text": "How do you handle the seasonal switch between Mexico and the US? Like, do you have a ritual or checklist for when you leave one place and go to the other? Any specific way you prep mentally or practically for that big of a change every few months?",
+      "category": "housing",
       "type": "enrich",
-      "target_file": "transportation-style.md"
+      "target_file": "seasonal-transition-rituals.md"
     },
     {
       "number": 4,
-      "text": "What kinds of video games do you enjoy \u2014 if any? Are you into competitive games, story-driven single-player games, casual mobile games, board games? Do you game solo or prefer playing with friends?",
-      "category": "gaming",
+      "text": "Do you have any outdoor or nature-related activities you like to do when you're not working? Like hiking, swimming, surfing, running outside, or just hanging out in parks/nature? Any preference for the type of nature experience?",
+      "category": "outdoor-activities",
       "type": "new",
-      "target_file": "gaming-preferences.md"
+      "target_file": "outdoor-preferences.md"
     },
     {
       "number": 5,
-      "text": "Do you have any mental frameworks, decision-making models, or productivity philosophies that you consciously use? Things like Stoicism, the 80/20 rule, specific planning systems, or anything you return to when thinking through big choices?",
-      "category": "mental-models",
+      "text": "What about podcasts, YouTube channels, or newsletters \u2014 is there anything you regularly consume for learning or just for fun? Any specific creators or shows you'd recommend to someone who knows what you like?",
+      "category": "content-consumption",
       "type": "new",
-      "target_file": "decision-frameworks.md"
+      "target_file": "digital-content.md"
     }
   ],
-  "sent_at": "2026-03-02T16:58:53.118829+00:00"
+  "sent_at": "2026-03-02T18:49:08.444308+00:00"
 }
