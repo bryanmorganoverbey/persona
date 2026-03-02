@@ -31,6 +31,10 @@ Must meet the criteria in [housing/minimum-requirements.md](../../../../housing/
 - Walkable neighborhood preferred
 - Kitchen for daily cooking
 
+## Relevant Files
+
+- [Pets](../pets/) - Remi's details.
+
 ## Status
 
 In progress — actively searching.

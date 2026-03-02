@@ -11,6 +11,10 @@ deadline: 2026-04-12
 
 Plan and prepare all logistics for the move from Mexico back to Tennessee by April 12.
 
+## Relevant Files
+
+- [Pets](../../../../../pets/)
+
 ## Tasks
 
 - [ ] Book flights (for one person + Remi)

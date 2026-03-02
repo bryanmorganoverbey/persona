@@ -23,6 +23,18 @@ I have a dog named **Remi**.
 
 **Status:** Going well. Data sets are being tracked to measure progress.
 
+## Travel
+When traveling by airplane, Remi is a service-animal. She flies for free. We must be sure to call the airline some time before the scheduled flight to verify there is space for her on the plane, and to get assigned seats so that she hes room on the plane.
+
+## Neutered
+Remi is not neutered.
+
+## Tags
+Remi does not have a tag on her collar
+
+## Microchip
+Remi is not microchipped.
+
 ## Agent Guidelines
 
 - **Remi travels with me.** When evaluating housing, accommodation, or travel, always check pet policies and pet-friendliness.
