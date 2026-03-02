@@ -1,6 +1,6 @@
 """
-Goal Executor — takes a task from the work queue, calls Claude API with tools
-to execute it, and returns the results.
+Goal Executor — takes a task from the work queue, calls MiniMax API
+(Anthropic-compatible) to execute it, and returns the results.
 """
 
 import os
@@ -9,15 +9,18 @@ from pathlib import Path
 from rate_limiter import limiter
 from budget import check_budget_before_call
 
+MINIMAX_BASE_URL = "https://api.minimax.io/anthropic"
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
-MODEL = os.environ.get("GOAL_AGENT_MODEL", "claude-sonnet-4-6")
+MODEL = os.environ.get("GOAL_AGENT_MODEL", "MiniMax-M2.5")
 MAX_TOKENS = int(os.environ.get("GOAL_AGENT_MAX_TOKENS", "8192"))
 
 COST_PER_MTOK = {
-    "claude-sonnet-4-6": {"input": 3.0, "output": 15.0},
-    "claude-haiku-4-5": {"input": 0.80, "output": 4.0},
+    "MiniMax-M2.5": {"input": 0.30, "output": 1.10},
+    "MiniMax-M2.5-highspeed": {"input": 0.30, "output": 1.10},
+    "MiniMax-M2.1": {"input": 0.30, "output": 1.10},
 }
-DEFAULT_COST = {"input": 3.0, "output": 15.0}
+DEFAULT_COST = {"input": 0.30, "output": 1.10}
 
 
 def estimate_cost(input_tokens: int, output_tokens: int, model: str = MODEL) -> float:
@@ -30,13 +33,12 @@ SYSTEM_PROMPT = """You are an autonomous goal execution agent working on tasks f
 ## Your Role
 You execute specific tasks from a goal. Each task is a concrete action item. Your job is to:
 1. Understand what the task requires
-2. Use web search, web fetch, and code execution tools to accomplish it
+2. Research and reason about the best approach
 3. Return thorough, actionable results
 
 ## Guidelines
-- Be thorough in your research. Use multiple sources when possible.
+- Be thorough and analytical.
 - Provide specific, actionable information — not vague summaries.
-- Include links to sources when you find useful information.
 - If the task requires creating a deliverable (list, comparison, analysis), produce the full deliverable.
 - If you cannot complete the task fully, explain exactly what you accomplished and what remains.
 - If you need information from the user to proceed, clearly state what you need in a section called "CLARIFICATION NEEDED".
@@ -69,7 +71,7 @@ def build_task_prompt(task: dict, goal_context: str) -> str:
 
 ## Instructions
 
-Execute this task thoroughly. Use web search to find real, current information.
+Execute this task thoroughly.
 Produce a complete deliverable that can be saved as a file in the goal folder.
 """
     return prompt
@@ -85,7 +87,7 @@ def load_goal_context(goal_index_path: str) -> str:
 
 def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     """
-    Execute a single task using the Claude API with tool use.
+    Execute a single task using the MiniMax API.
 
     Args:
         task: Task dictionary with description, goal info, etc.
@@ -114,7 +116,10 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
                 "budget_exceeded": True,
             }
     
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(
+        base_url=MINIMAX_BASE_URL,
+        api_key=MINIMAX_API_KEY,
+    )
 
     goal_context = load_goal_context(task["goal_index_path"])
     user_prompt = build_task_prompt(task, goal_context)
@@ -126,10 +131,6 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
         model=MODEL,
         max_tokens=MAX_TOKENS,
         system=SYSTEM_PROMPT,
-        tools=[
-            {"type": "web_search_20260209", "name": "web_search"},
-            {"type": "web_fetch_20260209", "name": "web_fetch"},
-        ],
         messages=[{"role": "user", "content": user_prompt}],
     )
 

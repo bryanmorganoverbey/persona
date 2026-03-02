@@ -1,7 +1,7 @@
 """
 Goal Agent — main orchestrator.
 
-Scans vision board goals for incomplete tasks, executes them via Claude API,
+Scans vision board goals for incomplete tasks, executes them via MiniMax API,
 reports results back to the repo, and notifies via Telegram.
 """
 
@@ -95,7 +95,7 @@ def run(repo_root: str, month: str | None = None) -> dict:
             notify_task_started(task_dict)
 
             # Create attempt file with plan
-            plan = f"Execute task: {task.description}\nGoal: {task.goal_title}\nUsing Claude API with web search and code execution tools."
+            plan = f"Execute task: {task.description}\nGoal: {task.goal_title}\nUsing MiniMax API."
             attempt_path = create_attempt_file(task_dict, plan, task.goal_dir)
             print(f"  Created attempt: {attempt_path}")
 

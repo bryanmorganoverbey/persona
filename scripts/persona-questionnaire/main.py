@@ -164,7 +164,6 @@ def handle_replies(repo_root: str, state: dict, remaining_budget: float) -> dict
         clear_state(repo_root)
         return stats
 
-    # Generate file updates via Claude
     print("Generating file updates from answers...")
     operations, cost = generate_file_updates(matched, repo_root, remaining_budget=remaining_budget)
     stats["cost_usd"] += cost
@@ -234,7 +233,7 @@ def handle_questions(repo_root: str, remaining_budget: float) -> dict:
     history = load_question_history(repo_root)
 
     # Generate questions
-    print("Generating questions via Claude...")
+    print("Generating questions via MiniMax...")
     questions, cost = generate_questions(summary, profile, history, remaining_budget=remaining_budget)
     stats["cost_usd"] += cost
     print(f"Generated {len(questions)} questions (cost: ${cost:.4f})")

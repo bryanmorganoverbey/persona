@@ -1,6 +1,7 @@
 """
 Answer Integrator — takes user replies, matches them to questions, and uses
-Claude to merge answers into the appropriate category files.
+MiniMax API (Anthropic-compatible) to merge answers into the appropriate
+category files.
 """
 
 import json
@@ -15,14 +16,18 @@ import anthropic
 from rate_limiter import limiter
 from budget import check_budget_before_call
 
-MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "claude-sonnet-4-6")
+MINIMAX_BASE_URL = "https://api.minimax.io/anthropic"
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+
+MODEL = os.environ.get("QUESTIONNAIRE_MODEL", "MiniMax-M2.5")
 MAX_TOKENS = 4096
 
 COST_PER_MTOK = {
-    "claude-sonnet-4-6": {"input": 3.0, "output": 15.0},
-    "claude-haiku-4-5": {"input": 0.80, "output": 4.0},
+    "MiniMax-M2.5": {"input": 0.30, "output": 1.10},
+    "MiniMax-M2.5-highspeed": {"input": 0.30, "output": 1.10},
+    "MiniMax-M2.1": {"input": 0.30, "output": 1.10},
 }
-DEFAULT_COST = {"input": 3.0, "output": 15.0}
+DEFAULT_COST = {"input": 0.30, "output": 1.10}
 
 
 def estimate_cost(input_tokens: int, output_tokens: int) -> float:
@@ -127,13 +132,15 @@ def generate_file_updates(
 
     # Check budget before making API call
     if remaining_budget is not None:
-        # Estimate: ~4K tokens at Sonnet-4-6 rates = ~$0.06 typical
-        estimated_cost = 0.06
+        estimated_cost = 0.01
         if not check_budget_before_call(remaining_budget, estimated_cost):
             print(f"  Budget insufficient (${remaining_budget:.4f} remaining, ${estimated_cost:.2f} needed) - skipping file update generation")
             return [], 0.0
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(
+        base_url=MINIMAX_BASE_URL,
+        api_key=MINIMAX_API_KEY,
+    )
 
     # Read existing file contents for context
     existing_context = []

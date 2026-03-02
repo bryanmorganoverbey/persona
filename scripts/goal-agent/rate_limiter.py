@@ -1,6 +1,6 @@
 """
 Rate Limiter — enforces per-minute limits on API calls and token usage
-to avoid hitting Anthropic rate limits.
+to avoid hitting MiniMax API rate limits.
 """
 
 import os
