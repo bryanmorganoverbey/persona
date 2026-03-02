@@ -41,7 +41,8 @@ Before the agent can run, add these GitHub repository secrets:
 
 | Secret | Purpose | How to Get |
 |--------|---------|------------|
-| `ANTHROPIC_API_KEY` | Claude API access | [console.anthropic.com](https://console.anthropic.com/) |
+| `MINIMAX_API_KEY` | MiniMax API access | [platform.minimax.io](https://platform.minimax.io/) |
+| `BRAVE_SEARCH_API_KEY` | Web search tool | [brave.com/search/api](https://brave.com/search/api/) (free tier: 2,000 queries/month) |
 | `TELEGRAM_BOT_TOKEN` | Telegram bot | Message [@BotFather](https://t.me/BotFather) on Telegram |
 | `TELEGRAM_CHAT_ID` | Your Telegram chat ID | Message [@userinfobot](https://t.me/userinfobot) on Telegram |
 
@@ -53,7 +54,7 @@ Before the agent can run, add these GitHub repository secrets:
 4. **Work queue** is capped at 3 tasks per run (configurable via `GOAL_AGENT_MAX_TASKS`)
 5. For each task:
    - Creates an **attempt file** with the plan, commits it
-   - **Executes** via Claude Sonnet 4.6 API with web search, web fetch, and code execution tools
+   - **Executes** via MiniMax API with web_search and web_fetch tools (agentic loop, up to 15 rounds)
    - If blocked, sends a **Telegram message** asking for clarification
    - If successful, writes results back, **checks off the task**, and updates goal status
    - **Commits** all changes to the repo
@@ -78,6 +79,6 @@ Before the agent can run, add these GitHub repository secrets:
 - [x] Implement the executor (spin up LLM agent)
 - [x] Implement the reporter (write results back, commit)
 - [x] Implement safety boundaries and permission checks
-- [ ] Add GitHub secrets (ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+- [ ] Add GitHub secrets (MINIMAX_API_KEY, BRAVE_SEARCH_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
 - [ ] Test with a low-risk goal (e.g., research task)
 - [ ] Deploy and monitor first autonomous run

@@ -1,6 +1,6 @@
 """
 Goal Executor — takes a task from the work queue, calls MiniMax API
-(Anthropic-compatible) to execute it, and returns the results.
+(Anthropic-compatible) to execute it with tool support, and returns the results.
 """
 
 import os
@@ -8,12 +8,14 @@ import anthropic
 from pathlib import Path
 from rate_limiter import limiter
 from budget import check_budget_before_call
+from tools import TOOL_DEFINITIONS, execute_tool
 
 MINIMAX_BASE_URL = "https://api.minimax.io/anthropic"
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
 MODEL = os.environ.get("GOAL_AGENT_MODEL", "MiniMax-M2.5")
 MAX_TOKENS = int(os.environ.get("GOAL_AGENT_MAX_TOKENS", "8192"))
+MAX_TOOL_ROUNDS = int(os.environ.get("GOAL_AGENT_MAX_TOOL_ROUNDS", "15"))
 
 COST_PER_MTOK = {
     "MiniMax-M2.5": {"input": 0.30, "output": 1.10},
@@ -85,23 +87,33 @@ def load_goal_context(goal_index_path: str) -> str:
         return "(Goal context file not found)"
 
 
+def _extract_text(content_blocks) -> str:
+    """Extract concatenated text from a list of content blocks."""
+    return "".join(block.text for block in content_blocks if block.type == "text")
+
+
+def _extract_tool_uses(content_blocks) -> list:
+    """Extract tool_use blocks from a response."""
+    return [block for block in content_blocks if block.type == "tool_use"]
+
+
 def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     """
-    Execute a single task using the MiniMax API.
+    Execute a single task using the MiniMax API with an agentic tool-use loop.
 
-    Args:
-        task: Task dictionary with description, goal info, etc.
-        remaining_budget: Remaining budget in USD. If provided, will check before API call.
+    The model can call web_search and web_fetch tools. Each tool call triggers
+    another API round until the model produces a final text response or we hit
+    MAX_TOOL_ROUNDS.
 
     Returns a dict with:
         - result: the markdown output from the agent
         - needs_clarification: bool
         - clarification_question: str or None
-        - tokens_used: dict with input/output counts
+        - tokens_used: dict with input/output counts (accumulated across rounds)
         - model: which model was used
         - cost_usd: estimated cost of this task
+        - tool_calls_made: number of tool calls executed
     """
-    # Check budget before making API call
     if remaining_budget is not None:
         estimated_cost = 0.10
         if not check_budget_before_call(remaining_budget, estimated_cost):
@@ -114,8 +126,9 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
                 "cost_usd": 0.0,
                 "model": MODEL,
                 "budget_exceeded": True,
+                "tool_calls_made": 0,
             }
-    
+
     client = anthropic.Anthropic(
         base_url=MINIMAX_BASE_URL,
         api_key=MINIMAX_API_KEY,
@@ -124,24 +137,53 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     goal_context = load_goal_context(task["goal_index_path"])
     user_prompt = build_task_prompt(task, goal_context)
 
-    limiter.wait_if_needed()
-    print(f"  Rate limiter: {limiter.status()}")
+    messages = [{"role": "user", "content": user_prompt}]
+    total_input_tokens = 0
+    total_output_tokens = 0
+    total_tool_calls = 0
 
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=MAX_TOKENS,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
+    for round_num in range(1, MAX_TOOL_ROUNDS + 1):
+        limiter.wait_if_needed()
+        print(f"  Round {round_num}/{MAX_TOOL_ROUNDS} | Rate limiter: {limiter.status()}")
 
-    total_tokens = response.usage.input_tokens + response.usage.output_tokens
-    limiter.record_call(tokens_used=total_tokens)
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=MAX_TOKENS,
+            system=SYSTEM_PROMPT,
+            tools=TOOL_DEFINITIONS,
+            messages=messages,
+        )
 
-    # Extract text blocks from the response
-    result_text = ""
-    for block in response.content:
-        if block.type == "text":
-            result_text += block.text
+        total_input_tokens += response.usage.input_tokens
+        total_output_tokens += response.usage.output_tokens
+        limiter.record_call(
+            tokens_used=response.usage.input_tokens + response.usage.output_tokens
+        )
+
+        tool_uses = _extract_tool_uses(response.content)
+
+        if response.stop_reason != "tool_use" or not tool_uses:
+            break
+
+        # Execute each tool call and build results
+        messages.append({"role": "assistant", "content": response.content})
+        tool_results = []
+        for tool_use in tool_uses:
+            total_tool_calls += 1
+            result_str = execute_tool(tool_use.name, tool_use.input)
+            tool_results.append({
+                "type": "tool_result",
+                "tool_use_id": tool_use.id,
+                "content": result_str,
+            })
+
+        messages.append({"role": "user", "content": tool_results})
+        print(f"  Executed {len(tool_uses)} tool call(s), continuing...")
+
+    result_text = _extract_text(response.content)
+    cost = estimate_cost(total_input_tokens, total_output_tokens)
+
+    print(f"  Finished after {round_num} round(s), {total_tool_calls} tool call(s)")
 
     needs_clarification = "CLARIFICATION NEEDED" in result_text
     clarification_question = None
@@ -155,18 +197,15 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
         if match:
             clarification_question = match.group(1).strip()
 
-    input_tok = response.usage.input_tokens
-    output_tok = response.usage.output_tokens
-    cost = estimate_cost(input_tok, output_tok)
-
     return {
         "result": result_text,
         "needs_clarification": needs_clarification,
         "clarification_question": clarification_question,
-        "tokens_used": {"input": input_tok, "output": output_tok},
+        "tokens_used": {"input": total_input_tokens, "output": total_output_tokens},
         "cost_usd": cost,
         "model": MODEL,
         "budget_exceeded": False,
+        "tool_calls_made": total_tool_calls,
     }
 
 
