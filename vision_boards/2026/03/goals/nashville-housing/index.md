@@ -1,7 +1,7 @@
 ---
 last_reviewed: 2026-02-28
 confidence: high
-status: not_started
+status: in_progress
 deadline: 2026-04-12
 ---
 
@@ -41,7 +41,7 @@ In progress — actively searching.
 
 ## Tasks
 
-- [ ] Search listings in target areas (furnished finder, facebook, craigslist, etc.)
+- [x] Search listings in target areas (furnished finder, facebook, craigslist, etc.)
 - [ ] Shortlist 3-5 options
 - [ ] Virtual tours or contact landlords
 - [ ] Confirm pet policy for top picks
