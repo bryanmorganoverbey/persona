@@ -1,41 +1,41 @@
 {
-  "message_id": 147,
+  "message_id": 152,
   "questions": [
     {
       "number": 1,
-      "text": "What's your go-to order at a coffee shop? Like, when you need caffeine and a change of scenery \u2014 do you get something consistent every time, or do you mix it up based on mood/season? Any specific drink that hits different?",
+      "text": "What's your approach to alcohol \u2014 do you drink socially, have a go-to drink, or steer clear entirely? Any preferences around beer, wine, cocktails, or spirits?",
       "category": "beverages",
       "type": "enrich",
-      "target_file": "coffee-orders.md"
+      "target_file": "alcohol-preferences.md"
     },
     {
       "number": 2,
-      "text": "When you're shopping for yourself \u2014 not gifts for someone else \u2014 how do you prefer to do it? Are you someone who researches the hell out of something before buying, or do you more like to see it in person and decide on the spot? Online vs. in-store for different types of things?",
-      "category": "shopping",
+      "text": "When you buy things, how important is it to you that a brand or company aligns with your values (fair trade, ethical labor, local production, etc.)? Is there a price point or product category where you care more about this?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "personal-shopping-habits.md"
+      "target_file": "purchasing-values.md"
     },
     {
       "number": 3,
-      "text": "How do you handle the seasonal switch between Mexico and the US? Like, do you have a ritual or checklist for when you leave one place and go to the other? Any specific way you prep mentally or practically for that big of a change every few months?",
-      "category": "housing",
+      "text": "What does your living space need to feel like 'home' to you? Are there specific decorative elements, colors, or vibes (minimalist, cozy, modern, etc.) that make a place feel right? Any must-have items you try to bring with you?",
+      "category": "home-decor",
       "type": "enrich",
-      "target_file": "seasonal-transition-rituals.md"
+      "target_file": "aesthetic.md"
     },
     {
       "number": 4,
-      "text": "Do you have any outdoor or nature-related activities you like to do when you're not working? Like hiking, swimming, surfing, running outside, or just hanging out in parks/nature? Any preference for the type of nature experience?",
-      "category": "outdoor-activities",
+      "text": "What kind of reading do you enjoy \u2014 fiction, non-fiction, both? Any favorite genres or authors? Do you prefer physical books, e-readers, or audiobooks?",
+      "category": "reading-preferences",
       "type": "new",
-      "target_file": "outdoor-preferences.md"
+      "target_file": "index.md"
     },
     {
       "number": 5,
-      "text": "What about podcasts, YouTube channels, or newsletters \u2014 is there anything you regularly consume for learning or just for fun? Any specific creators or shows you'd recommend to someone who knows what you like?",
-      "category": "content-consumption",
+      "text": "What are your news and information habits \u2014 do you follow specific outlets, podcasts, newsletters, or influencers? Any sources you trust for tech news, world events, or just interesting reads?",
+      "category": "information-consumption",
       "type": "new",
-      "target_file": "digital-content.md"
+      "target_file": "index.md"
     }
   ],
-  "sent_at": "2026-03-02T18:49:08.444308+00:00"
+  "sent_at": "2026-03-02T20:48:14.131365+00:00"
 }
