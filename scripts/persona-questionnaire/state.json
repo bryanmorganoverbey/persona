@@ -1,41 +1,41 @@
 {
-  "message_id": 130,
+  "message_id": 133,
   "questions": [
     {
       "number": 1,
-      "text": "When you're learning a new language (currently Spanish), do you prefer immersion-based learning (speaking with natives, watching content without subtitles) or structured lessons (grammar drills, apps like Duolingo)? What has worked best for you so far?",
-      "category": "languages",
+      "text": "What does your daily movement or exercise routine look like these days? Do you have a specific workout you do, like running, CrossFit, yoga, swimming, or something else? Do you prefer working out alone or with others?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "learning-approach.md"
+      "target_file": "fitness-routine.md"
     },
     {
       "number": 2,
-      "text": "What does your ideal morning look like from the moment you wake up until you start work? Walk me through your routine \u2014 coffee first? Exercise? Reading? Just coffee and jump into calls?",
-      "category": "daily-routine",
+      "text": "When you're buying something \u2014 whether it's a new gadget, a piece of furniture, or even groceries \u2014 how do you factor in sustainability? Are there specific brands you prefer for being more ethical, or types of products where sustainability matters more to you?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "morning-ritual.md"
+      "target_file": "purchasing-decisions.md"
     },
     {
       "number": 3,
-      "text": "When you buy clothes, are you more of an 'invest in one quality piece' person or a 'find something decent at a reasonable price and replace later' person? How do you balance durability with the reality of travel wear and tear?",
-      "category": "fashion",
+      "text": "What's your approach to transportation when you're living somewhere? Do you typically rent a car, buy one, rely on public transit, or just use bikes/scooters and ride-shares? Any preferences around car type or features?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "buying-philosophy.md"
+      "target_file": "transportation-style.md"
     },
     {
       "number": 4,
-      "text": "What are your preferences when it comes to weather and climate? Do you like it dry or humid? How hot is too hot for you? Do you seek out places with distinct seasons or prefer year-round consistency?",
-      "category": "climate-preferences",
+      "text": "What kinds of video games do you enjoy \u2014 if any? Are you into competitive games, story-driven single-player games, casual mobile games, board games? Do you game solo or prefer playing with friends?",
+      "category": "gaming",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "gaming-preferences.md"
     },
     {
       "number": 5,
-      "text": "What does your ideal vacation or extended break look like? Are you someone who plans every detail in advance, or do you prefer to figure it out as you go? Big city exploration, beach relaxation, adventure sports, or visiting friends and family?",
-      "category": "vacation-preferences",
+      "text": "Do you have any mental frameworks, decision-making models, or productivity philosophies that you consciously use? Things like Stoicism, the 80/20 rule, specific planning systems, or anything you return to when thinking through big choices?",
+      "category": "mental-models",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "decision-frameworks.md"
     }
   ],
-  "sent_at": "2026-03-02T16:49:29.055333+00:00"
+  "sent_at": "2026-03-02T16:58:53.118829+00:00"
 }
