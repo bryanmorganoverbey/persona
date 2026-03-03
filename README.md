@@ -30,6 +30,7 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [friendships](./friendships/) | Preferences related to social connections, making friends, and maintaining relationships. Covers how new people are evaluated for deeper friendship investment. |
 | [gifts](./gifts/) | Preferences related to giving and receiving gifts. Covers budget ranges, preferred gift types, occasions, and wishlists. |
 | [health](./health/) | Preferences related to healthcare and wellness. Covers medical provider preferences, supplement and medication habits, mental health practices, and wellness routines. |
+| [hobbies](./hobbies/) | Non-fitness, non-media-consumption activities done for enjoyment and creative expression. Covers building, tinkering, and hands-on projects. |
 | [home-decor](./home-decor/) | Preferences related to interior design and furnishing. Covers aesthetic style, color palettes, furniture brands, and spatial organization philosophy. |
 | [housing](./housing/) | Preferences related to residential properties. Covers minimum requirements for size, layout, amenities, and other factors considered when evaluating a place to live. Splits time between the US (mid-April to Nov 1) and Mexico (Nov 1 to mid-April). |
 | [languages](./languages/) | Preferences related to spoken and written languages. Covers fluency levels, languages being actively studied, and communication language preferences. |
@@ -37,6 +38,7 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [music](./music/) | Preferences related to music and audio. Covers preferred genres, artists, listening habits, and streaming services. |
 | [personal-brand](./personal-brand/) | Preferences related to online presence, social media, and professional reputation. Covers which platforms I use, how I post, and goals for building a presence in the tech / AI space. |
 | [pets](./pets/) | Preferences related to animals and pet ownership. Covers preferred animals, care standards, veterinary expectations, and pet-related purchasing. |
+| [podcasts](./podcasts/) | Regularly listened to podcasts and audio content. Covers preferred shows, genres, and listening contexts. |
 | [productivity](./productivity/) | Preferences related to time management, planning, and personal organization. Covers how I structure my time outside of work, handle unwanted tasks, and protect free time. |
 | [relationships](./relationships/) | Preferences related to how I build and maintain relationships — family, partner, friendships, and professional connections. |
 | [shopping](./shopping/) | Preferences related to shopping habits and purchasing behavior. Covers online vs. in-store preferences, secondhand shopping, and general approach to buying things. |

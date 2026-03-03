@@ -12,6 +12,7 @@ confidence: high
 - Prefers consistent warm weather without extreme heat
 - Not a fan of cold climates or freezing temperatures
 - Year-round consistency preferred over distinct seasons
+- **Heat tolerance limit:** Above 90°F daily starts affecting mood and productivity — prefers to avoid this
 
 ## Climate Type
 

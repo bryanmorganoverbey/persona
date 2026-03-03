@@ -26,7 +26,13 @@ When at a café in Mexico, I default to a **cappuccino** or **vanilla latte** wi
 - Agua de Jamaica (hibiscus water)
 - Coke Zero
 
+## Alcohol Preferences
+
+- **Does not drink alcohol** — this is a firm preference, not occasional
+- When others are drinking, comfortable sticking to non-alcoholic options
+
 ## Agent Guidelines
 
 - **In Mexico:** Suggest cappuccino or vanilla latte options. Don't suggest alcohol.
+- **When ordering drinks:** Never suggest alcoholic options — they are not an option.
 

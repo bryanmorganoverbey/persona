@@ -6,7 +6,7 @@ confidence: high
 # Languages Spoken
 
 - **English** — fluent (native)
-- **Spanish** — fluent or conversational
+- **Spanish** — C1 level (advanced fluency)
 
 ## Learning Preferences
 
