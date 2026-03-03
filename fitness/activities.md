@@ -10,6 +10,14 @@ Preferred types of exercise and physical activity:
 - **Team sports** — volleyball daily with friends. This is the primary form of exercise and is non-negotiable social time.
 - **Yoga** — flexibility, mindfulness, and recovery. Complements the active lifestyle.
 
+## Current Goals
+
+- Daily exercise as a consistent habit
+- Eating healthier overall
+- Reducing sweets/snacking at night
+
+Currently focused on building consistency rather than specific performance metrics.
+
 ## Agent Guidelines
 
 - **Don't suggest gym routines or weightlifting** unless I ask. My fitness comes from sports and yoga.

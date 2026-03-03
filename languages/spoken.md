@@ -16,6 +16,10 @@ Currently learning Spanish through:
 
 This immersion-based approach works better than structured grammar drills or apps.
 
+## Learning Gaps
+
+Uncomfortable discussing topics outside familiar areas like food, drink, travel, and personal experiences. Struggers with abstract or specialized subjects in Spanish.
+
 ## Agent Guidelines
 
 - **Default to English** for all written communication and content.

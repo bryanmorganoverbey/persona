@@ -35,6 +35,8 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [housing](./housing/) | Preferences related to residential properties. Covers minimum requirements for size, layout, amenities, and other factors considered when evaluating a place to live. Splits time between the US (mid-April to Nov 1) and Mexico (Nov 1 to mid-April). |
 | [languages](./languages/) | Preferences related to spoken and written languages. Covers fluency levels, languages being actively studied, and communication language preferences. |
 | [life-planning](./life-planning/) | Preferences related to future goals, roadmaps, and long-term planning. Covers financial aspirations, location preferences, and approach to planning vs. flexibility. |
+| [mental-health-support](./mental-health-support/) | Preferences related to processing stress, emotional challenges, and seeking help. Covers coping mechanisms, support preferences, and therapeutic approaches. |
+| [mindfulness-spirituality](./mindfulness-spirituality/) | Preferences related to contemplative practices, meditation, journaling, and spiritual or philosophical frameworks. Covers daily habits, preferred modalities, and sources of perspective. |
 | [music](./music/) | Preferences related to music and audio. Covers preferred genres, artists, listening habits, and streaming services. |
 | [personal-brand](./personal-brand/) | Preferences related to online presence, social media, and professional reputation. Covers which platforms I use, how I post, and goals for building a presence in the tech / AI space. |
 | [pets](./pets/) | Preferences related to animals and pet ownership. Covers preferred animals, care standards, veterinary expectations, and pet-related purchasing. |
