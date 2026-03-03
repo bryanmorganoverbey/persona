@@ -16,7 +16,7 @@ confidence: high
 
 ## Climate Type
 
-- **Humidity tolerance:** Not specified, but warm climate preference suggests comfort with some humidity
+- **Humidity tolerance:** Okay with humidity — not a dealbreaker. Heat + humidity is manageable as long as there's good A/C and they can cool down at night.
 - Avoids: Cold winters, freezing temperatures, icy conditions
 
 ## Agent Guidelines

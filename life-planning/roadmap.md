@@ -7,10 +7,11 @@ confidence: high
 
 Ideal 5-year plan:
 
-- **Own a beach house** — primary residence
-- **Own a mountain home** — in Tennessee
+- **Own a beach condo** — primary residence
+- **Own a mountain home** — in the Tennessee mountains
+- **Own a house in Nashville** — city base
 - **Financial goal:** Retired with millions in cash
-- **Location:** Flexible — always either at the beach or in the mountains
+- **Location:** Flexible — rotating between beach, mountains, and Nashville
 
 ## Approach to Planning
 

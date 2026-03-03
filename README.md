@@ -28,6 +28,7 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [fitness](./fitness/) | Preferences related to exercise and physical activity. Covers workout routines, gym vs. home training, preferred activities, equipment, and fitness goals. |
 | [food](./food/) | Preferences related to food, cooking, and dining. Covers dietary restrictions, cuisine preferences, favorite restaurants, meal planning habits, and grocery shopping. |
 | [friendships](./friendships/) | Preferences related to social connections, making friends, and maintaining relationships. Covers how new people are evaluated for deeper friendship investment. |
+| [gaming](./gaming/) | Preferences related to video games, console gaming, and interactive entertainment. Covers platform preferences, game genres, and gaming habits. |
 | [gifts](./gifts/) | Preferences related to giving and receiving gifts. Covers budget ranges, preferred gift types, occasions, and wishlists. |
 | [health](./health/) | Preferences related to healthcare and wellness. Covers medical provider preferences, supplement and medication habits, mental health practices, and wellness routines. |
 | [hobbies](./hobbies/) | Non-fitness, non-media-consumption activities done for enjoyment and creative expression. Covers building, tinkering, and hands-on projects. |
@@ -42,6 +43,7 @@ When there's no explicit preference file for a decision, **ask me** — don't gu
 | [pets](./pets/) | Preferences related to animals and pet ownership. Covers preferred animals, care standards, veterinary expectations, and pet-related purchasing. |
 | [podcasts](./podcasts/) | Regularly listened to podcasts and audio content. Covers preferred shows, genres, and listening contexts. |
 | [productivity](./productivity/) | Preferences related to time management, planning, and personal organization. Covers how I structure my time outside of work, handle unwanted tasks, and protect free time. |
+| [reading](./reading/) | Preferences related to books, audiobooks, and reading habits. Covers format preferences, genres, and reading patterns. |
 | [relationships](./relationships/) | Preferences related to how I build and maintain relationships — family, partner, friendships, and professional connections. |
 | [shopping](./shopping/) | Preferences related to shopping habits and purchasing behavior. Covers online vs. in-store preferences, secondhand shopping, and general approach to buying things. |
 | [social](./social/) | Preferences related to social life and gatherings. Covers event types, hosting style, group size preferences, and social cadence. |
