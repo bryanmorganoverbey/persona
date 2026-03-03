@@ -5,7 +5,13 @@ confidence: high
 
 # Shopping Habits
 
-Balanced mix of online and in-store shopping (roughly 50/50). I buy secondhand and thrift when possible.
+**Online vs. in-store split:** ~70% online, 30% in-store. I research everything online first, then may go to a store to buy.
+
+**Grocery shopping:** Usually in-person, unless in the US — then I use apps:
+- **Walmart** (with Walmart+ $15/month subscription for home delivery)
+- **Aldi** (click & collect only)
+
+I buy secondhand and thrift when possible.
 
 ## Agent Guidelines
 

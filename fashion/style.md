@@ -7,6 +7,10 @@ confidence: high
 
 Day-to-day clothing style: **athleisure** — comfortable, athletic-inspired clothing suitable for both casual outings and light activity.
 
+## Brand Transparency
+
+I do factor in where and how clothes are made. I prefer locally-made items when possible. As prices drop, quality drops too — I avoid very cheap clothes because the quality is poor.
+
 ## Agent Guidelines
 
 - **When shopping for clothes or recommending outfits:** Default to athleisure. Think joggers, performance tees, lightweight sneakers, hoodies.
