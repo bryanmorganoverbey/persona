@@ -1,41 +1,41 @@
 {
-  "message_id": 8,
+  "message_id": 11,
   "questions": [
     {
       "number": 1,
-      "text": "What's your ideal temperature range when choosing a city? Are you someone who tolerates any heat as long as there's A/C, or do you have a hard upper limit where the heat starts affecting your mood or productivity?",
-      "category": "climate-preferences",
+      "text": "When you're learning Spanish, what specific scenarios feel most uncomfortable or where do you still get stuck? Is it more around formal vs. casual speech, understanding fast conversations, or expressing nuanced emotions/ideas?",
+      "category": "languages",
       "type": "enrich",
-      "target_file": "temperature-preference.md"
+      "target_file": "spanish-learning.md"
     },
     {
       "number": 2,
-      "text": "When you're going out for drinks in Mexico \u2014 say Friday after volleyball \u2014 what's your default? Do you stick to beer, cocktails, or does it depend on the venue? Any go-to Mexican beers or cocktails you always order?",
-      "category": "beverages",
+      "text": "When you're buying something \u2014 say a new gadget, clothes, or even food \u2014 how often do you actively choose products based on their environmental impact or company ethics? Is it a dealbreaker, a nice-to-have, or something you think about but don't let it override other factors like price or convenience?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "alcohol-preferences.md"
+      "target_file": "purchasing-decisions.md"
     },
     {
       "number": 3,
-      "text": "How's your Spanish coming along? Do you feel comfortable handling daily life (ordering food, Negotiating prices, doctor visits) in Spanish, or are there specific situations where you still need English or a translator?",
-      "category": "languages",
+      "text": "What's your current fitness philosophy \u2014 are you mostly maintaining, trying to build specific things, or just showing up to feel good? Do you track metrics or go more by how you feel?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "spanish-proficiency.md"
+      "target_file": "philosophy.md"
     },
     {
       "number": 4,
-      "text": "What podcasts do you regularly listen to \u2014 if any? Are you into tech/AI podcasts, true crime, storytelling, or something else entirely? Do you mainly listen during commutes, workouts, or while doing chores?",
-      "category": "suggested-new-category",
+      "text": "Do you have any regular meditation, journaling, or mindfulness practices? Or any spiritual/philosophical frameworks you lean on for perspective?",
+      "category": "mindfulness-spirituality",
       "type": "new",
-      "target_file": "podcasts.md"
+      "target_file": "index.md"
     },
     {
       "number": 5,
-      "text": "Beyond volleyball, what other hobbies or creative outlets do you enjoy? Things like gaming, photography, music, woodworking, coding side projects \u2014 anything you do to unwind that isn't fitness or media consumption?",
-      "category": "suggested-new-category",
+      "text": "When things feel off \u2014 whether it's work stress, relationship friction, or just general burnout \u2014 what's your default way of processing it? Do you talk it through with people, work through it solo, seek professional help, or something else?",
+      "category": "mental-health-support",
       "type": "new",
-      "target_file": "hobbies-outside-fitness.md"
+      "target_file": "index.md"
     }
   ],
-  "sent_at": "2026-03-03T04:54:31.822982+00:00"
+  "sent_at": "2026-03-03T05:21:51.164279+00:00"
 }
