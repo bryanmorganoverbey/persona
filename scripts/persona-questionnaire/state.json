@@ -1,0 +1,41 @@
+{
+  "message_id": 3,
+  "questions": [
+    {
+      "number": 1,
+      "text": "What's your coffee order when you're at a caf\u00e9 in Mexico \u2014 do you stick to familiar drinks or use ordering as a way to explore local specialties?",
+      "category": "beverages",
+      "type": "enrich",
+      "target_file": "coffee-ordering.md"
+    },
+    {
+      "number": 2,
+      "text": "When you're buying clothing, how much does brand transparency (who made it, where, under what conditions) factor into your decision? Is there a price point where you stop caring as much?",
+      "category": "fashion",
+      "type": "enrich",
+      "target_file": "sustainable-shopping.md"
+    },
+    {
+      "number": 3,
+      "text": "Between online shopping and in-person browsing, what's your split? Do you research heavily online before buying in stores, or do you prefer one channel entirely?",
+      "category": "shopping",
+      "type": "enrich",
+      "target_file": "shopping-channels.md"
+    },
+    {
+      "number": 4,
+      "text": "What does your ideal 5-year roadmap look like? Are there specific milestones (financial, career, location, relationship) you actively plan toward, or do you prefer to stay flexible and let opportunities emerge?",
+      "category": "life-planning",
+      "type": "new",
+      "target_file": "goals.md"
+    },
+    {
+      "number": 5,
+      "text": "When you meet new people in a city (at volleyball, coworking, etc.), how do you typically decide whether to invest in building a deeper friendship versus keeping it as a casual acquaintance?",
+      "category": "friendships",
+      "type": "new",
+      "target_file": "friendship-investment.md"
+    }
+  ],
+  "sent_at": "2026-03-03T04:03:17.630021+00:00"
+}
