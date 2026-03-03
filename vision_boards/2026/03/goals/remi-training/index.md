@@ -19,7 +19,7 @@ Continue reinforcing Remi's ability to sit quietly under the chair/table at cafe
 ## Status
 
 In progress — going well. Data sets are being tracked to measure progress. Building on February training sessions.
-
+Documentation - ['./documentation/']
 ## March Targets
 
 - [ ] Consistent calm behavior in familiar cafes

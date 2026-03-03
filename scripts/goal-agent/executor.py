@@ -59,7 +59,7 @@ The user is a software engineer and digital nomad currently in Mexico, planning 
 """
 
 
-def build_task_prompt(task: dict, goal_context: str) -> str:
+def build_task_prompt(task: dict, goal_context: str, user_answer: str | None = None) -> str:
     """Build the user message prompt from the task and goal context."""
     prompt = f"""## Task to Execute
 
@@ -76,6 +76,18 @@ def build_task_prompt(task: dict, goal_context: str) -> str:
 Execute this task thoroughly.
 Produce a complete deliverable that can be saved as a file in the goal folder.
 """
+
+    if user_answer:
+        prompt += f"""
+## User's Clarification Response
+
+You previously asked for clarification on this task. The user has provided the following answer:
+
+{user_answer}
+
+Use this information to complete the task. Do NOT ask for further clarification on the same topic.
+"""
+
     return prompt
 
 
@@ -97,13 +109,22 @@ def _extract_tool_uses(content_blocks) -> list:
     return [block for block in content_blocks if block.type == "tool_use"]
 
 
-def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
+def execute_task(
+    task: dict,
+    remaining_budget: float | None = None,
+    user_answer: str | None = None,
+) -> dict:
     """
     Execute a single task using the MiniMax API with an agentic tool-use loop.
 
     The model can call web_search and web_fetch tools. Each tool call triggers
     another API round until the model produces a final text response or we hit
     MAX_TOOL_ROUNDS.
+
+    Args:
+        task: Task dict with description, goal_name, goal_title, etc.
+        remaining_budget: Budget remaining in USD (None = unlimited).
+        user_answer: If provided, injects the user's clarification answer into the prompt.
 
     Returns a dict with:
         - result: the markdown output from the agent
@@ -135,7 +156,7 @@ def execute_task(task: dict, remaining_budget: float | None = None) -> dict:
     )
 
     goal_context = load_goal_context(task["goal_index_path"])
-    user_prompt = build_task_prompt(task, goal_context)
+    user_prompt = build_task_prompt(task, goal_context, user_answer=user_answer)
 
     messages = [{"role": "user", "content": user_prompt}]
     total_input_tokens = 0
