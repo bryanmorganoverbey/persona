@@ -1,41 +1,41 @@
 {
-  "message_id": 17,
+  "message_id": 19,
   "questions": [
     {
       "number": 1,
-      "text": "When you host friends at your place \u2014 whether for a dinner party, watching a game, or just hanging out \u2014 what's your hosting style? Do you go all out with prepared food and drinks, keep it casual with snacks and good music, or does it depend on who you're hosting?",
-      "category": "social",
+      "text": "Do you own a car right now, or are you fully car-free? If you do have one, what's the make/model, and do you actually enjoy driving, or is it more of a necessary evil for getting around?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "hosting-style.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 2,
-      "text": "What's your music setup like? Do you have a favorite speaker or headphones, do you host music listening sessions with friends, play an instrument, or just stream through your phone? What songs or artists have been on repeat lately?",
-      "category": "music",
+      "text": "When a big life decision comes up \u2014 like whether to take a job, move to a new city, or make a major financial commitment \u2014 do you typically make a pros/cons list, talk it through with people you trust, trust your gut, or wait for more information? What's your decision-making process for the 'big stuff'?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "listening-habits.md"
+      "target_file": "roadmap.md"
     },
     {
       "number": 3,
-      "text": "When you're on vacation or taking time off, what's your ideal breakdown? Do you prefer an action-packed itinerary with activities every day, a mix of planned things and free time to wander, or do you mostly just want to relax, read, and not commit to anything?",
-      "category": "vacation-preferences",
+      "text": "What's your philosophy on spending money on yourself versus saving? Are you more of a 'you only live once' spender, a 'save aggressively and FI' type, or somewhere in between depending on the category?",
+      "category": "finance",
       "type": "enrich",
-      "target_file": "vacation-style.md"
+      "target_file": "philosophy.md"
     },
     {
       "number": 4,
-      "text": "What's your home aesthetic \u2014 are you minimalist with clean lines, do you love filling your space with plants and character, or do you have a specific style (mid-century, boho, industrial)? Any preferred furniture brands or places you shop for home items?",
-      "category": "home-decor",
+      "text": "Is there a category for how you approach self-care, grooming, and personal appearance beyond clothing? Things like skincare routines, how often you get haircuts, whether you care about personal care products, etc.",
+      "category": "personal-care",
       "type": "new",
-      "target_file": "aesthetic.md"
+      "target_file": "routines.md"
     },
     {
       "number": 5,
-      "text": "How do you handle gift-giving \u2014 do you prefer experiences over things, do you keep a running wishlist of things you actually want, or do you love finding creative personal gifts for others? Any budget range you consider standard for different occasions?",
-      "category": "gifts",
+      "text": "Do you have strong opinions about news and current events consumption? How do you stay informed \u2014 do you avoid the news entirely, have specific sources you trust, listen to podcasts, or just let algorithms show you what's happening?",
+      "category": "news-consumption",
       "type": "new",
-      "target_file": "gift-preferences.md"
+      "target_file": "preferences.md"
     }
   ],
-  "sent_at": "2026-03-03T18:04:42.122792+00:00"
+  "sent_at": "2026-03-04T18:25:16.145356+00:00"
 }
