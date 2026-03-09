@@ -1,41 +1,41 @@
 {
-  "message_id": 28,
+  "message_id": 30,
   "questions": [
     {
       "number": 1,
-      "text": "What's your car situation right now \u2014 do you own one, or are you fully car-free depending on the city? If you do have a car, what's the make/model and do you actually enjoy driving, or is it more of a necessary utility?",
-      "category": "vehicles",
+      "text": "What podcasts do you actually listen to regularly \u2014 any specific shows, hosts, or genres you keep coming back to? Do you listen while working, during commutes, or only during dedicated downtime?",
+      "category": "podcasts",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "favorite-shows.md"
     },
     {
       "number": 2,
-      "text": "When you think about your ideal friend group \u2014 not your current circle, but what you'd love \u2014 how many close friends feels 'right' to you? Are you someone who prefers a small tight-knit crew, or do you like having a bigger network of acquaintances?",
-      "category": "friendships",
+      "text": "When you receive a gift, what's the ideal scenario for you \u2014 do you prefer practical things you can use, experiences over things, handwritten notes, or something else entirely? And do you keep a running wishlist somewhere, or do you just hope people know what you'd like?",
+      "category": "gifts",
       "type": "enrich",
-      "target_file": "social-decisions.md"
+      "target_file": "receiving-preferences.md"
     },
     {
       "number": 3,
-      "text": "What's your approach to learning new things outside of work? Are you someone who takes courses, reads books to learn, watches YouTube tutorials, or just dives in and figures it out as you go?",
-      "category": "education",
+      "text": "What's your typical beverage routine beyond coffee \u2014 do you drink tea, alcohol, energy drinks, or just water? And when you're socializing at a bar or restaurant, what's your go-to order?",
+      "category": "beverages",
       "type": "enrich",
-      "target_file": "learning-style.md"
+      "target_file": "social-drinks.md"
     },
     {
       "number": 4,
-      "text": "How do you think about risk and uncertainty in life? Are you someone who avoids risks whenever possible, or do you lean into calculated risks with upside? How does that show up in your career, finances, and where you choose to live?",
-      "category": "risk-tolerance",
+      "text": "What's your approach to personal care and grooming \u2014 things like skincare, haircuts, beard grooming, fragrances, or even how you present yourself on video calls? Do you have specific products you use, or is it pretty minimal?",
+      "category": "personal-care",
       "type": "new",
-      "target_file": "risk-philosophy.md"
+      "target_file": "grooming-routine.md"
     },
     {
       "number": 5,
-      "text": "What's your approach to healthcare and medical care while living abroad in Mexico? Do you have local health insurance, use public clinics, fly back to the US for serious stuff, or have a hybrid approach?",
-      "category": "healthcare-access",
+      "text": "How do you handle making new friends or building community in a new city? Are you someone who actively puts yourself out there \u2014 joining classes, apps, asking people to hang out \u2014 or do you wait for connections to happen more organically?",
+      "category": "friendships",
       "type": "new",
-      "target_file": "international-healthcare.md"
+      "target_file": "making-friends.md"
     }
   ],
-  "sent_at": "2026-03-08T19:50:39.460253+00:00"
+  "sent_at": "2026-03-09T19:51:31.955402+00:00"
 }
