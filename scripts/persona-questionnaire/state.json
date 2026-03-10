@@ -1,41 +1,41 @@
 {
-  "message_id": 30,
+  "message_id": 32,
   "questions": [
     {
       "number": 1,
-      "text": "What podcasts do you actually listen to regularly \u2014 any specific shows, hosts, or genres you keep coming back to? Do you listen while working, during commutes, or only during dedicated downtime?",
-      "category": "podcasts",
+      "text": "When you buy things online \u2014 whether it's gear, clothes, or random stuff \u2014 which platforms do you actually use? Are you an Amazon-everything person, prefer buying direct from brands, or do you hunt for deals on specific sites?",
+      "category": "shopping",
       "type": "enrich",
-      "target_file": "favorite-shows.md"
+      "target_file": "shopping-habits.md"
     },
     {
       "number": 2,
-      "text": "When you receive a gift, what's the ideal scenario for you \u2014 do you prefer practical things you can use, experiences over things, handwritten notes, or something else entirely? And do you keep a running wishlist somewhere, or do you just hope people know what you'd like?",
-      "category": "gifts",
+      "text": "What's your fitness 'why' right now? Are you training for something specific (a race, a sport, strength goals), primarily doing it for mental health and routine, or just maintaining so you can keep doing the activities you love like volleyball?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "receiving-preferences.md"
+      "target_file": "fitness-motivation.md"
     },
     {
       "number": 3,
-      "text": "What's your typical beverage routine beyond coffee \u2014 do you drink tea, alcohol, energy drinks, or just water? And when you're socializing at a bar or restaurant, what's your go-to order?",
-      "category": "beverages",
+      "text": "Are you actively learning any languages right now, or working toward a specific fluency goal? And when you meet someone who doesn't speak English, how do you handle communication \u2014 Google Translate, try to piece it together, or just default to English and see what happens?",
+      "category": "languages",
       "type": "enrich",
-      "target_file": "social-drinks.md"
+      "target_file": "language-learning.md"
     },
     {
       "number": 4,
-      "text": "What's your approach to personal care and grooming \u2014 things like skincare, haircuts, beard grooming, fragrances, or even how you present yourself on video calls? Do you have specific products you use, or is it pretty minimal?",
-      "category": "personal-care",
+      "text": "What's your financial philosophy when it comes to investing? Are you index-fund-and-forget-it, more hands-on with individual stocks/crypto, or a bit of both? Do you have specific FIRE-style goals or just want enough to keep your options open?",
+      "category": "suggested-new-category",
       "type": "new",
-      "target_file": "grooming-routine.md"
+      "target_file": "investing-philosophy.md"
     },
     {
       "number": 5,
-      "text": "How do you handle making new friends or building community in a new city? Are you someone who actively puts yourself out there \u2014 joining classes, apps, asking people to hang out \u2014 or do you wait for connections to happen more organically?",
-      "category": "friendships",
+      "text": "What's your relationship with social media and online presence these days? Are you someone who posts regularly, only lurks, or mostly off-platform? And do you think about how you come across online, or is that not something you stress about?",
+      "category": "suggested-new-category",
       "type": "new",
-      "target_file": "making-friends.md"
+      "target_file": "social-media-presence.md"
     }
   ],
-  "sent_at": "2026-03-09T19:51:31.955402+00:00"
+  "sent_at": "2026-03-10T20:02:36.826722+00:00"
 }
