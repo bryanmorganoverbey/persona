@@ -1,41 +1,41 @@
 {
-  "message_id": 32,
+  "message_id": 34,
   "questions": [
     {
       "number": 1,
-      "text": "When you buy things online \u2014 whether it's gear, clothes, or random stuff \u2014 which platforms do you actually use? Are you an Amazon-everything person, prefer buying direct from brands, or do you hunt for deals on specific sites?",
-      "category": "shopping",
+      "text": "When you buy things \u2014 whether it's a gadget, a piece of clothing, or random household stuff \u2014 how much does sustainability factor into your decision? Do you actively seek out ethical brands, don't really think about it, or is it somewhere in between depending on the category?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "shopping-habits.md"
+      "target_file": "purchasing-habits.md"
     },
     {
       "number": 2,
-      "text": "What's your fitness 'why' right now? Are you training for something specific (a race, a sport, strength goals), primarily doing it for mental health and routine, or just maintaining so you can keep doing the activities you love like volleyball?",
-      "category": "fitness",
+      "text": "What's your skincare and grooming routine like beyond haircuts? Do you have a specific skincare regimen, any products you swear by, or is it pretty minimal? And how do you feel about fragrances or colognes \u2014 do you wear them regularly, save them for special occasions, or not really bother?",
+      "category": "fashion",
       "type": "enrich",
-      "target_file": "fitness-motivation.md"
+      "target_file": "grooming.md"
     },
     {
       "number": 3,
-      "text": "Are you actively learning any languages right now, or working toward a specific fluency goal? And when you meet someone who doesn't speak English, how do you handle communication \u2014 Google Translate, try to piece it together, or just default to English and see what happens?",
-      "category": "languages",
+      "text": "When you're at a bar or social gathering, what's your go-to drink order? Are you someone who sticks with one drink all night, likes trying new cocktails, or do you usually just grab a beer? How important is the 'vibe' of a bar or venue to you?",
+      "category": "beverages",
       "type": "enrich",
-      "target_file": "language-learning.md"
+      "target_file": "social-drinks.md"
     },
     {
       "number": 4,
-      "text": "What's your financial philosophy when it comes to investing? Are you index-fund-and-forget-it, more hands-on with individual stocks/crypto, or a bit of both? Do you have specific FIRE-style goals or just want enough to keep your options open?",
-      "category": "suggested-new-category",
+      "text": "What's your relationship with alcohol and nightlife? Do you enjoy going out to bars, clubs, or late-night gatherings, or is your ideal night more about low-key hangouts? Any feelings about being the 'sober' one in a group, or do you usually match the energy of whoever you're with?",
+      "category": "alcohol-nightlife",
       "type": "new",
-      "target_file": "investing-philosophy.md"
+      "target_file": "index.md"
     },
     {
       "number": 5,
-      "text": "What's your relationship with social media and online presence these days? Are you someone who posts regularly, only lurks, or mostly off-platform? And do you think about how you come across online, or is that not something you stress about?",
-      "category": "suggested-new-category",
+      "text": "If you had unlimited resources and time, what are 2-3 skills or hobbies you would love to learn or get really good at? This could be anything \u2014 playing an instrument, woodworking, cooking a specific cuisine, learning a language to fluency, etc.",
+      "category": "aspirational-interests",
       "type": "new",
-      "target_file": "social-media-presence.md"
+      "target_file": "index.md"
     }
   ],
-  "sent_at": "2026-03-10T20:02:36.826722+00:00"
+  "sent_at": "2026-03-11T20:04:10.288490+00:00"
 }
