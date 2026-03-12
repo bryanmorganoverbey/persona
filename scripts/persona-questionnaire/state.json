@@ -1,41 +1,41 @@
 {
-  "message_id": 34,
+  "message_id": 36,
   "questions": [
     {
       "number": 1,
-      "text": "When you buy things \u2014 whether it's a gadget, a piece of clothing, or random household stuff \u2014 how much does sustainability factor into your decision? Do you actively seek out ethical brands, don't really think about it, or is it somewhere in between depending on the category?",
-      "category": "sustainability",
+      "text": "When you're working from a new place \u2014 a cafe, a coworking space, or a rented apartment \u2014 what are the non-negotiables that make it workable for you? Things like WiFi speed, noise level, seating comfort, power outlet access, or whether you need outdoor space nearby.",
+      "category": "work",
       "type": "enrich",
-      "target_file": "purchasing-habits.md"
+      "target_file": "workspace-preferences.md"
     },
     {
       "number": 2,
-      "text": "What's your skincare and grooming routine like beyond haircuts? Do you have a specific skincare regimen, any products you swear by, or is it pretty minimal? And how do you feel about fragrances or colognes \u2014 do you wear them regularly, save them for special occasions, or not really bother?",
-      "category": "fashion",
+      "text": "What's your philosophy on personal brand and content creation in the tech/AI space? Are you more interested in building an audience for career opportunities, genuinely wanting to help others learn, establishing credibility, or just sharing when something excites you \u2014 or is it a mix?",
+      "category": "personal-brand",
       "type": "enrich",
-      "target_file": "grooming.md"
+      "target_file": "motivation.md"
     },
     {
       "number": 3,
-      "text": "When you're at a bar or social gathering, what's your go-to drink order? Are you someone who sticks with one drink all night, likes trying new cocktails, or do you usually just grab a beer? How important is the 'vibe' of a bar or venue to you?",
-      "category": "beverages",
+      "text": "What does an ideal day look like for you when you're NOT working and NOT doing your regular activities \u2014 like a completely free Saturday? What's the default way you'd want to spend that time if you had total freedom?",
+      "category": "daily-routine",
       "type": "enrich",
-      "target_file": "social-drinks.md"
+      "target_file": "ideal-free-day.md"
     },
     {
       "number": 4,
-      "text": "What's your relationship with alcohol and nightlife? Do you enjoy going out to bars, clubs, or late-night gatherings, or is your ideal night more about low-key hangouts? Any feelings about being the 'sober' one in a group, or do you usually match the energy of whoever you're with?",
-      "category": "alcohol-nightlife",
+      "text": "When you think about success and 'having made it' \u2014 what does that actually look like to you beyond financial independence? What are the specific things you'd be doing, how you'd be spending your time, or what relationships would look like when you feel you've succeeded?",
+      "category": "suggested-new-category",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "vision-of-success.md"
     },
     {
       "number": 5,
-      "text": "If you had unlimited resources and time, what are 2-3 skills or hobbies you would love to learn or get really good at? This could be anything \u2014 playing an instrument, woodworking, cooking a specific cuisine, learning a language to fluency, etc.",
-      "category": "aspirational-interests",
+      "text": "What's your actual relationship with creativity and making things \u2014 not for work, but just for fun or self-expression? Do you ever tinker with side projects, build things, make music, write, photograph, or get into creative flows, or is your creative expression mostly through things like volleyball and cooking?",
+      "category": "suggested-new-category",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "creative-expression.md"
     }
   ],
-  "sent_at": "2026-03-11T20:04:10.288490+00:00"
+  "sent_at": "2026-03-12T20:06:46.477493+00:00"
 }
