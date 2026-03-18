@@ -1,41 +1,41 @@
 {
-  "message_id": 47,
+  "message_id": 49,
   "questions": [
     {
       "number": 1,
-      "text": "When it comes to cars and driving, are you someone who cares about the vehicle itself \u2014 the driving experience, features, looks \u2014 or is a car purely functional transportation for you? Do you prefer owning a car, or as a digital nomad, do you just use rideshares and rentals when you need them?",
-      "category": "vehicles",
+      "text": "What's your actual approach to buying clothes \u2014 do you have go-to brands you trust, prefer hunting for unique pieces, or mostly just get what's comfortable and functional? And how do you feel about spending on quality pieces versus grabbing something cheap that does the job?",
+      "category": "fashion",
+      "type": "enrich",
+      "target_file": "style.md"
+    },
+    {
+      "number": 2,
+      "text": "When you listen to music, is it mostly background stuff while you're working or cooking, or do you actually sit down and focus on it? Do you have specific rituals around music \u2014 like particular playlists for volleyball days, morning vibes, or winding down at night?",
+      "category": "music",
+      "type": "enrich",
+      "target_file": "listening-context.md"
+    },
+    {
+      "number": 3,
+      "text": "When you give gifts, do you put a lot of thought into finding something personal and meaningful, or do you lean more toward practical or useful things? What's the best gift you've ever received, or is there something you've mentioned wanting that people somehow never seem to get right?",
+      "category": "gifts",
       "type": "enrich",
       "target_file": "preferences.md"
     },
     {
-      "number": 2,
-      "text": "How do you think about big life decisions \u2014 things like where to live long-term, career moves, or major commitments? Are you someone who makes detailed plans and has timelines, or do you prefer keeping things flexible and making decisions as you go? Has that changed as you've gotten older?",
-      "category": "life-planning",
-      "type": "enrich",
-      "target_file": "roadmap.md"
-    },
-    {
-      "number": 3,
-      "text": "What's your home office or workspace setup look like \u2014 are you minimal (just a laptop anywhere), do you travel with specific gear (mechanical keyboard, monitor, ergonomic stuff), or do you just figure out what the space has available when you arrive? And do you have strong preferences about desk height, chair, or standing vs sitting?",
-      "category": "work",
-      "type": "enrich",
-      "target_file": "index.md"
-    },
-    {
       "number": 4,
-      "text": "What does your ideal evening look like when you have a free night \u2014 not going out, just your place. Are you someone who unwinds with specific rituals (TV show, reading, gaming), do you prefer spontaneous hangouts with whoever's around, or does it depend on your mood/energy level?",
-      "category": "suggested-new-category:evening-routine",
+      "text": "How do you typically approach big life decisions \u2014 like where to live, career moves, or major commitments? Are you someone who makes detailed pros and cons lists, talks it through with your partner or friends, trusts your gut, or just makes the call and adjusts as you go?",
+      "category": "decision-making-framework",
       "type": "new",
-      "target_file": "evening-rituals.md"
+      "target_file": "decisions.md"
     },
     {
       "number": 5,
-      "text": "When you think about your relationship with your family back in Tennessee \u2014 how do you stay connected and maintain those bonds despite the distance? Are you someone who calls regularly, prefers texting/voice notes, visits on a set schedule, or is it more ad-hoc depending on what's happening?",
-      "category": "suggested-new-category:family-connections",
+      "text": "What's your personal motto or guiding principle that sums up how you approach life? Is there a phrase, quote, or belief you come back to when making decisions or dealing with challenges?",
+      "category": "life-philosophy",
       "type": "new",
-      "target_file": "family-ties.md"
+      "target_file": "mottos.md"
     }
   ],
-  "sent_at": "2026-03-17T21:20:11.329869+00:00"
+  "sent_at": "2026-03-18T21:36:09.701498+00:00"
 }
