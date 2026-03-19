@@ -1,41 +1,41 @@
 {
-  "message_id": 49,
+  "message_id": 51,
   "questions": [
     {
       "number": 1,
-      "text": "What's your actual approach to buying clothes \u2014 do you have go-to brands you trust, prefer hunting for unique pieces, or mostly just get what's comfortable and functional? And how do you feel about spending on quality pieces versus grabbing something cheap that does the job?",
-      "category": "fashion",
+      "text": "You live in Mexico half the year \u2014 what's your Spanish level and how do you practice? Do you actively seek out Spanish conversations, prefer immersing yourself in local life, or is English still your default for most daily interactions?",
+      "category": "languages",
       "type": "enrich",
-      "target_file": "style.md"
+      "target_file": "spanish-practice.md"
     },
     {
       "number": 2,
-      "text": "When you listen to music, is it mostly background stuff while you're working or cooking, or do you actually sit down and focus on it? Do you have specific rituals around music \u2014 like particular playlists for volleyball days, morning vibes, or winding down at night?",
-      "category": "music",
+      "text": "When you move to a new city, how do you go about building your social circle from scratch? Are you someone who proactively joins groups and activities, reaches out to existing contacts who might know people, or just lets connections happen naturally over time?",
+      "category": "friendships",
       "type": "enrich",
-      "target_file": "listening-context.md"
+      "target_file": "making-friends-new-places.md"
     },
     {
       "number": 3,
-      "text": "When you give gifts, do you put a lot of thought into finding something personal and meaningful, or do you lean more toward practical or useful things? What's the best gift you've ever received, or is there something you've mentioned wanting that people somehow never seem to get right?",
-      "category": "gifts",
+      "text": "Beyond volleyball and the hobbies you've mentioned, is there something you've always wanted to get really good at \u2014 maybe a skill you've bookmarked as 'someday' like playing an instrument, woodworking, photography, or learning a trade? What's stopping you from diving in?",
+      "category": "hobbies",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "dreamskills.md"
     },
     {
       "number": 4,
-      "text": "How do you typically approach big life decisions \u2014 like where to live, career moves, or major commitments? Are you someone who makes detailed pros and cons lists, talks it through with your partner or friends, trusts your gut, or just makes the call and adjusts as you go?",
-      "category": "decision-making-framework",
+      "text": "What's your 5 or 10 year vision for your career \u2014 not just what work you're doing, but what 'success' looks like? Are you building toward something specific (a company, a product, financial number), or is the goal more about having the freedom to choose what you work on?",
+      "category": "career-aspirations",
       "type": "new",
-      "target_file": "decisions.md"
+      "target_file": "career-vision.md"
     },
     {
       "number": 5,
-      "text": "What's your personal motto or guiding principle that sums up how you approach life? Is there a phrase, quote, or belief you come back to when making decisions or dealing with challenges?",
-      "category": "life-philosophy",
+      "text": "If you had to plan your ideal legacy or how you want to be remembered \u2014 not in a morbid way, but what impact you want to leave behind \u2014 what would that look like? Is it about the people you've touched, work you've built, experiences you've had, or something else entirely?",
+      "category": "legacy-goals",
       "type": "new",
-      "target_file": "mottos.md"
+      "target_file": "legacy.md"
     }
   ],
-  "sent_at": "2026-03-18T21:36:09.701498+00:00"
+  "sent_at": "2026-03-19T21:51:14.232746+00:00"
 }
