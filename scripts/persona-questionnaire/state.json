@@ -1,41 +1,41 @@
 {
-  "message_id": 51,
+  "message_id": 53,
   "questions": [
     {
       "number": 1,
-      "text": "You live in Mexico half the year \u2014 what's your Spanish level and how do you practice? Do you actively seek out Spanish conversations, prefer immersing yourself in local life, or is English still your default for most daily interactions?",
-      "category": "languages",
+      "text": "When you're buying something \u2014 whether it's a gadget, a piece of clothing, or something for your place \u2014 how much does sustainability or ethical production factor into your decision? Are you willing to pay more for eco-friendly options, do you research brands, or is it more of a 'nice to have' that doesn't often override other preferences?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "spanish-practice.md"
+      "target_file": "sustainability/purchasing-habits.md"
     },
     {
       "number": 2,
-      "text": "When you move to a new city, how do you go about building your social circle from scratch? Are you someone who proactively joins groups and activities, reaches out to existing contacts who might know people, or just lets connections happen naturally over time?",
-      "category": "friendships",
+      "text": "When you need to make a nontrivial decision \u2014 say, choosing a new city to live in, evaluating a job opportunity, or figuring out your next big move \u2014 what's your actual decision-making process? Do you make pros/cons lists, talk it through with your partner, trust your gut, sleep on it, or use some other framework?",
+      "category": "decision-making",
       "type": "enrich",
-      "target_file": "making-friends-new-places.md"
+      "target_file": "decision-making/process.md"
     },
     {
       "number": 3,
-      "text": "Beyond volleyball and the hobbies you've mentioned, is there something you've always wanted to get really good at \u2014 maybe a skill you've bookmarked as 'someday' like playing an instrument, woodworking, photography, or learning a trade? What's stopping you from diving in?",
-      "category": "hobbies",
+      "text": "As a digital nomad who's been moving between places for a while now, what has surprised you about this lifestyle \u2014 either positively or negatively? Are there things you thought you'd miss but don't, or things you didn't expect to struggle with?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "dreamskills.md"
+      "target_file": "life-planning/nomad-surprises.md"
     },
     {
       "number": 4,
-      "text": "What's your 5 or 10 year vision for your career \u2014 not just what work you're doing, but what 'success' looks like? Are you building toward something specific (a company, a product, financial number), or is the goal more about having the freedom to choose what you work on?",
-      "category": "career-aspirations",
+      "text": "When you encounter a problem in your daily life \u2014 something breaks, you face a logistical challenge, or something goes wrong with your setup \u2014how do you typically approach solving it? Are you someone who figures it out yourself through trial and error, immediately Google/YouTube it, ask someone for help, or does it depend on the problem?",
+      "category": "problem-solving",
       "type": "new",
-      "target_file": "career-vision.md"
+      "target_file": "problem-solving/style.md"
     },
     {
       "number": 5,
-      "text": "If you had to plan your ideal legacy or how you want to be remembered \u2014 not in a morbid way, but what impact you want to leave behind \u2014 what would that look like? Is it about the people you've touched, work you've built, experiences you've had, or something else entirely?",
-      "category": "legacy-goals",
+      "text": "What's your relationship with risk and uncertainty? Are you someone who actively seeks out new experiences and opportunities even when the outcome is unclear, or do you prefer having more certainty before committing to something? Has that changed over time?",
+      "category": "risk-tolerance",
       "type": "new",
-      "target_file": "legacy.md"
+      "target_file": "risk-tolerance/approach.md"
     }
   ],
-  "sent_at": "2026-03-19T21:51:14.232746+00:00"
+  "sent_at": "2026-03-20T21:58:48.145033+00:00"
 }
