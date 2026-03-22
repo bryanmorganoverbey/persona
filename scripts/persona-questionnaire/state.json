@@ -1,41 +1,41 @@
 {
-  "message_id": 55,
+  "message_id": 57,
   "questions": [
     {
       "number": 1,
-      "text": "When you're learning something new \u2014 whether it's a framework, a skill, or a random topic \u2014 how do you actually go about it? Do you dive into documentation, watch video courses, read books, build a side project, or prefer learning from people who know more than you?",
-      "category": "education",
+      "text": "When you rent a car or use rideshares, do you have preferences about the vehicle type \u2014 like do you prefer certain sizes, is it important to you, or do you just take whatever's available?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "learning-approach.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 2,
-      "text": "Do you consider yourself someone who generally seeks out novelty and new experiences \u2014 trying new restaurants, exploring unfamiliar neighborhoods, picking up random hobbies \u2014 or do you tend to stick with what you know and love?",
-      "category": "novelty-preferences",
+      "text": "Has the climate or weather ever been a deciding factor in choosing a place to live or visit? Like, do you actively seek out places with specific weather patterns, or is it more of a 'I'll figure it out' thing?",
+      "category": "climate-preferences",
       "type": "enrich",
-      "target_file": "novelty-vs-routine.md"
+      "target_file": "climate.md"
     },
     {
       "number": 3,
-      "text": "When you encounter a problem in your daily life \u2014 something breaks, you face a logistical challenge, or something goes wrong with your setup \u2014 how do you typically approach solving it? Are you someone who figures it out yourself through trial and error, immediately Google/YouTube it, ask someone for help, or does it depend on the problem?",
-      "category": "problem-solving",
+      "text": "When you buy something \u2014 let's say clothes, tech, or household items \u2014 how much does the brand's environmental or ethical track record actually influence you? Is there a price point where you stop caring, or do you consistently prioritize it?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "problem-solving-style.md"
+      "target_file": "philosophy.md"
     },
     {
       "number": 4,
-      "text": "What's your relationship with vulnerability \u2014 both in close relationships and more broadly? Are you someone who opens up easily, do you need time to build trust before being vulnerable, or do you prefer keeping things more guarded?",
-      "category": "vulnerability",
+      "text": "How do you think about politics \u2014 is it something you keep private, discuss openly, or avoid altogether? And do you have strong views on specific issues that affect your daily life, or is it more of a 'I'll vote but that's it' kind of thing?",
+      "category": "politics",
       "type": "new",
-      "target_file": "vulnerability-style.md"
+      "target_file": "views.md"
     },
     {
       "number": 5,
-      "text": "If you could have dinner with any historical figure \u2014 scientist, artist, philosopher, leader \u2014 who would you pick and what would you want to ask them?",
-      "category": "intellectual-curiosity",
+      "text": "When you go out with friends \u2014 whether it's grabbing drinks, a party, or just hanging \u2014 do you typically drink alcohol, stick to non-alcoholic, or is it pretty situational? And is there a type of social scene you enjoy versus ones you'd rather skip?",
+      "category": "social-habits",
       "type": "new",
-      "target_file": "dream-conversations.md"
+      "target_file": "partying.md"
     }
   ],
-  "sent_at": "2026-03-21T22:04:20.866841+00:00"
+  "sent_at": "2026-03-22T22:16:29.219891+00:00"
 }
