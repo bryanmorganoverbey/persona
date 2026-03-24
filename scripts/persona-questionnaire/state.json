@@ -1,41 +1,41 @@
 {
-  "message_id": 59,
+  "message_id": 61,
   "questions": [
     {
       "number": 1,
-      "text": "When it comes to mindfulness or spiritual practices \u2014 do you actually have a daily habit like meditation, journaling, breathwork, or something else, or is it more of an 'as needed' thing when you need to reset? And do you have a specific way you like to do it (app-guided, music, silence, with a partner)?",
-      "category": "mindfulness-spirituality",
+      "text": "When you discover a new podcast you're into, how do you find it \u2014 do people recommend shows to you, do you actively search for topics you're curious about, or do you just let algorithms guide you? And once you find one, do you binge entire seasons or listen episode-by-episode as they drop?",
+      "category": "podcasts",
       "type": "enrich",
-      "target_file": "practices.md"
+      "target_file": "discovery.md"
     },
     {
       "number": 2,
-      "text": "When you're shopping for your place \u2014 like decor, furniture, or household items \u2014 how do you actually decide what to get? Do you have a clear aesthetic in mind, do you impulse buy when you see something you like, or do you research for a while before committing?",
-      "category": "home-decor",
+      "text": "When you're building a friendship with someone new \u2014 what actually makes you decide to invest more time and energy into that person? Is there a specific quality, conversation topic, or vibe that signals to you 'this person is going to be in my inner circle'?",
+      "category": "friendships",
       "type": "enrich",
-      "target_file": "style.md"
+      "target_file": "investment-criteria.md"
     },
     {
       "number": 3,
-      "text": "Beyond volleyball, what's your vibe when it comes to physical activity \u2014 are you someone who sticks to a consistent routine (same workout, same time), or do you mix it up based on mood/energy/what's available? Do you prefer working out alone or with others?",
-      "category": "fitness",
+      "text": "When you need to buy something \u2014 let's say a gadget, some household item, or something for your place \u2014 do you mostly shop online or do you prefer going to physical stores? And how do you feel about buying used or secondhand versus new, especially when you're in a new place and don't know the local marketplaces?",
+      "category": "shopping",
       "type": "enrich",
-      "target_file": "activities.md"
+      "target_file": "shopping-habits.md"
     },
     {
       "number": 4,
-      "text": "When you think about personal growth and self-improvement \u2014 are you someone who actively works on habits, tracks metrics, reads self-help books, sees a therapist or coach, or has a specific framework you use? Or do you feel like you're already 'there' and prefer just living life?",
-      "category": "suggested: personal-growth",
+      "text": "What's your actual approach to managing money day-to-day \u2014 are you someone who budgets closely (tracking every expense), do you have a rough mental sense of your spending, or do you mostly just wing it? And do you have specific financial goals you're actively working toward right now?",
+      "category": "finance",
       "type": "new",
-      "target_file": "self-improvement.md"
+      "target_file": "budgeting.md"
     },
     {
       "number": 5,
-      "text": "What's your relationship with energy management throughout the day \u2014 do you naturally ride waves of high and low energy, do you force yourself through low moments with caffeine or discipline, or do you structure your day around your natural rhythms? And how do you handle those mid-afternoon slumps?",
-      "category": "suggested: energy-vitality",
+      "text": "When you're learning something new for fun \u2014 not work-related \u2014 what's your preferred way to learn? Do you dive into books, watch videos, take online courses, learn by doing, or talk to people who know more than you?",
+      "category": "education",
       "type": "new",
-      "target_file": "energy-management.md"
+      "target_file": "learning-style.md"
     }
   ],
-  "sent_at": "2026-03-23T22:17:44.166367+00:00"
+  "sent_at": "2026-03-24T22:32:11.719224+00:00"
 }
