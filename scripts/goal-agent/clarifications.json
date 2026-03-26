@@ -1,0 +1,13 @@
+{
+  "message_id": 525,
+  "task": {
+    "description": "Consistent calm behavior in familiar cafes",
+    "goal_name": "remi-training",
+    "goal_title": "Remi Public Behavior Training",
+    "goal_dir": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training",
+    "goal_index_path": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training/index.md",
+    "deadline": null
+  },
+  "question": "To make this deliverable more specific and useful, please share:\n1. **Which familiar cafes** have you already been training at with Remi?\n2. **What is Remi's current treat interval** (how long can Remi currently stay calm before needing a treat)?\n3. **Are there any specific challenges** (barking at other dogs, difficulty settling, etc.) you'd like this protocol to address?\n\nThis would allow me to customize the progression timeline and troubleshooting sections for Remi's specific situation.",
+  "sent_at": "2026-03-26T18:24:01.494019+00:00"
+}
