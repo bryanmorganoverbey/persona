@@ -1,41 +1,41 @@
 {
-  "message_id": 63,
+  "message_id": 65,
   "questions": [
     {
       "number": 1,
-      "text": "When you read, what format do you prefer \u2014 physical books, e-reader, or audio? And when do you usually read \u2014 before bed, on flights, or do you read in dedicated sessions?",
-      "category": "reading",
+      "text": "When you have a free weekend with no obligations \u2014 what's your ideal way to spend it? Do you have a specific routine or rituals that make it feel restorative, or do you just see where the day takes you?",
+      "category": "daily-routine",
       "type": "enrich",
-      "target_file": "reading-habits.md"
+      "target_file": "weekends.md"
     },
     {
       "number": 2,
-      "text": "Are you into gaming currently? If so, what platform \u2014 console, PC, mobile \u2014 and do you mostly play solo (RPGs, story games) or with others (multiplayer, co-op)? Or is it more of an 'occasional thing when I have time' thing?",
-      "category": "gaming",
+      "text": "When something causes you stress or emotional difficulty \u2014 not a crisis, but just the everyday stuff that gets to you \u2014 how do you typically process it? Do you talk it out, write it down, distract yourself, exercise, or just let it pass on its own?",
+      "category": "mental-health-support",
       "type": "enrich",
-      "target_file": "current-gaming.md"
+      "target_file": "stress-response.md"
     },
     {
       "number": 3,
-      "text": "Do you have a specific philosophical or spiritual framework you lean on \u2014 like Buddhism, Stoicism, some mix of ideas, or nothing formal? Or is it more like 'I figure things out as I go' without a label?",
-      "category": "mindfulness-spirituality",
+      "text": "When you're planning a trip, what excites you more \u2014 the research and anticipation phase, the actual travel and exploration, or the memories and stories you bring back? Or is there something else about travel that lights you up?",
+      "category": "travel",
       "type": "enrich",
-      "target_file": "philosophy.md"
+      "target_file": "travel-joy.md"
     },
     {
       "number": 4,
-      "text": "Do you take photos \u2014 with your phone or a camera? Are you someone who documents their travels and daily life, or do you prefer being in the moment without capturing it?",
-      "category": "photography",
+      "text": "What's your relationship with alcohol and substances \u2014 not in a recovery sense, but as part of your social life and daily habits? Do you drink socially, have specific preferences, or is it not really a part of your life?",
+      "category": "social-lifestyle",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "substances.md"
     },
     {
       "number": 5,
-      "text": "How do you handle bureaucracy and administrative tasks \u2014 things like taxes, visas, insurance, paperwork? Do you tackle them immediately, procrastinate until they become urgent, or hire help?",
-      "category": "administrative-preferences",
+      "text": "When you think about your home \u2014 whether it's a rented apartment or a place you're staying temporarily \u2014 what makes a space feel like yours? Is it specific objects, how you set things up, a certain vibe, or something else entirely?",
+      "category": "home-feeling",
       "type": "new",
-      "target_file": "index.md"
+      "target_file": "home-identity.md"
     }
   ],
-  "sent_at": "2026-03-25T22:34:14.378609+00:00"
+  "sent_at": "2026-03-26T22:47:54.261636+00:00"
 }
