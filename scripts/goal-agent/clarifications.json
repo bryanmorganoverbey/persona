@@ -1,0 +1,13 @@
+{
+  "message_id": 541,
+  "task": {
+    "description": "Consistent calm behavior in familiar cafes",
+    "goal_name": "remi-training",
+    "goal_title": "Remi Public Behavior Training",
+    "goal_dir": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training",
+    "goal_index_path": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training/index.md",
+    "deadline": null
+  },
+  "question": "To make this documentation more specific to Remi, please provide:\n\n1. **Current baseline:** What is Remi's current typical duration under the table at familiar cafes? (minutes)\n2. **Current treat frequency:** How often are treats currently given during a session?\n3. **Known triggers:** What specific stimuli (people, dogs, noises) cause barking or disruption?\n4. **February data:** Do you have existing session logs from February I can incorporate?\n\nWith this information, I can customize the targets and protocols to Remi's specific progress level.",
+  "sent_at": "2026-03-27T20:11:30.130085+00:00"
+}
