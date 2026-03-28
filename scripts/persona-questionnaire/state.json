@@ -1,41 +1,41 @@
 {
-  "message_id": 67,
+  "message_id": 69,
   "questions": [
     {
       "number": 1,
-      "text": "When you're looking for a place to stay \u2014 whether it's an Airbnb, a hotel, or a rental \u2014 what's the minimum bar for 'good enough'? Are there specific things that will instantly make you skip a listing, or do you mostly go with the flow and figure it out once you're there?",
-      "category": "vacation-preferences",
-      "type": "enrich",
-      "target_file": "accommodation.md"
+      "text": "As someone who's chosen the digital nomad life in Mexico, what's your approach to visa logistics and immigration? Do you do border runs, have a temporary resident visa, fly under tourist status, or is it something you just figure out as you go?",
+      "category": "immigration-status",
+      "type": "new",
+      "target_file": "immigration.md"
     },
     {
       "number": 2,
-      "text": "When you see something cool or beautiful \u2014 an interesting building, a nice outfit, a well-designed product \u2014 do you notice it, appreciate it, and move on? Or does it spark an urge to take a photo, save it, or share it with someone?",
-      "category": "fashion",
+      "text": "When you're in a place and things are going well \u2014 you have good friends, a solid routine, a nice spot \u2014 what actually makes you decide to leave and move to a new city? Is there a specific feeling, timeframe, or trigger that signals it's time to move on?",
+      "category": "travel",
       "type": "enrich",
-      "target_file": "style.md"
+      "target_file": "destination-selection.md"
     },
     {
       "number": 3,
-      "text": "When you're working out \u2014 whether at a gym, a class, or outdoors \u2014 how important is the social aspect to you? Do you prefer grinding alone with your headphones in, exercising with a friend, or being surrounded by other people doing their own thing?",
-      "category": "fitness",
+      "text": "How do you think about networking and professional connections while being location-independent? Do you make an effort to meet other remote workers or developers in the places you stay, or is that not a priority for you?",
+      "category": "relationships",
       "type": "enrich",
-      "target_file": "activities.md"
+      "target_file": "professional-connections.md"
     },
     {
       "number": 4,
-      "text": "How do you think about your appearance and self-presentation \u2014 beyond clothes. Do you have a specific grooming routine, skincare preferences, or are you pretty low-maintenance about things like haircuts, products, and how you present yourself day-to-day?",
-      "category": "personal-care",
+      "text": "When it comes to managing money across countries \u2014 receiving USD payments, converting to Mexican pesos, handling banking as a US citizen abroad \u2014 how do you actually do it? Any apps, strategies, or banks you recommend?",
+      "category": "international-banking",
       "type": "new",
-      "target_file": "grooming.md"
+      "target_file": "cross-border-finances.md"
     },
     {
       "number": 5,
-      "text": "When you imagine your ideal romantic date \u2014 not a special occasion, just a regular 'we want to connect tonight' kind of night \u2014 what does that look like? What's the vibe, activity, and energy you're hoping for?",
-      "category": "dating-preferences",
-      "type": "new",
-      "target_file": "ideal-date.md"
+      "text": "Beyond volleyball and your daily movement, how do you think about recovery and rest? Are you someone who actively prioritizes rest days, stretching, mobility work, or is that not part of your routine?",
+      "category": "fitness",
+      "type": "enrich",
+      "target_file": "recovery.md"
     }
   ],
-  "sent_at": "2026-03-27T22:51:30.360628+00:00"
+  "sent_at": "2026-03-28T22:56:47.143966+00:00"
 }
