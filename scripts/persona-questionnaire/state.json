@@ -1,41 +1,41 @@
 {
-  "message_id": 69,
+  "message_id": 71,
   "questions": [
     {
       "number": 1,
-      "text": "As someone who's chosen the digital nomad life in Mexico, what's your approach to visa logistics and immigration? Do you do border runs, have a temporary resident visa, fly under tourist status, or is it something you just figure out as you go?",
-      "category": "immigration-status",
-      "type": "new",
-      "target_file": "immigration.md"
+      "text": "When you're traveling or moving between places, how do you handle pet care for Remi \u2014 do you take him with you, does he stay with someone, or do you have a specific setup? And what's your backup plan if something unexpected comes up?",
+      "category": "pets",
+      "type": "enrich",
+      "target_file": "travel-handling.md"
     },
     {
       "number": 2,
-      "text": "When you're in a place and things are going well \u2014 you have good friends, a solid routine, a nice spot \u2014 what actually makes you decide to leave and move to a new city? Is there a specific feeling, timeframe, or trigger that signals it's time to move on?",
-      "category": "travel",
+      "text": "When you think about building a personal brand or presence in the tech/AI space \u2014 what's driving that for you? Is it about career opportunities, feeling like you have knowledge worth sharing, connecting with specific people, or something else entirely?",
+      "category": "personal-brand",
       "type": "enrich",
-      "target_file": "destination-selection.md"
+      "target_file": "motivation.md"
     },
     {
       "number": 3,
-      "text": "How do you think about networking and professional connections while being location-independent? Do you make an effort to meet other remote workers or developers in the places you stay, or is that not a priority for you?",
-      "category": "relationships",
+      "text": "As someone living abroad, what's your go-to plan if something actually goes wrong \u2014 like a medical emergency, needing to evacuate, or losing access to your funds? Do you have specific contacts, protocols, or resources you'd turn to first?",
+      "category": "emergency",
       "type": "enrich",
-      "target_file": "professional-connections.md"
+      "target_file": "abroad-scenarios.md"
     },
     {
       "number": 4,
-      "text": "When it comes to managing money across countries \u2014 receiving USD payments, converting to Mexican pesos, handling banking as a US citizen abroad \u2014 how do you actually do it? Any apps, strategies, or banks you recommend?",
-      "category": "international-banking",
+      "text": "How do you think about your relationship with community \u2014 beyond volleyball. Is it important to you to be part of a local community wherever you are, do you maintain connections remotely, or is your community primarily wherever your people happen to be?",
+      "category": "community-investment",
       "type": "new",
-      "target_file": "cross-border-finances.md"
+      "target_file": "community-philosophy.md"
     },
     {
       "number": 5,
-      "text": "Beyond volleyball and your daily movement, how do you think about recovery and rest? Are you someone who actively prioritizes rest days, stretching, mobility work, or is that not part of your routine?",
-      "category": "fitness",
-      "type": "enrich",
-      "target_file": "recovery.md"
+      "text": "When you think about your aesthetic or style \u2014 not just clothes, but the overall vibe you want to project \u2014 do you have a specific look or feel you're going for, or is it more like 'I just wear what feels right' without thinking much about it?",
+      "category": "personal-aesthetic",
+      "type": "new",
+      "target_file": "style-philosophy.md"
     }
   ],
-  "sent_at": "2026-03-28T22:56:47.143966+00:00"
+  "sent_at": "2026-03-29T23:02:52.829233+00:00"
 }
