@@ -22,7 +22,7 @@ In progress — going well. Data sets are being tracked to measure progress. Bui
 Documentation - ['./documentation/']
 ## March Targets
 
-- [ ] Consistent calm behavior in familiar cafes
+- [x] Consistent calm behavior in familiar cafes
 - [ ] Test in new / unfamiliar restaurant environments
 - [ ] Extend treat intervals (reduce frequency while maintaining behavior)
 - [ ] Track data on duration of calm behavior per session

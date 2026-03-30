@@ -1,23 +1,4 @@
----
-task: "Consistent calm behavior in familiar cafes"
-goal: remi-training
-started: 2026-03-30T22:12:29.380746+00:00
-completed: 2026-03-30T22:12:54.644951+00:00
-model: MiniMax-M2.5
-tokens_input: 13201
-tokens_output: 2515
-status: completed
----
-
-# Attempt: Consistent calm behavior in familiar cafes
-
-## Plan
-
-Execute task: Consistent calm behavior in familiar cafes
-Goal: Remi Public Behavior Training
-Using MiniMax API.
-
-## Results
+# Consistent calm behavior in familiar cafes
 
 # Remi Public Behavior Training: Consistent Calm Behavior in Familiar Cafes
 
