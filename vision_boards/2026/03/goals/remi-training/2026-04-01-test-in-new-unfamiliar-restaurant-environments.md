@@ -1,23 +1,4 @@
----
-task: "Test in new / unfamiliar restaurant environments"
-goal: remi-training
-started: 2026-04-01T00:29:06.474578+00:00
-completed: 2026-04-01T00:29:47.682985+00:00
-model: MiniMax-M2.5
-tokens_input: 5965
-tokens_output: 3588
-status: completed
----
-
-# Attempt: Test in new / unfamiliar restaurant environments
-
-## Plan
-
-Execute task: Test in new / unfamiliar restaurant environments
-Goal: Remi Public Behavior Training
-Using MiniMax API.
-
-## Results
+# Test in new / unfamiliar restaurant environments
 
 # Remi Public Behavior Training: New Environment Testing Plan
 
