@@ -1,41 +1,41 @@
 {
-  "message_id": 83,
+  "message_id": 85,
   "questions": [
     {
       "number": 1,
-      "text": "When you're shopping for everyday items \u2014 tech gear, household stuff, or things for your space \u2014 do you research thoroughly before buying, or do you tend to just get what feels right in the moment?",
-      "category": "shopping",
+      "text": "When you think about big life decisions \u2014 like whether to stay in a city, take on a new work opportunity, or make a lifestyle change \u2014 what's your actual decision-making process? Do you make lists, sleep on it, talk it through with specific people, trust a gut feeling, or have some other method that works for you?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "habits.md"
+      "target_file": "decision-process.md"
     },
     {
       "number": 2,
-      "text": "When you're playing video games \u2014 whether it's a quick session or a deep dive \u2014 do you tend to go for short, pick-up-and-play games, or do you prefer ones where you can sink hours into progress and story?",
-      "category": "gaming",
+      "text": "When it comes to your living space \u2014 whether it's a rental or somewhere you're staying for a while \u2014 how do you actually think about decorating or making it feel like yours? Do you bring things with you, buy things locally, focus on lighting and small details, or is it more about just having your dog and essentials?",
+      "category": "home-decor",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "personalizing-space.md"
     },
     {
       "number": 3,
-      "text": "When you're planning a vacation or trip \u2014 how far out do you typically start thinking about it? Do you like having something booked months in advance, or do you prefer keeping things flexible and deciding closer to the date?",
-      "category": "vacation-preferences",
+      "text": "When you're hanging out at home or want to relax in the evening \u2014 besides video games \u2014 what's your go-to way to just chill and unwind? Like, do you watch shows, scroll your phone, tinker on a project, listen to music, cook something, or just hang out with Remi?",
+      "category": "entertainment",
       "type": "enrich",
-      "target_file": "vacation.md"
+      "target_file": "relaxation-habits.md"
     },
     {
       "number": 4,
-      "text": "What's your approach to maintaining important documents and records \u2014 things like passports, insurance policies, financial accounts, and IDs? Do you keep digital copies synced somewhere, physical originals organized in a specific place, or have some other system?",
-      "category": "suggested-new-category: document-management",
+      "text": "As someone who takes health seriously and values freedom, do you think about giving back or contributing to causes beyond your day-to-day life \u2014 like volunteering, donating to specific organizations, or supporting communities you're connected to? What's your approach to that kind of stuff?",
+      "category": "volunteering-philanthropy",
       "type": "new",
-      "target_file": "organization.md"
+      "target_file": "giving-back.md"
     },
     {
       "number": 5,
-      "text": "When you think about your daily environment \u2014 the sounds, visual clutter, and overall sensory input around you \u2014 do you prefer things quiet and minimal, or do you actually work better with some background noise and visual activity happening?",
-      "category": "suggested-new-category: sensory-environment",
-      "type": "new",
-      "target_file": "preferences.md"
+      "text": "When you think about your relationship with money and finances \u2014 beyond investing and budgeting \u2014 what's your actual day-to-day money style? Are you someone who tracks every dollar, uses specific apps, prefers cash, or just kind of wing it while keeping an eye on the big picture?",
+      "category": "finance",
+      "type": "enrich",
+      "target_file": "money-management-habits.md"
     }
   ],
-  "sent_at": "2026-04-04T23:59:41.604989+00:00"
+  "sent_at": "2026-04-06T00:04:56.660807+00:00"
 }
