@@ -1,23 +1,4 @@
----
-task: "Extend treat intervals (reduce frequency while maintaining behavior)"
-goal: remi-training
-started: 2026-04-06T10:25:59.282502+00:00
-completed: 2026-04-06T10:27:47.884661+00:00
-model: MiniMax-M2.5
-tokens_input: 13243
-tokens_output: 3293
-status: completed
----
-
-# Attempt: Extend treat intervals (reduce frequency while maintaining behavior)
-
-## Plan
-
-Execute task: Extend treat intervals (reduce frequency while maintaining behavior)
-Goal: Remi Public Behavior Training
-Using MiniMax API.
-
-## Results
+# Extend treat intervals (reduce frequency while maintaining behavior)
 
 # Remi Public Behavior Training: Extending Treat Intervals Protocol
 
