@@ -1,41 +1,41 @@
 {
-  "message_id": 85,
+  "message_id": 87,
   "questions": [
     {
       "number": 1,
-      "text": "When you think about big life decisions \u2014 like whether to stay in a city, take on a new work opportunity, or make a lifestyle change \u2014 what's your actual decision-making process? Do you make lists, sleep on it, talk it through with specific people, trust a gut feeling, or have some other method that works for you?",
-      "category": "life-planning",
+      "text": "When it comes to buying video games \u2014 are you someone who waits for sales, buys full price for something you're hyped about, checks reviews first, or do you have a specific approach? And do you prefer buying on a specific platform because of the library/perks, or do you just get it wherever?",
+      "category": "gaming",
       "type": "enrich",
-      "target_file": "decision-process.md"
+      "target_file": "shopping-habits.md"
     },
     {
       "number": 2,
-      "text": "When it comes to your living space \u2014 whether it's a rental or somewhere you're staying for a while \u2014 how do you actually think about decorating or making it feel like yours? Do you bring things with you, buy things locally, focus on lighting and small details, or is it more about just having your dog and essentials?",
-      "category": "home-decor",
+      "text": "How do you actually balance having a plan versus staying flexible \u2014 is the life roadmap something written down, mostly in your head, or do you not really plan far ahead and just figure it out as you go? What's the furthest out you typically plan something?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "personalizing-space.md"
+      "target_file": "roadmap.md"
     },
     {
       "number": 3,
-      "text": "When you're hanging out at home or want to relax in the evening \u2014 besides video games \u2014 what's your go-to way to just chill and unwind? Like, do you watch shows, scroll your phone, tinker on a project, listen to music, cook something, or just hang out with Remi?",
-      "category": "entertainment",
+      "text": "In your daily choices \u2014 like what you buy, where you eat, how you travel \u2014 how much does sustainability actually factor in? Is it something you actively think about, avoid certain things because of, or more of a 'do what you can' situation?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "relaxation-habits.md"
+      "target_file": "philosophy.md"
     },
     {
       "number": 4,
-      "text": "As someone who takes health seriously and values freedom, do you think about giving back or contributing to causes beyond your day-to-day life \u2014 like volunteering, donating to specific organizations, or supporting communities you're connected to? What's your approach to that kind of stuff?",
-      "category": "volunteering-philanthropy",
+      "text": "When you take photos for yourself \u2014 what's the setup? Do you just use your phone, do you have a dedicated camera, and do you actually do anything with the photos afterward (\u6574\u7406, edit, share), or do they just sit in your camera roll?",
+      "category": "photography",
       "type": "new",
-      "target_file": "giving-back.md"
+      "target_file": "gear.md"
     },
     {
       "number": 5,
-      "text": "When you think about your relationship with money and finances \u2014 beyond investing and budgeting \u2014 what's your actual day-to-day money style? Are you someone who tracks every dollar, uses specific apps, prefers cash, or just kind of wing it while keeping an eye on the big picture?",
-      "category": "finance",
-      "type": "enrich",
-      "target_file": "money-management-habits.md"
+      "text": "How do you feel about holidays and celebrations \u2014 both big ones like Thanksgiving/Christmas and smaller ones? Do you have specific traditions you like to keep, do you prefer making up your own thing, or is it more of a 'whatever works' situation depending on who you're with?",
+      "category": "celebrations",
+      "type": "new",
+      "target_file": "traditions.md"
     }
   ],
-  "sent_at": "2026-04-06T00:04:56.660807+00:00"
+  "sent_at": "2026-04-07T00:56:04.132937+00:00"
 }
