@@ -1,41 +1,41 @@
 {
-  "message_id": 87,
+  "message_id": 89,
   "questions": [
     {
       "number": 1,
-      "text": "When it comes to buying video games \u2014 are you someone who waits for sales, buys full price for something you're hyped about, checks reviews first, or do you have a specific approach? And do you prefer buying on a specific platform because of the library/perks, or do you just get it wherever?",
-      "category": "gaming",
+      "text": "When you're shopping for things \u2014 not groceries, but bigger stuff like gear, electronics, or things for your space \u2014 are you someone who hunts for deals, compares prices carefully, or just buys what you need when you need it? And how do you feel about secondhand or vintage shopping versus buying new?",
+      "category": "shopping",
       "type": "enrich",
       "target_file": "shopping-habits.md"
     },
     {
       "number": 2,
-      "text": "How do you actually balance having a plan versus staying flexible \u2014 is the life roadmap something written down, mostly in your head, or do you not really plan far ahead and just figure it out as you go? What's the furthest out you typically plan something?",
-      "category": "life-planning",
+      "text": "When you rent a car or borrow someone's wheels \u2014 what kind of vehicle do you actually prefer? Like, are you going for something practical and compact, or do you like having an SUV for the extra space? Any preferences on brand, features, or the driving experience itself?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "roadmap.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 3,
-      "text": "In your daily choices \u2014 like what you buy, where you eat, how you travel \u2014 how much does sustainability actually factor in? Is it something you actively think about, avoid certain things because of, or more of a 'do what you can' situation?",
-      "category": "sustainability",
+      "text": "When you're reading for fun \u2014 do you prefer physical books, ebooks on a tablet/reader, or audiobooks? Or does it depend on the situation \u2014 like audio for walks, physical for bedtime?",
+      "category": "reading",
       "type": "enrich",
-      "target_file": "philosophy.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 4,
-      "text": "When you take photos for yourself \u2014 what's the setup? Do you just use your phone, do you have a dedicated camera, and do you actually do anything with the photos afterward (\u6574\u7406, edit, share), or do they just sit in your camera roll?",
-      "category": "photography",
+      "text": "How do you handle banking and money when you're bouncing between countries? Do you use specific banks, apps like Wise or Revolut, carry multiple cards, or just figure it out as you go? What's your system for not getting hit with fees or locked out of your own funds while traveling?",
+      "category": "digital-nomad-finances",
       "type": "new",
-      "target_file": "gear.md"
+      "target_file": "banking.md"
     },
     {
       "number": 5,
-      "text": "How do you feel about holidays and celebrations \u2014 both big ones like Thanksgiving/Christmas and smaller ones? Do you have specific traditions you like to keep, do you prefer making up your own thing, or is it more of a 'whatever works' situation depending on who you're with?",
-      "category": "celebrations",
+      "text": "When you think about personal growth or self-improvement \u2014 is that something you actively work on (reading, courses, specific goals), or is it more of a 'live and learn' organic thing? Do you have areas you're deliberately trying to get better at, or do you just let life teach you as it happens?",
+      "category": "personal-growth",
       "type": "new",
-      "target_file": "traditions.md"
+      "target_file": "philosophy.md"
     }
   ],
-  "sent_at": "2026-04-07T00:56:04.132937+00:00"
+  "sent_at": "2026-04-08T01:07:22.479288+00:00"
 }
