@@ -1,41 +1,41 @@
 {
-  "message_id": 89,
+  "message_id": 91,
   "questions": [
     {
       "number": 1,
-      "text": "When you're shopping for things \u2014 not groceries, but bigger stuff like gear, electronics, or things for your space \u2014 are you someone who hunts for deals, compares prices carefully, or just buys what you need when you need it? And how do you feel about secondhand or vintage shopping versus buying new?",
-      "category": "shopping",
+      "text": "What's your ideal morning coffee or drink setup \u2014 are you someone who needs a specific brewing method (pour-over, French press, espresso machine), or do you just grab whatever good coffee is nearby? And how do you take it \u2014 black, with milk, flavored, something else?",
+      "category": "beverages",
       "type": "enrich",
-      "target_file": "shopping-habits.md"
+      "target_file": "morning-drink.md"
     },
     {
       "number": 2,
-      "text": "When you rent a car or borrow someone's wheels \u2014 what kind of vehicle do you actually prefer? Like, are you going for something practical and compact, or do you like having an SUV for the extra space? Any preferences on brand, features, or the driving experience itself?",
-      "category": "vehicles",
+      "text": "When you eat out at restaurants \u2014 since you're into cooking and have a good list of cuisines you like \u2014 what's your approach? Do you research places beforehand, ask locals for recommendations, play it by ear, or do you have specific criteria (like must have good vegetarian options, or a certain vibe)?",
+      "category": "food",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "dining-out.md"
     },
     {
       "number": 3,
-      "text": "When you're reading for fun \u2014 do you prefer physical books, ebooks on a tablet/reader, or audiobooks? Or does it depend on the situation \u2014 like audio for walks, physical for bedtime?",
-      "category": "reading",
+      "text": "When it comes to your personal brand and online presence \u2014 since you already have goals around building in the tech/AI space \u2014 do you have a specific vision for what you want to be known for, or is it more of a 'figure it out as I go' thing? Any platforms or types of content you want to create?",
+      "category": "personal-brand",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "content-vision.md"
     },
     {
       "number": 4,
-      "text": "How do you handle banking and money when you're bouncing between countries? Do you use specific banks, apps like Wise or Revolut, carry multiple cards, or just figure it out as you go? What's your system for not getting hit with fees or locked out of your own funds while traveling?",
-      "category": "digital-nomad-finances",
+      "text": "What's your philosophy around routines and rituals \u2014 not your daily schedule, but the things you do regularly that give your life structure or meaning? Like, do you have weekly check-ins with yourself, a specific way you start or end your week, or habits that help you feel grounded?",
+      "category": "rituals-personal",
       "type": "new",
-      "target_file": "banking.md"
+      "target_file": "personal-rituals.md"
     },
     {
       "number": 5,
-      "text": "When you think about personal growth or self-improvement \u2014 is that something you actively work on (reading, courses, specific goals), or is it more of a 'live and learn' organic thing? Do you have areas you're deliberately trying to get better at, or do you just let life teach you as it happens?",
-      "category": "personal-growth",
+      "text": "When you think about your ideal future living situation \u2014 beyond just climate preferences \u2014 what's the vision? Like, do you see yourself eventually owning property, living somewhere permanently, or keeping the flexibility of bouncing around? What's the dream setup?",
+      "category": "housing-future",
       "type": "new",
-      "target_file": "philosophy.md"
+      "target_file": "living-vision.md"
     }
   ],
-  "sent_at": "2026-04-08T01:07:22.479288+00:00"
+  "sent_at": "2026-04-09T01:19:07.861329+00:00"
 }
