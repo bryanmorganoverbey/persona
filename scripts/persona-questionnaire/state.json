@@ -1,41 +1,41 @@
 {
-  "message_id": 93,
+  "message_id": 95,
   "questions": [
     {
       "number": 1,
-      "text": "When you think about your personal style and what you wear day-to-day \u2014 are you someone who has a pretty defined 'look' or uniform, or do you switch it up a lot? Any specific brands or pieces you consistently reach for?",
-      "category": "fashion",
+      "text": "When you want to disconnect or take real time off from work \u2014 are you good at actually stepping away, or do you find yourself still checking in? What's your philosophy for truly unplugging?",
+      "category": "work",
       "type": "enrich",
-      "target_file": "style.md"
+      "target_file": "boundaries.md"
     },
     {
       "number": 2,
-      "text": "When it comes to music \u2014 besides the context of when you listen (work, workouts, etc.) \u2014 what are you actually into? Any specific artists, albums, or playlists you love? Do you have a go-to when you want to discover new stuff?",
-      "category": "music",
+      "text": "Do you currently work with any kind of coach, mentor, therapist, or guide \u2014 someone you intentionally go to for personal or professional growth? Or do you prefer learning on your own?",
+      "category": "education",
       "type": "enrich",
-      "target_file": "artists.md"
+      "target_file": "mentorship.md"
     },
     {
       "number": 3,
-      "text": "When you think about coffee \u2014 beyond your daily drink \u2014 are you particular about the beans, roast level, or brewing method? Do you seek out specific cafes when you're in a new city, or is good coffee just a nice bonus?",
-      "category": "beverages",
+      "text": "When you exercise or work out \u2014 are you following a specific program with progressive goals, or do you mostly go by how you feel that day? Do you track progress (weights, reps, distances) or just move and see what happens?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "coffee-preferences.md"
+      "target_file": "training-style.md"
     },
     {
       "number": 4,
-      "text": "How do you stay informed about what's happening in the world \u2014 news, tech industry updates, or things happening in the places you live? Do you follow specific sources, newsletters, Twitter/X, podcasts, or just kind of stay in your bubble?",
-      "category": "information-consumption",
+      "text": "What's your grooming and self-care routine like \u2014 things like haircuts, skincare, or other personal maintenance? Do you have a specific approach or schedule, or do you just handle it when it comes up?",
+      "category": "personal-care",
       "type": "new",
-      "target_file": "news-sources.md"
+      "target_file": "routines.md"
     },
     {
       "number": 5,
-      "text": "When it comes to photography \u2014 do you have any interest in it beyond just capturing memories? Like, do you think about composition, editing your photos, or even showing them to people? Or is it more of a 'point and shoot, it sits on my phone' thing?",
-      "category": "photography",
+      "text": "When you go out for drinks or nightlife \u2014 are you mostly a beer/wine person, or do you enjoy exploring cocktails, spirits, or craft drinks? What's your go-to order, and do you like trying new places or returning to favorites?",
+      "category": "nightlife",
       "type": "new",
-      "target_file": "photography-hobby.md"
+      "target_file": "preferences.md"
     }
   ],
-  "sent_at": "2026-04-10T01:36:42.199429+00:00"
+  "sent_at": "2026-04-11T01:41:16.338715+00:00"
 }
