@@ -1,41 +1,41 @@
 {
-  "message_id": 99,
+  "message_id": 101,
   "questions": [
     {
       "number": 1,
-      "text": "When you're communicating with family in Tennessee or Spanish-speaking locals in Mexico \u2014 what's your language preference? Do you switch entirely based on who you're talking to, mix languages in conversation, or have a specific approach to code-switching?",
-      "category": "languages",
+      "text": "When you're reading for fun right now \u2014 what's your current read? Are you working through a specific book, doing a reread of something, or bouncing between a few? And do you find yourself seeking out specific types of books depending on your mood, or do you just pick up whatever looks interesting?",
+      "category": "reading",
       "type": "enrich",
-      "target_file": "communication-preferences.md"
+      "target_file": "currently-reading.md"
     },
     {
       "number": 2,
-      "text": "When it comes to your personal finances \u2014 beyond day-to-day spending \u2014 do you have specific financial goals you're actively working toward (like a savings target, buying property, financial independence), or is it more of a 'keep things flexible and see where life takes you' approach?",
-      "category": "finance",
+      "text": "When you game \u2014 are you more of a single-player story person, or do you need multiplayer/competitive to really get into it? Like, are you the type who wants a deep narrative experience, or do you prefer jumping into something with friends for a session?",
+      "category": "gaming",
       "type": "enrich",
-      "target_file": "goals.md"
+      "target_file": "game-preferences.md"
     },
     {
       "number": 3,
-      "text": "When you're looking to discover new podcasts or content \u2014 aside from the ones you already listen to \u2014 what's your method for finding good recommendations? Do you ask friends, browse specific platforms, rely on algorithms, or have other ways you discover new shows?",
-      "category": "podcasts",
+      "text": "Beyond just knowing you have contemplative practices \u2014 what's actually working for you right now? Like, is it meditation apps (Headspace, Calm, Waking Up), do you just do your own thing, is it more of a physical practice like journaling or walking, or is it something else entirely?",
+      "category": "mindfulness-spirituality",
       "type": "enrich",
-      "target_file": "discovery.md"
+      "target_file": "current-practices.md"
     },
     {
       "number": 4,
-      "text": "Do you have any interest in creative hobbies beyond tech \u2014 like drawing, painting, playing an instrument, writing, or making things with your hands? If you ever wanted to explore creative expression outside of work, what's appeal you the most?",
-      "category": "creative-expression",
+      "text": "Do you think about your credit and banking setup at all \u2014 like, do you have a specific strategy for credit cards (Chase, capital one, no annual fee), or is it just whatever card works? And do you prefer keeping everything at one bank or spreading it across multiple institutions?",
+      "category": "credit-banking",
       "type": "new",
-      "target_file": "creative-hobbies.md"
+      "target_file": "credit-strategy.md"
     },
     {
       "number": 5,
-      "text": "What's your philosophy on sleep \u2014 do you have specific routines or habits around winding down, optimizing your sleep environment, or tracking sleep quality? Or is it more of a 'just sleep when you're tired' thing?",
-      "category": "sleep-habits",
+      "text": "Since you're living internationally and bouncing between Mexico and the US \u2014 do you have any estate planning, power of attorney, or legal documents sorted for that? Like, is that something you've looked into, or is it one of those things that's on the 'someday' list?",
+      "category": "legal-planning",
       "type": "new",
-      "target_file": "sleep-routine.md"
+      "target_file": "estate-plan.md"
     }
   ],
-  "sent_at": "2026-04-13T01:45:26.320285+00:00"
+  "sent_at": "2026-04-14T02:43:59.862345+00:00"
 }
