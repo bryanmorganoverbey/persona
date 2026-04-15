@@ -1,41 +1,41 @@
 {
-  "message_id": 101,
+  "message_id": 103,
   "questions": [
     {
       "number": 1,
-      "text": "When you're reading for fun right now \u2014 what's your current read? Are you working through a specific book, doing a reread of something, or bouncing between a few? And do you find yourself seeking out specific types of books depending on your mood, or do you just pick up whatever looks interesting?",
-      "category": "reading",
+      "text": "When you face a real tradeoff \u2014 like choosing between a higher paying job that requires being in an office versus one that keeps you location-independent, or spending money on experiences vs saving for the future \u2014 what's the core principle or value that tips the scales for you? Is there a specific hierarchy of what's non-negotiable versus what you're flexible on?",
+      "category": "values",
       "type": "enrich",
-      "target_file": "currently-reading.md"
+      "target_file": "decision-rules.md"
     },
     {
       "number": 2,
-      "text": "When you game \u2014 are you more of a single-player story person, or do you need multiplayer/competitive to really get into it? Like, are you the type who wants a deep narrative experience, or do you prefer jumping into something with friends for a session?",
-      "category": "gaming",
+      "text": "Do you create playlists for yourself \u2014 like for specific moods, activities, or phases of life \u2014 or do you mostly just stream and let algorithms guide you? And when you discover a new artist or song you love, do you share it with anyone, keep it to yourself, or add it to a rotation that you come back to?",
+      "category": "music",
       "type": "enrich",
-      "target_file": "game-preferences.md"
+      "target_file": "playlists.md"
     },
     {
       "number": 3,
-      "text": "Beyond just knowing you have contemplative practices \u2014 what's actually working for you right now? Like, is it meditation apps (Headspace, Calm, Waking Up), do you just do your own thing, is it more of a physical practice like journaling or walking, or is it something else entirely?",
-      "category": "mindfulness-spirituality",
-      "type": "enrich",
-      "target_file": "current-practices.md"
+      "text": "What's your philosophy on digital privacy and data? Like, are you okay with apps tracking your location if it's useful, do you use ad blockers or VPNs, prefer cash over card in certain places, or are you generally like 'they already have everything so why stress' about it?",
+      "category": "privacy-digital-footprint",
+      "type": "new",
+      "target_file": "privacy-preferences.md"
     },
     {
       "number": 4,
-      "text": "Do you think about your credit and banking setup at all \u2014 like, do you have a specific strategy for credit cards (Chase, capital one, no annual fee), or is it just whatever card works? And do you prefer keeping everything at one bank or spreading it across multiple institutions?",
-      "category": "credit-banking",
+      "text": "When you spend money on 'life experiences' \u2014 like concerts, festivals, tickets to things, travel memories, or special outings \u2014 is that something you budget pretty freely, save up for specifically, or is it more of a 'whenever something cool comes up I'll do it' approach? Do you prioritize spending on experiences over things?",
+      "category": "experiences-spending",
       "type": "new",
-      "target_file": "credit-strategy.md"
+      "target_file": "experience-preferences.md"
     },
     {
       "number": 5,
-      "text": "Since you're living internationally and bouncing between Mexico and the US \u2014 do you have any estate planning, power of attorney, or legal documents sorted for that? Like, is that something you've looked into, or is it one of those things that's on the 'someday' list?",
-      "category": "legal-planning",
-      "type": "new",
-      "target_file": "estate-plan.md"
+      "text": "When it comes to afternoon or mid-day work sessions \u2014 besides your morning Pomodoro routine \u2014 do you have a different approach? Like, do you schedule deep work differently after lunch, have a specific afternoon pick-me-up ritual, or is it more of a consistent flow throughout the day?",
+      "category": "daily-routine",
+      "type": "enrich",
+      "target_file": "afternoon-rhythm.md"
     }
   ],
-  "sent_at": "2026-04-14T02:43:59.862345+00:00"
+  "sent_at": "2026-04-15T02:44:23.828382+00:00"
 }
