@@ -1,0 +1,13 @@
+{
+  "message_id": 830,
+  "task": {
+    "description": "Track data on duration of calm behavior per session",
+    "goal_name": "remi-training",
+    "goal_title": "Remi Public Behavior Training",
+    "goal_dir": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training",
+    "goal_index_path": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/remi-training/index.md",
+    "deadline": null
+  },
+  "question": "To customize this tracker further, please let me know:\n\n1. **Do you prefer digital (spreadsheet) or paper-based tracking?**\n2. **Do you have existing session data from February that needs to be incorporated?**\n3. **Any specific metrics or behaviors you'd like to track additionally?**\n\nI can create a ready-to-use spreadsheet version if you prefer that format over the printable templates.",
+  "sent_at": "2026-04-15T22:16:20.062932+00:00"
+}
