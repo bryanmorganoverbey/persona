@@ -1,41 +1,41 @@
 {
-  "message_id": 103,
+  "message_id": 105,
   "questions": [
     {
       "number": 1,
-      "text": "When you face a real tradeoff \u2014 like choosing between a higher paying job that requires being in an office versus one that keeps you location-independent, or spending money on experiences vs saving for the future \u2014 what's the core principle or value that tips the scales for you? Is there a specific hierarchy of what's non-negotiable versus what you're flexible on?",
-      "category": "values",
+      "text": "When you buy something \u2014 whether it's a new gadget, clothing, or something for your space \u2014 how much does sustainability factor into your decision? Are there specific brands you trust, types of products you avoid, or certifications you look for? Or is it more of a 'if it works and feels right, I'll get it' approach?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "decision-rules.md"
+      "target_file": "shopping-decisions.md"
     },
     {
       "number": 2,
-      "text": "Do you create playlists for yourself \u2014 like for specific moods, activities, or phases of life \u2014 or do you mostly just stream and let algorithms guide you? And when you discover a new artist or song you love, do you share it with anyone, keep it to yourself, or add it to a rotation that you come back to?",
-      "category": "music",
+      "text": "When it comes to weather and climate \u2014 you mentioned warm, walkable cities \u2014 but do you have strong preferences around humidity, rainy seasons, or altitude? Like, does living somewhere humid bother you, do you avoid places with long rainy winters, or do you not really notice?",
+      "category": "climate-preferences",
       "type": "enrich",
-      "target_file": "playlists.md"
+      "target_file": "weather\u7ec6\u8282.md"
     },
     {
       "number": 3,
-      "text": "What's your philosophy on digital privacy and data? Like, are you okay with apps tracking your location if it's useful, do you use ad blockers or VPNs, prefer cash over card in certain places, or are you generally like 'they already have everything so why stress' about it?",
-      "category": "privacy-digital-footprint",
-      "type": "new",
-      "target_file": "privacy-preferences.md"
+      "text": "When you think about your personal growth or philosophy \u2014 like how you make sense of life, purpose, or big questions \u2014 do you lean on a specific framework (Stoicism, Buddhism, something else), is it more of a mix-and-match personal belief system, or do you not really think about it in those terms?",
+      "category": "mindfulness-spirituality",
+      "type": "enrich",
+      "target_file": "philosophical-frameworks.md"
     },
     {
       "number": 4,
-      "text": "When you spend money on 'life experiences' \u2014 like concerts, festivals, tickets to things, travel memories, or special outings \u2014 is that something you budget pretty freely, save up for specifically, or is it more of a 'whenever something cool comes up I'll do it' approach? Do you prioritize spending on experiences over things?",
-      "category": "experiences-spending",
+      "text": "When special occasions come up \u2014 your birthday, holidays, celebrations with friends or Remi's gotchas \u2014 how do you like to mark them? Do you have specific traditions, prefer low-key vs. big gatherings, or are you the type to make a big deal out of milestones?",
+      "category": "celebrations-and-rituals",
       "type": "new",
-      "target_file": "experience-preferences.md"
+      "target_file": "celebrations.md"
     },
     {
       "number": 5,
-      "text": "When it comes to afternoon or mid-day work sessions \u2014 besides your morning Pomodoro routine \u2014 do you have a different approach? Like, do you schedule deep work differently after lunch, have a specific afternoon pick-me-up ritual, or is it more of a consistent flow throughout the day?",
-      "category": "daily-routine",
-      "type": "enrich",
-      "target_file": "afternoon-rhythm.md"
+      "text": "When it comes to planning and organizing your personal life \u2014 aside from work tasks in Linear \u2014 do you use any specific tools or methods (bullet journals, Notion, apps, whiteboards), or is it mostly in your head or in notes? How do you keep track of non-work goals, reminders, or life admin?",
+      "category": "personal-organization",
+      "type": "new",
+      "target_file": "life-management-tools.md"
     }
   ],
-  "sent_at": "2026-04-15T02:44:23.828382+00:00"
+  "sent_at": "2026-04-16T02:44:54.024722+00:00"
 }
