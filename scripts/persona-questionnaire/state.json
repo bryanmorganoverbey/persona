@@ -1,41 +1,41 @@
 {
-  "message_id": 105,
+  "message_id": 107,
   "questions": [
     {
       "number": 1,
-      "text": "When you buy something \u2014 whether it's a new gadget, clothing, or something for your space \u2014 how much does sustainability factor into your decision? Are there specific brands you trust, types of products you avoid, or certifications you look for? Or is it more of a 'if it works and feels right, I'll get it' approach?",
-      "category": "sustainability",
+      "text": "When it comes to getting around \u2014 do you own a car where you are now (Mexico), or do you rely entirely on ride-shares, public transit, and walking? And what's your general philosophy on car ownership \u2014 is it something you see yourself doing eventually, or do you prefer the flexibility of not having one?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "shopping-decisions.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 2,
-      "text": "When it comes to weather and climate \u2014 you mentioned warm, walkable cities \u2014 but do you have strong preferences around humidity, rainy seasons, or altitude? Like, does living somewhere humid bother you, do you avoid places with long rainy winters, or do you not really notice?",
-      "category": "climate-preferences",
+      "text": "Beyond just 'sustainability as a value' \u2014 when you're actually buying something (clothes, tech, food, household stuff), how often does sustainability factor into the decision? Are there specific things you actively avoid (fast fashion, certain brands), things you seek out (eco-certifications, secondhand), or is it more of a 'I think about it sometimes' kind of thing?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "weather\u7ec6\u8282.md"
+      "target_file": "practices.md"
     },
     {
       "number": 3,
-      "text": "When you think about your personal growth or philosophy \u2014 like how you make sense of life, purpose, or big questions \u2014 do you lean on a specific framework (Stoicism, Buddhism, something else), is it more of a mix-and-match personal belief system, or do you not really think about it in those terms?",
-      "category": "mindfulness-spirituality",
+      "text": "When it comes to community and local involvement \u2014 volleyball with friends is your current thing, but do you ever see yourself getting more involved in your communities (wherever you're living)? Like, volunteering, local organizations, meetups, religious groups, or anything where you're showing up regularly as a regular part of something bigger?",
+      "category": "friendships",
       "type": "enrich",
-      "target_file": "philosophical-frameworks.md"
+      "target_file": "community-involvement.md"
     },
     {
       "number": 4,
-      "text": "When special occasions come up \u2014 your birthday, holidays, celebrations with friends or Remi's gotchas \u2014 how do you like to mark them? Do you have specific traditions, prefer low-key vs. big gatherings, or are you the type to make a big deal out of milestones?",
-      "category": "celebrations-and-rituals",
+      "text": "When you want to learn something new \u2014 not for work specifically, but like a personal skill or topic you're curious about \u2014 how do you actually go about it? Do you dive into YouTube tutorials, read books, take online courses, tinker around, ask people, or something else? What's your go-to method for learning outside of structured education?",
+      "category": "suggested-new-learning-methods",
       "type": "new",
-      "target_file": "celebrations.md"
+      "target_file": "self-directed-learning.md"
     },
     {
       "number": 5,
-      "text": "When it comes to planning and organizing your personal life \u2014 aside from work tasks in Linear \u2014 do you use any specific tools or methods (bullet journals, Notion, apps, whiteboards), or is it mostly in your head or in notes? How do you keep track of non-work goals, reminders, or life admin?",
-      "category": "personal-organization",
+      "text": "When you're just scrolling or consuming content for fun \u2014 beyond podcasts and music \u2014 what's your vibe? Do you spend time on Reddit, YouTube, TikTok, Twitter/X, news apps, or do you find yourself mostly just doing other things? How do you unwind with content when you're not actively seeking something specific?",
+      "category": "suggested-new-digital-consumption",
       "type": "new",
-      "target_file": "life-management-tools.md"
+      "target_file": "content-consumption.md"
     }
   ],
-  "sent_at": "2026-04-16T02:44:54.024722+00:00"
+  "sent_at": "2026-04-17T03:55:15.607515+00:00"
 }
