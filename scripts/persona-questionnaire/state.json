@@ -1,41 +1,41 @@
 {
-  "message_id": 109,
+  "message_id": 111,
   "questions": [
     {
       "number": 1,
-      "text": "When you're really into a game \u2014 are you someone who plays the same game for months on end (grinding out every achievement, completing everything), or do you bounce between different games pretty quickly? What's your all-time favorite game or franchise you've come back to more than once, and do you have a go-to genre that got you through the pandemic? Also, what's your setup \u2014 console, PC, or do you play on both?",
-      "category": "gaming",
+      "text": "When you think about your ideal living space \u2014 aside from the functional requirements you've listed \u2014 what's the vibe or feeling you're going for? Do you like a clean, minimal aesthetic, or do you prefer a space with more character and warmth? Any specific interior styles that appeal to you (mid-century modern, bohemian, industrial, something else)?",
+      "category": "home-decor",
       "type": "enrich",
-      "target_file": "gaming.md"
+      "target_file": "style.md"
     },
     {
       "number": 2,
-      "text": "For reading \u2014 are you particular about the format? Like, do you prefer physical books, Kindle/e-reader, or audiobooks? Do you mostly buy books, hit up the library, or borrow from friends? Any favorite authors or series you find yourself re-reading? And do you read differently depending on your mood \u2014 like, reach for something light and fun when you're tired versus something heavier when you want to think?",
-      "category": "reading",
+      "text": "When you think about building deeper connections with people \u2014 whether it's friends back in Tennessee, people you meet while traveling, or your community in Mexico \u2014 do you have a specific approach to staying close despite distance? Do you make an effort to video call, send voice notes, have scheduled catch-ups, or just let it happen naturally? And do you find it easy to maintain multiple close friendships across different places, or does it feel like a lot to keep up?",
+      "category": "relationships",
       "type": "enrich",
-      "target_file": "reading-habits.md"
+      "target_file": "maintaining-distance.md"
     },
     {
       "number": 3,
-      "text": "When you think about your life over the next few years \u2014 what are the concrete goals or milestones you're working toward? Do you keep them written down somewhere specific (a document, notes app, vision board), or do you just hold them in your head as a general direction? And when you hit something big \u2014 like landing a goal, making a big move, or a milestone \u2014 how do you mark or celebrate it, or do you just kind of move on to the next thing?",
-      "category": "life-planning",
+      "text": "What's your current approach to learning Spanish? Are you actively studying (apps, lessons, textbooks), focusing more on immersive learning through conversation, or is it more of a passive thing where you pick things up as you go? And what's driving the motivation \u2014 is it about being more comfortable in daily life in Mexico, connecting with locals on a deeper level, or something else?",
+      "category": "languages",
       "type": "enrich",
-      "target_file": "roadmap.md"
+      "target_file": "learning-approach.md"
     },
     {
       "number": 4,
-      "text": "Do you have any interest in photography beyond just capturing memories on your phone? Like, do you ever think about composition, lighting, or framing when you're taking a photo? Do you have a proper camera (DSLR, mirrorless, film), or is that something you've wanted to explore more? And when you take photos \u2014 do you edit them at all, share them on social media, keep them to yourself, or do they just sit on your phone and never get looked at again?",
-      "category": "photography",
+      "text": "When you think about your public presence and personal brand \u2014 you mentioned interest in the tech/AI space \u2014 what specifically do you want to be known for or have people associate with you? Is it more about building your individual reputation as a developer, sharing your journey as a digital nomad, creating content about the tools and workflows you use, or something else entirely?",
+      "category": "personal-brand",
       "type": "new",
-      "target_file": "photography.md"
+      "target_file": "content-focus.md"
     },
     {
       "number": 5,
-      "text": "When you're pouring yourself a drink at home or ordering at a bar \u2014 are you mostly a beer or wine person, or do you enjoy cocktails and spirits? Any specific drinks you always reach for (a particular whiskey, your go-to cocktail), or do you like exploring and trying new stuff? Have you ever gotten into making cocktails at home \u2014 like, do you have a small bar setup, bitters, anything you've experimented with \u2014 or is it more of a 'grab whatever's easy' vibe?",
-      "category": "alcohol",
+      "text": "When you're planning for the future \u2014 not just travel or housing, but things like financial independence, career growth, relationships, where you want to be in 5-10 years \u2014 do you have a specific place where you document those thoughts? Like a journal, a notes app, a vision board, or is it mostly something you think about but don't write down? And do you find it helpful to talk through big picture stuff with your partner, friends, or a coach, or do you prefer to process it on your own?",
+      "category": "life-planning",
       "type": "new",
-      "target_file": "alcohol.md"
+      "target_file": "future-documentation.md"
     }
   ],
-  "sent_at": "2026-04-18T04:30:24.716197+00:00"
+  "sent_at": "2026-04-19T05:03:21.831598+00:00"
 }
