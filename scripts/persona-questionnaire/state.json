@@ -1,41 +1,41 @@
 {
-  "message_id": 111,
+  "message_id": 113,
   "questions": [
     {
       "number": 1,
-      "text": "When you think about your ideal living space \u2014 aside from the functional requirements you've listed \u2014 what's the vibe or feeling you're going for? Do you like a clean, minimal aesthetic, or do you prefer a space with more character and warmth? Any specific interior styles that appeal to you (mid-century modern, bohemian, industrial, something else)?",
-      "category": "home-decor",
+      "text": "When it comes to fitness and movement \u2014 you mentioned daily exercise as a baseline commitment \u2014 but what's your philosophy on working out alone versus with others? Are you more of a solo gym-goer who likes to zone out and get it done, do you prefer classes or partner workouts for the accountability and energy, or does it depend on the type of movement you're doing?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "style.md"
+      "target_file": "social-workouts.md"
     },
     {
       "number": 2,
-      "text": "When you think about building deeper connections with people \u2014 whether it's friends back in Tennessee, people you meet while traveling, or your community in Mexico \u2014 do you have a specific approach to staying close despite distance? Do you make an effort to video call, send voice notes, have scheduled catch-ups, or just let it happen naturally? And do you find it easy to maintain multiple close friendships across different places, or does it feel like a lot to keep up?",
-      "category": "relationships",
+      "text": "Since you're bouncing between Mexico and the US twice a year \u2014 do you own any vehicles at all right now, or are you fully relying on walking, ride-shares, and public transit wherever you are? And what's your feeling on car ownership as a digital nomad \u2014 is it something you'll eventually want for the freedom, or do you prefer the simplicity of not dealing with a car across borders?",
+      "category": "vehicles",
       "type": "enrich",
-      "target_file": "maintaining-distance.md"
+      "target_file": "ownership-philosophy.md"
     },
     {
       "number": 3,
-      "text": "What's your current approach to learning Spanish? Are you actively studying (apps, lessons, textbooks), focusing more on immersive learning through conversation, or is it more of a passive thing where you pick things up as you go? And what's driving the motivation \u2014 is it about being more comfortable in daily life in Mexico, connecting with locals on a deeper level, or something else?",
-      "category": "languages",
+      "text": "When you're buying things \u2014 whether it's gear for work, clothes, household stuff, or gifts for people \u2014 do you mostly shop online (Amazon, direct brands) or do you prefer in-store for the instant gratification and ability to see things in person? And are you someone who researches purchases extensively, or do you more of a 'need it, buy it, figure out if it works' person?",
+      "category": "shopping",
       "type": "enrich",
-      "target_file": "learning-approach.md"
+      "target_file": "shopping-methods.md"
     },
     {
       "number": 4,
-      "text": "When you think about your public presence and personal brand \u2014 you mentioned interest in the tech/AI space \u2014 what specifically do you want to be known for or have people associate with you? Is it more about building your individual reputation as a developer, sharing your journey as a digital nomad, creating content about the tools and workflows you use, or something else entirely?",
-      "category": "personal-brand",
-      "type": "new",
-      "target_file": "content-focus.md"
+      "text": "What's your relationship with routines and habits outside of work? Do you have specific morning or evening rituals beyond your coffee and wind-down, or is your day-to-day pretty unstructured once the work day ends? I'm thinking about things like daily journaling, specific times you check in with yourself, or anything you do to maintain mental clarity.",
+      "category": "daily-routine",
+      "type": "enrich",
+      "target_file": "personal-rituals.md"
     },
     {
       "number": 5,
-      "text": "When you're planning for the future \u2014 not just travel or housing, but things like financial independence, career growth, relationships, where you want to be in 5-10 years \u2014 do you have a specific place where you document those thoughts? Like a journal, a notes app, a vision board, or is it mostly something you think about but don't write down? And do you find it helpful to talk through big picture stuff with your partner, friends, or a coach, or do you prefer to process it on your own?",
-      "category": "life-planning",
+      "text": "When it comes to alcohol and nightlife \u2014 are you someone who goes out to bars, clubs, or social drinking events fairly regularly, or is your socializing more centered around other activities? Do you enjoy the bar scene as part of your social life, or do you prefer gatherings in homes, restaurants, or other settings?",
+      "category": "social-life",
       "type": "new",
-      "target_file": "future-documentation.md"
+      "target_file": "nightlife-preferences.md"
     }
   ],
-  "sent_at": "2026-04-19T05:03:21.831598+00:00"
+  "sent_at": "2026-04-20T05:12:40.981589+00:00"
 }
