@@ -1,41 +1,41 @@
 {
-  "message_id": 113,
+  "message_id": 115,
   "questions": [
     {
       "number": 1,
-      "text": "When it comes to fitness and movement \u2014 you mentioned daily exercise as a baseline commitment \u2014 but what's your philosophy on working out alone versus with others? Are you more of a solo gym-goer who likes to zone out and get it done, do you prefer classes or partner workouts for the accountability and energy, or does it depend on the type of movement you're doing?",
-      "category": "fitness",
+      "text": "When it comes to your gaming setup and session habits \u2014 do you prefer playing on console, PC, or both? And when you actually sit down to game, are you someone who plays for longer stretches in one go, or do you prefer shorter sessions (30-60 minutes) where you can jump in and out?",
+      "category": "gaming",
       "type": "enrich",
-      "target_file": "social-workouts.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 2,
-      "text": "Since you're bouncing between Mexico and the US twice a year \u2014 do you own any vehicles at all right now, or are you fully relying on walking, ride-shares, and public transit wherever you are? And what's your feeling on car ownership as a digital nomad \u2014 is it something you'll eventually want for the freedom, or do you prefer the simplicity of not dealing with a car across borders?",
-      "category": "vehicles",
+      "text": "When you think about life planning \u2014 beyond financial goals \u2014 do you have a vision for where you want to be in 3 years, 5 years, 10 years? Is this something you actively think about and document, or do you prefer keeping it loose and seeing how things unfold?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "ownership-philosophy.md"
+      "target_file": "roadmap.md"
     },
     {
       "number": 3,
-      "text": "When you're buying things \u2014 whether it's gear for work, clothes, household stuff, or gifts for people \u2014 do you mostly shop online (Amazon, direct brands) or do you prefer in-store for the instant gratification and ability to see things in person? And are you someone who researches purchases extensively, or do you more of a 'need it, buy it, figure out if it works' person?",
-      "category": "shopping",
+      "text": "When you read fiction versus non-fiction \u2014 do you seek out different things for each, or is it all just 'reading' to you? And are there any specific authors, genres, or types of books you keep coming back to for comfort re-reads?",
+      "category": "reading",
       "type": "enrich",
-      "target_file": "shopping-methods.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 4,
-      "text": "What's your relationship with routines and habits outside of work? Do you have specific morning or evening rituals beyond your coffee and wind-down, or is your day-to-day pretty unstructured once the work day ends? I'm thinking about things like daily journaling, specific times you check in with yourself, or anything you do to maintain mental clarity.",
-      "category": "daily-routine",
-      "type": "enrich",
-      "target_file": "personal-rituals.md"
+      "text": "What's your relationship with digital privacy and data security? Do you use VPNs, ad blockers, specific browsers, or have any routines around protecting your online footprint \u2014 or are you more in the 'they already have everything, so why stress' camp?",
+      "category": "digital-privacy",
+      "type": "new",
+      "target_file": "index.md"
     },
     {
       "number": 5,
-      "text": "When it comes to alcohol and nightlife \u2014 are you someone who goes out to bars, clubs, or social drinking events fairly regularly, or is your socializing more centered around other activities? Do you enjoy the bar scene as part of your social life, or do you prefer gatherings in homes, restaurants, or other settings?",
-      "category": "social-life",
+      "text": "When you're consuming content for fun \u2014 not podcasts or music, but doom-scrolling or browsing \u2014 what's your go-to? Do you spend time on Reddit, YouTube, TikTok, Twitter/X, news apps, or do you find yourself mostly doing other things with that free time?",
+      "category": "content-consumption",
       "type": "new",
-      "target_file": "nightlife-preferences.md"
+      "target_file": "index.md"
     }
   ],
-  "sent_at": "2026-04-20T05:12:40.981589+00:00"
+  "sent_at": "2026-04-21T05:50:45.362236+00:00"
 }
