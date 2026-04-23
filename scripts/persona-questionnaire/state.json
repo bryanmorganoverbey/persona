@@ -1,41 +1,41 @@
 {
-  "message_id": 117,
+  "message_id": 119,
   "questions": [
     {
       "number": 1,
-      "text": "When you're reading fiction versus non-fiction \u2014 do you seek out different things for each, or is it all just 'reading' to you? And are there any specific authors, genres, or types of books you keep coming back to for comfort re-reads?",
-      "category": "reading",
+      "text": "Have you ever worked with a therapist, coach, or counselor \u2014 and if so, what was that experience like? I'm curious whether you've found professional support helpful for processing things, or if it's just not your thing. If you have worked with someone, any qualities that made them effective (or not)?",
+      "category": "mental-health-support",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "professional-support.md"
     },
     {
       "number": 2,
-      "text": "When it comes to your gaming setup and session habits \u2014 do you prefer playing on console, PC, or both? And when you actually sit down to game, are you someone who plays for longer stretches in one go, or do you prefer shorter sessions (30-60 minutes) where you can jump in and out?",
-      "category": "gaming",
+      "text": "When it comes to your presence online \u2014 you mentioned interest in the tech/AI space \u2014 are you more interested in building an audience/community, or is it more about reputation and professional visibility for career stuff? Do you actually want to be a 'content creator' or is the goal just to be known as someone solid in your field?",
+      "category": "personal-brand",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "community-vs-audience.md"
     },
     {
       "number": 3,
-      "text": "When you think about your life over the next few years \u2014 what are the concrete goals or milestones you're working toward? Do you keep them written down somewhere specific (a document, notes app, vision board), or do you just hold them in your head as a general direction? And when you hit something big \u2014 like landing a goal, making a big move, or a milestone \u2014 how do you mark or celebrate it, or do you just kind of move on to the next thing?",
-      "category": "life-planning",
+      "text": "How do you handle it when you and someone close to you have a real disagreement \u2014 like a friendship conflict, a misunderstanding with family, or tension with a partner? Are you someone who addresses it head-on and ASAP, needs time to cool off first, tries to avoid confrontation entirely, or does it depend on the situation?",
+      "category": "relationships",
       "type": "enrich",
-      "target_file": "roadmap.md"
+      "target_file": "conflict-resolution.md"
     },
     {
       "number": 4,
-      "text": "Do you have any interest in photography beyond just capturing memories on your phone? Like, do you ever think about composition, lighting, or framing when you're taking a photo? Do you have a proper camera (DSLR, mirrorless, film), or is that something you've wanted to explore more? And when you take photos \u2014 do you edit them at all, share them on social media, keep them to yourself, or do they just sit on your phone and never get looked at again?",
-      "category": "photography",
+      "text": "What's your relationship with risk and trying new things? Like, when you face a big decision \u2014 quitting a job, moving somewhere new, betting on yourself on a project \u2014 do you usually lean toward caution or go for it? How do you typically weigh the upside vs. downside?",
+      "category": "risk-tolerance",
       "type": "new",
-      "target_file": "photography-interest.md"
+      "target_file": "risk-tolerance.md"
     },
     {
       "number": 5,
-      "text": "When it comes to your personal presence online \u2014 beyond tech content, do you engage with any social or political causes publicly? Or do you keep your opinions on bigger societal issues more private? Is there anything you feel strongly about that you'd want to use a platform for if you had one?",
-      "category": "advocacy",
+      "text": "Do you ever create things just for the joy of it \u2014 like write, draw, build projects that aren't about productivity or work, make music, journal, or anything where the output is more important than the outcome? Or is your creative energy mostly channeled into building things that serve a purpose?",
+      "category": "creative-expression",
       "type": "new",
-      "target_file": "causes.md"
+      "target_file": "creative-expression.md"
     }
   ],
-  "sent_at": "2026-04-22T06:20:52.684837+00:00"
+  "sent_at": "2026-04-23T06:54:05.752044+00:00"
 }
