@@ -1,7 +1,7 @@
 ---
 last_reviewed: 2026-02-28
 confidence: high
-status: in_progress
+status: completed
 ---
 
 # Remi Public Behavior Training
@@ -25,4 +25,4 @@ Documentation - ['./documentation/']
 - [x] Consistent calm behavior in familiar cafes
 - [x] Test in new / unfamiliar restaurant environments
 - [x] Extend treat intervals (reduce frequency while maintaining behavior)
-- [ ] Track data on duration of calm behavior per session
+- [x] Track data on duration of calm behavior per session
