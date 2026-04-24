@@ -1,41 +1,41 @@
 {
-  "message_id": 119,
+  "message_id": 121,
   "questions": [
     {
       "number": 1,
-      "text": "Have you ever worked with a therapist, coach, or counselor \u2014 and if so, what was that experience like? I'm curious whether you've found professional support helpful for processing things, or if it's just not your thing. If you have worked with someone, any qualities that made them effective (or not)?",
-      "category": "mental-health-support",
+      "text": "When you think about the places you've lived \u2014 both in the US and Mexico \u2014 what are the specific little things that made a place feel 'right' to you beyond just the basics? Like, was it a certain type of light in the apartment, a neighborhood vibe, the sound of the area, something about the building's architecture, or the way the space was laid out?",
+      "category": "housing",
       "type": "enrich",
-      "target_file": "professional-support.md"
+      "target_file": "what-makes-a-place-feel-right.md"
     },
     {
       "number": 2,
-      "text": "When it comes to your presence online \u2014 you mentioned interest in the tech/AI space \u2014 are you more interested in building an audience/community, or is it more about reputation and professional visibility for career stuff? Do you actually want to be a 'content creator' or is the goal just to be known as someone solid in your field?",
-      "category": "personal-brand",
+      "text": "When you're watching something on a streaming service \u2014 do you tend to binge whole seasons in one or two sittings, or are you more of a 'one or two episodes a night' paced watcher? And do you have any specific rituals around TV/movie time \u2014 like always with a specific drink or snack, watching with your partner, or unwinding in a particular spot?",
+      "category": "entertainment",
       "type": "enrich",
-      "target_file": "community-vs-audience.md"
+      "target_file": "viewing-habits.md"
     },
     {
       "number": 3,
-      "text": "How do you handle it when you and someone close to you have a real disagreement \u2014 like a friendship conflict, a misunderstanding with family, or tension with a partner? Are you someone who addresses it head-on and ASAP, needs time to cool off first, tries to avoid confrontation entirely, or does it depend on the situation?",
-      "category": "relationships",
+      "text": "When it comes to your financial life \u2014 are you someone who tracks every expense and has a detailed budget, or do you more or less just know roughly where your money goes without tracking it rigorously? And do you have any specific money habits or rules that work for you (like 'never spend more than X on a whim,' automate savings, check accounts weekly, etc.)?",
+      "category": "finance",
       "type": "enrich",
-      "target_file": "conflict-resolution.md"
+      "target_file": "money-habits.md"
     },
     {
       "number": 4,
-      "text": "What's your relationship with risk and trying new things? Like, when you face a big decision \u2014 quitting a job, moving somewhere new, betting on yourself on a project \u2014 do you usually lean toward caution or go for it? How do you typically weigh the upside vs. downside?",
-      "category": "risk-tolerance",
+      "text": "Do you have any interest in creative or artistic pursuits outside of work \u2014 things like writing, drawing, making music, woodworking, crafting, or any kind of hands-on making? And if you do dabble in anything creative, is it something you do just for yourself and the process, or do you ever share it or want to create things other people could use/see?",
+      "category": "creative-expression",
       "type": "new",
-      "target_file": "risk-tolerance.md"
+      "target_file": "creative-pursuits.md"
     },
     {
       "number": 5,
-      "text": "Do you ever create things just for the joy of it \u2014 like write, draw, build projects that aren't about productivity or work, make music, journal, or anything where the output is more important than the outcome? Or is your creative energy mostly channeled into building things that serve a purpose?",
-      "category": "creative-expression",
+      "text": "When you think about your digital footprint and how you show up online \u2014 beyond personal branding for work \u2014 do you have any concerns or preferences around privacy? Like, do you try to keep certain parts of your life off social media, are you careful about what personal info you share publicly, or are you pretty open about most things?",
+      "category": "digital-privacy",
       "type": "new",
-      "target_file": "creative-expression.md"
+      "target_file": "privacy-preferences.md"
     }
   ],
-  "sent_at": "2026-04-23T06:54:05.752044+00:00"
+  "sent_at": "2026-04-24T07:32:52.299407+00:00"
 }
