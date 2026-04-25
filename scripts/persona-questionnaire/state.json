@@ -1,41 +1,41 @@
 {
-  "message_id": 121,
+  "message_id": 123,
   "questions": [
     {
       "number": 1,
-      "text": "When you think about the places you've lived \u2014 both in the US and Mexico \u2014 what are the specific little things that made a place feel 'right' to you beyond just the basics? Like, was it a certain type of light in the apartment, a neighborhood vibe, the sound of the area, something about the building's architecture, or the way the space was laid out?",
-      "category": "housing",
+      "text": "When you're dealing with a really big life decision \u2014 like whether to take a new job, move somewhere, make a major financial commitment, or something that could shift your whole trajectory \u2014 how do you actually go about making that call? Do you have a specific process ( pros/cons, sleeping on it, talking it through), or does it feel more like a gut thing? And once you've decided, do you ever doubt it or need to talk yourself into it, or are you pretty solid once you've made up your mind?",
+      "category": "life-planning",
       "type": "enrich",
-      "target_file": "what-makes-a-place-feel-right.md"
+      "target_file": "decision-process.md"
     },
     {
       "number": 2,
-      "text": "When you're watching something on a streaming service \u2014 do you tend to binge whole seasons in one or two sittings, or are you more of a 'one or two episodes a night' paced watcher? And do you have any specific rituals around TV/movie time \u2014 like always with a specific drink or snack, watching with your partner, or unwinding in a particular spot?",
-      "category": "entertainment",
+      "text": "Beyond volleyball and fitness \u2014 what's the stuff you like to do with your hands or just for fun when you're not working or working out? Like, do you tinker with anything, build things, work on side projects, cook for the joy of it, go fishing, play an instrument, or just kind of mess around with random stuff? Is there anything you've getting into or want to get more into?",
+      "category": "hobbies",
       "type": "enrich",
-      "target_file": "viewing-habits.md"
+      "target_file": "hands-on-projects.md"
     },
     {
       "number": 3,
-      "text": "When it comes to your financial life \u2014 are you someone who tracks every expense and has a detailed budget, or do you more or less just know roughly where your money goes without tracking it rigorously? And do you have any specific money habits or rules that work for you (like 'never spend more than X on a whim,' automate savings, check accounts weekly, etc.)?",
-      "category": "finance",
+      "text": "When you're injured, sick, or just not feeling great physically \u2014 how do you handle it? Do you push through, take complete rest, modify your activities, or do you have a specific threshold where you stop and recover? And when you do have to take it easy, does it mess with your head or are you pretty chill about it?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "money-habits.md"
+      "target_file": "injury-recovery.md"
     },
     {
       "number": 4,
-      "text": "Do you have any interest in creative or artistic pursuits outside of work \u2014 things like writing, drawing, making music, woodworking, crafting, or any kind of hands-on making? And if you do dabble in anything creative, is it something you do just for yourself and the process, or do you ever share it or want to create things other people could use/see?",
-      "category": "creative-expression",
+      "text": "What's your vibe with news and staying informed about what's going on in the world? Are you someone who follows current events closely (news apps, newsletters, news shows), do you generally avoid the news, or are you somewhere in between where you catch things when they come up? Any specific topics you care about staying on top of, or do you feel like 'if it's important, I'll find out eventually'?",
+      "category": "news-consumption",
       "type": "new",
-      "target_file": "creative-pursuits.md"
+      "target_file": "news-habits.md"
     },
     {
       "number": 5,
-      "text": "When you think about your digital footprint and how you show up online \u2014 beyond personal branding for work \u2014 do you have any concerns or preferences around privacy? Like, do you try to keep certain parts of your life off social media, are you careful about what personal info you share publicly, or are you pretty open about most things?",
-      "category": "digital-privacy",
+      "text": "Have you done any estate planning, legal documents, or thought about what happens if something unexpected happens to you \u2014 like a will, power of attorney, healthcare directive, or nominating someone to make decisions for you? As someone living abroad and bouncing between countries, is this something you've thought about, or does it feel like 'not on my radar yet'?",
+      "category": "legal-planning",
       "type": "new",
-      "target_file": "privacy-preferences.md"
+      "target_file": "estate-planning.md"
     }
   ],
-  "sent_at": "2026-04-24T07:32:52.299407+00:00"
+  "sent_at": "2026-04-25T07:47:57.601432+00:00"
 }
