@@ -1,0 +1,13 @@
+{
+  "message_id": 974,
+  "task": {
+    "description": "Set up Telegram bot for clarification questions",
+    "goal_name": "autonomous-agent-system",
+    "goal_title": "Build Autonomous Goal Execution System",
+    "goal_dir": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/autonomous-agent-system",
+    "goal_index_path": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/autonomous-agent-system/index.md",
+    "deadline": null
+  },
+  "question": "**None** \u2014 This deliverable contains complete instructions for setting up the Telegram bot. No additional information is required from the user.",
+  "sent_at": "2026-04-25T12:16:29.472474+00:00"
+}
