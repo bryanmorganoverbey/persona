@@ -1,41 +1,41 @@
 {
-  "message_id": 123,
+  "message_id": 125,
   "questions": [
     {
       "number": 1,
-      "text": "When you're dealing with a really big life decision \u2014 like whether to take a new job, move somewhere, make a major financial commitment, or something that could shift your whole trajectory \u2014 how do you actually go about making that call? Do you have a specific process ( pros/cons, sleeping on it, talking it through), or does it feel more like a gut thing? And once you've decided, do you ever doubt it or need to talk yourself into it, or are you pretty solid once you've made up your mind?",
-      "category": "life-planning",
+      "text": "Do you have a personal set of values or guiding principles that you actually reference when making decisions \u2014 not just 'health and freedom' as concepts, but like, a specific code or set of beliefs you try to live by? Or is your approach more fluid and intuitive, figuring it out as situations come up?",
+      "category": "values",
       "type": "enrich",
-      "target_file": "decision-process.md"
+      "target_file": "decision-making-principles.md"
     },
     {
       "number": 2,
-      "text": "Beyond volleyball and fitness \u2014 what's the stuff you like to do with your hands or just for fun when you're not working or working out? Like, do you tinker with anything, build things, work on side projects, cook for the joy of it, go fishing, play an instrument, or just kind of mess around with random stuff? Is there anything you've getting into or want to get more into?",
-      "category": "hobbies",
+      "text": "How much time do you actually spend outside in nature \u2014 not counting walking to get coffee or moving between places, but like, intentional outdoor time? Hiking, beach time, parks, sitting on a rooftop, whatever counts as 'being outdoors' for you. Is it a priority or does it just happen incidentally?",
+      "category": "climate-preferences",
       "type": "enrich",
-      "target_file": "hands-on-projects.md"
+      "target_file": "outdoor-time-habits.md"
     },
     {
       "number": 3,
-      "text": "When you're injured, sick, or just not feeling great physically \u2014 how do you handle it? Do you push through, take complete rest, modify your activities, or do you have a specific threshold where you stop and recover? And when you do have to take it easy, does it mess with your head or are you pretty chill about it?",
-      "category": "fitness",
+      "text": "What's your relationship with creative hobbies that aren't productive \u2014 meaning not building software, not side projects for work or money, just things you do purely because you enjoy the doing? Do you have any? And if you used to have them or want them back, what happened?",
+      "category": "hobbies",
       "type": "enrich",
-      "target_file": "injury-recovery.md"
+      "target_file": "non-productive-creativity.md"
     },
     {
       "number": 4,
-      "text": "What's your vibe with news and staying informed about what's going on in the world? Are you someone who follows current events closely (news apps, newsletters, news shows), do you generally avoid the news, or are you somewhere in between where you catch things when they come up? Any specific topics you care about staying on top of, or do you feel like 'if it's important, I'll find out eventually'?",
-      "category": "news-consumption",
+      "text": "How do you feel about organized religion or spiritual communities \u2014 like, church, meditation sanghas, retreat groups, or anything where there's a structured spiritual or philosophical gathering? Is this something you've ever been drawn to, actively avoid, or are neutral about?",
+      "category": "suggested-new-spiritual-communities",
       "type": "new",
-      "target_file": "news-habits.md"
+      "target_file": "spiritual-communities.md"
     },
     {
       "number": 5,
-      "text": "Have you done any estate planning, legal documents, or thought about what happens if something unexpected happens to you \u2014 like a will, power of attorney, healthcare directive, or nominating someone to make decisions for you? As someone living abroad and bouncing between countries, is this something you've thought about, or does it feel like 'not on my radar yet'?",
-      "category": "legal-planning",
+      "text": "When you think about being a digital nomad long-term \u2014 like 10+ years from now \u2014 do you see yourself still doing this full-time, tapering off into something more rooted, or do you not really think that far ahead on the lifestyle question? Is there an eventual 'end state' you're working toward or is this just how life is indefinitely?",
+      "category": "suggested-new-lifestyle-vision",
       "type": "new",
-      "target_file": "estate-planning.md"
+      "target_file": "nomad-longevity.md"
     }
   ],
-  "sent_at": "2026-04-25T07:47:57.601432+00:00"
+  "sent_at": "2026-04-26T08:14:53.775159+00:00"
 }
