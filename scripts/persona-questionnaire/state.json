@@ -1,41 +1,41 @@
 {
-  "message_id": 127,
+  "message_id": 129,
   "questions": [
     {
       "number": 1,
-      "text": "When you play video games \u2014 what actually draws you in? Are you more into story-driven single-player games where you can sink into a world, competitive multiplayer stuff where you can beat other people, relaxing indie games, strategy games where you're solving problems, or something else? And what's your tolerance for frustration \u2014 do you like a challenge that makes you work through it, or do you prefer games that are more about chill enjoyment than difficulty?",
-      "category": "gaming",
+      "text": "When you tune into a podcast, what are you usually looking for \u2014 entertainment and humor to lighten your mood, substantive conversations that make you think, learning something new about a topic, industry stuff to stay sharp professionally, or just background noise while you do something else? Any specific shows that nailed what you look for?",
+      "category": "podcasts",
       "type": "enrich",
-      "target_file": "game-preferences.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 2,
-      "text": "When you think about sustainability in your actual day-to-day life \u2014 beyond the philosophical stuff \u2014 what specific things do you actually do? Like, do you avoid certain products, offset carbon, bring your own bags/bottles, choose overland travel over flying when possible, buy secondhand, or anything like that? Is there a particular part of environmental impact that you prioritize, or is it more of a general awareness thing?",
-      "category": "sustainability",
+      "text": "When you crack open a book (or listen to one), what's the vibe you're after \u2014 escaping into a story and forgetting your own life for a bit, learning something that actually changes how you think or act, professional growth and skills, or just winding down before bed? Do you read different things depending on your mood, or do you stick to what you know you like?",
+      "category": "reading",
       "type": "enrich",
-      "target_file": "daily-actions.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 3,
-      "text": "What are you reading right now \u2014 or what have you read recently that actually stuck with you? I'm curious about the specific books, authors, or topics that show up on your shelves. Do you tend to read fiction for escapism and non-fiction for learning, or do you blend both? Any favorite authors or genres you keep coming back to?",
-      "category": "reading",
+      "text": "When you're playing video games \u2014 do you ever play with friends or strangers online, or is it mostly a solo thing for you? If you do play with others, is that a big part of the appeal, or do you mostly just end up playing alone?",
+      "category": "gaming",
       "type": "enrich",
-      "target_file": "current-reading.md"
+      "target_file": "preferences.md"
     },
     {
       "number": 4,
-      "text": "Do you have any photography interest beyond phone snapshots? Like, do you ever think about composition, lighting, or framing when you're taking a photo? Do you have a proper camera, or is that something you've wanted to explore? And when you take photos \u2014 do you edit them, share them on social media, or do they just live on your phone?",
-      "category": "photography",
+      "text": "What's your taste in interior spaces and home aesthetics \u2014 do you have a specific vibe you gravitate toward (modern, Cozy, minimalist, eclectic), or do you just know it when you see it? Are there colors, materials, or design elements you consistently lean into or avoid?",
+      "category": "home-decor",
       "type": "new",
-      "target_file": "photography.md"
+      "target_file": "style.md"
     },
     {
       "number": 5,
-      "text": "How do you think about your career trajectory and professional growth? Are you actively working toward something specific \u2014 like a certain role, skill set, reputation, or type of work \u2014 or are you more in a 'follow interesting opportunities' mode? Do you have any mentorship, coaching, or deliberate skill-building outside of what's required for your current job?",
-      "category": "career-growth",
+      "text": "How do you actually think about money on a gut level \u2014 is it freedom and security, a scorecard, a tool for experiences, something you don't like to think about much, or something else entirely? When you make a big purchase or financial decision, does your 'money mindset' change depending on what it's for?",
+      "category": "financial-philosophy",
       "type": "new",
-      "target_file": "career-trajectory.md"
+      "target_file": "mindset.md"
     }
   ],
-  "sent_at": "2026-04-27T09:03:44.112371+00:00"
+  "sent_at": "2026-04-28T09:56:54.489650+00:00"
 }
