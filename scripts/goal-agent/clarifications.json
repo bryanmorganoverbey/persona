@@ -1,0 +1,13 @@
+{
+  "message_id": 1020,
+  "task": {
+    "description": "Set up Telegram bot for clarification questions",
+    "goal_name": "autonomous-agent-system",
+    "goal_title": "Build Autonomous Goal Execution System",
+    "goal_dir": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/autonomous-agent-system",
+    "goal_index_path": "/home/runner/work/persona/persona/vision_boards/2026/03/goals/autonomous-agent-system/index.md",
+    "deadline": null
+  },
+  "question": "Do you need any specific customizations to the Telegram bot functionality? For example:\n\n1. **Message format preferences** \u2014 More detailed summaries? Different emoji?\n2. **Inline keyboard buttons** \u2014 For quick yes/no responses to clarification questions?\n3. **Scheduling preferences** \u2014 Only send messages during certain hours?\n4. **Logging** \u2014 Want the bot to keep a message history in the repo?",
+  "sent_at": "2026-04-28T16:37:51.975077+00:00"
+}
