@@ -1,41 +1,41 @@
 {
-  "message_id": 129,
+  "message_id": 131,
   "questions": [
     {
       "number": 1,
-      "text": "When you tune into a podcast, what are you usually looking for \u2014 entertainment and humor to lighten your mood, substantive conversations that make you think, learning something new about a topic, industry stuff to stay sharp professionally, or just background noise while you do something else? Any specific shows that nailed what you look for?",
-      "category": "podcasts",
+      "text": "When you think about your fitness routine \u2014 aside from volleyball and gym sessions \u2014 do you have any other ways you like to move your body? Like, do you enjoy hiking, swimming, dancing, sports, yoga, or anything else? And is there a specific type of workout you find yourself always coming back to when things get busy or life gets in the way?",
+      "category": "fitness",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "activities.md"
     },
     {
       "number": 2,
-      "text": "When you crack open a book (or listen to one), what's the vibe you're after \u2014 escaping into a story and forgetting your own life for a bit, learning something that actually changes how you think or act, professional growth and skills, or just winding down before bed? Do you read different things depending on your mood, or do you stick to what you know you like?",
-      "category": "reading",
+      "text": "Do you own a car, rent one occasionally, or do you mostly get by without one in the places you live? And when you do need wheels \u2014 what's your ideal setup? Like, do you care about the type of car, the driving experience, specific features, or is it mostly just 'does it get me from A to B reliably'?",
+      "category": "vehicles",
       "type": "enrich",
       "target_file": "preferences.md"
     },
     {
       "number": 3,
-      "text": "When you're playing video games \u2014 do you ever play with friends or strangers online, or is it mostly a solo thing for you? If you do play with others, is that a big part of the appeal, or do you mostly just end up playing alone?",
-      "category": "gaming",
+      "text": "What's your current situation with languages \u2014 are you learning any right now, or is there a language you've always wanted to pick up? And when you're in Mexico, do you find yourself using Spanish regularly, or does English mostly get you by in your day-to-day?",
+      "category": "languages",
       "type": "enrich",
-      "target_file": "preferences.md"
+      "target_file": "spoken.md"
     },
     {
       "number": 4,
-      "text": "What's your taste in interior spaces and home aesthetics \u2014 do you have a specific vibe you gravitate toward (modern, Cozy, minimalist, eclectic), or do you just know it when you see it? Are there colors, materials, or design elements you consistently lean into or avoid?",
-      "category": "home-decor",
-      "type": "new",
+      "text": "Do you have any specific style icons, fashion inspirations, or aesthetic influences when it comes to how you dress? Like, do you look to anyone for inspiration, have a specific era or vibe you gravitate toward, or do you just figure it out as you go?",
+      "category": "fashion",
+      "type": "enrich",
       "target_file": "style.md"
     },
     {
       "number": 5,
-      "text": "How do you actually think about money on a gut level \u2014 is it freedom and security, a scorecard, a tool for experiences, something you don't like to think about much, or something else entirely? When you make a big purchase or financial decision, does your 'money mindset' change depending on what it's for?",
-      "category": "financial-philosophy",
-      "type": "new",
-      "target_file": "mindset.md"
+      "text": "When you think about your ideal living space \u2014 what's the one thing that immediately makes a place feel like 'yes, I could live here' or 'nope, not for me'? Is it the light, the layout, the neighborhood, the building amenities, something about the kitchen, or is it more of a gut feeling?",
+      "category": "housing",
+      "type": "enrich",
+      "target_file": "deal-breakers.md"
     }
   ],
-  "sent_at": "2026-04-28T09:56:54.489650+00:00"
+  "sent_at": "2026-04-29T09:59:49.369934+00:00"
 }
