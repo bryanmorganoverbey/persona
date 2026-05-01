@@ -1,41 +1,41 @@
 {
-  "message_id": 133,
+  "message_id": 135,
   "questions": [
     {
       "number": 1,
-      "text": "When it comes to your morning routine \u2014 are you someone who needs to ease into the day slowly with quiet time and coffee, or do you prefer to get moving right away? What's the absolute minimum non-negotiables you need to feel like you've started the day right?",
-      "category": "daily-routine",
+      "text": "When you buy things \u2014 whether it's tech gear, clothes, home stuff, or whatever \u2014 how do sustainability and ethical considerations actually factor into your purchasing decisions? Like, do you research brands, look for specific certifications, prefer secondhand, avoid certain materials, or is it more of a general awareness where you don't actively seek out sustainable options?",
+      "category": "sustainability",
       "type": "enrich",
-      "target_file": "morning.md"
+      "target_file": "purchasing-habits.md"
     },
     {
       "number": 2,
-      "text": "What's your drink of choice in the morning versus later in the day \u2014 do you switch between something caffeinated in the AM and something different in the evening? And are there specific drinks you only have in certain situations (like only IPAs at the beach, only wine on weekends, only matcha when you need to focus)?",
-      "category": "beverages",
-      "type": "enrich",
-      "target_file": "daily-drinks.md"
+      "text": "Do you drink alcohol at all, and if so, what's your scene \u2014 are you more of a craft beer person, into wine, cocktails, mezcal, or does it depend on the vibe and place? And when you go out for drinks or nightlife, what's your ideal scenario \u2014 a chill bar with good conversation, a lively spot with music, nothing too fancy, or do you mostly just not go out for drinking?",
+      "category": "alcohol-nightlife",
+      "type": "new",
+      "target_file": "drinking-habits.md"
     },
     {
       "number": 3,
-      "text": "What's your current setup with Remi \u2014 are you the primary caregiver for everything (walks, feeding, vet), or does your partner split that? And when you travel or have long work days, how do you handle dog care \u2014 do you bring Remi, have a sitter, rely on friends, or something else?",
-      "category": "pets",
+      "text": "If you had to pick one hobby or hands-on project to dive deep into \u2014 something you've been curious about or wanted to try \u2014 what would it be? Like, woodworking, painting, cooking more seriously, learning an instrument, building something, fishing, brewing, or something else entirely? Is there something on the back burner that you'd like to make more time for?",
+      "category": "hobbies",
       "type": "enrich",
-      "target_file": "care-routine.md"
+      "target_file": "desired-hobbies.md"
     },
     {
       "number": 4,
-      "text": "As someone who lives across countries, do you have any tax setup or strategy for managing your income across borders \u2014 like working with a CPA who understands expat taxes, using a specific entity structure, or just handling it reactively when it comes up?",
-      "category": "nomad-taxes",
+      "text": "Are you someone who identifies with a particular sports team or follows any sports at all \u2014 like, do you root for any teams (college, pro, MLS, Liga MX), watch games regularly, fill out brackets, or is sports watching just not really your thing?",
+      "category": "sports-fandom",
       "type": "new",
-      "target_file": "tax-setup.md"
+      "target_file": "sports-preferences.md"
     },
     {
       "number": 5,
-      "text": "What's your approach to capturing and keeping memories from experiences \u2014 are you someone who takes lots of photos/videos to preserve moments, do you prefer to just be present and let memories live in your head, or are you somewhere in between? Do you ever look back at old photos or videos?",
-      "category": "memory-keeping",
-      "type": "new",
-      "target_file": "memories.md"
+      "text": "When you're working on a personal project or building something for yourself (not work, not client stuff) \u2014 do you document it anywhere, keep notes in a specific app, use a particular system to track ideas and progress, or does it all live in your head until you start coding?",
+      "category": "hobbies",
+      "type": "enrich",
+      "target_file": "project-tracking.md"
     }
   ],
-  "sent_at": "2026-04-30T10:36:35.885157+00:00"
+  "sent_at": "2026-05-01T10:55:44.427363+00:00"
 }
