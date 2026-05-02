@@ -1,41 +1,41 @@
 {
-  "message_id": 135,
+  "message_id": 137,
   "questions": [
     {
       "number": 1,
-      "text": "When you buy things \u2014 whether it's tech gear, clothes, home stuff, or whatever \u2014 how do sustainability and ethical considerations actually factor into your purchasing decisions? Like, do you research brands, look for specific certifications, prefer secondhand, avoid certain materials, or is it more of a general awareness where you don't actively seek out sustainable options?",
-      "category": "sustainability",
+      "text": "When you're diving into a video game \u2014 are you the type to sink 20+ hours into a single-player story, or do you prefer quick sessions of multiplayer with friends? And do you play solo mostly, or is the social aspect a big part of the appeal for you?",
+      "category": "gaming",
       "type": "enrich",
-      "target_file": "purchasing-habits.md"
+      "target_file": "gaming-preferences.md"
     },
     {
       "number": 2,
-      "text": "Do you drink alcohol at all, and if so, what's your scene \u2014 are you more of a craft beer person, into wine, cocktails, mezcal, or does it depend on the vibe and place? And when you go out for drinks or nightlife, what's your ideal scenario \u2014 a chill bar with good conversation, a lively spot with music, nothing too fancy, or do you mostly just not go out for drinking?",
-      "category": "alcohol-nightlife",
+      "text": "Where do you actually read \u2014 in bed, on the couch, in a specific chair, or does it change based on the moment? And is it mostly physical books, Kindle, or audio when you're moving around? Any specific reading spot or setup that feels like yours?",
+      "category": "reading",
+      "type": "enrich",
+      "target_file": "reading-habits.md"
+    },
+    {
+      "number": 3,
+      "text": "When you think about your life 5\u201310 years down the line \u2014 do you have a pretty clear picture of where you want to be (location, work, lifestyle), or is it more of a 'figuring it out as I go' approach? Do you have any big milestones you're working toward, or do you resist thinking that far ahead?",
+      "category": "life-planning",
+      "type": "enrich",
+      "target_file": "future-roadmap.md"
+    },
+    {
+      "number": 4,
+      "text": "What's your scene with alcohol \u2014 are you someone who enjoys a craft beer, mezcal, wine, or cocktails in social settings, or do you mostly skip it? And what's your ideal night out if you do go out \u2014 a chill bar with good conversation, a lively spot with music, or more of a 'not really my thing' vibe?",
+      "category": "alcohol-and-nightlife",
       "type": "new",
       "target_file": "drinking-habits.md"
     },
     {
-      "number": 3,
-      "text": "If you had to pick one hobby or hands-on project to dive deep into \u2014 something you've been curious about or wanted to try \u2014 what would it be? Like, woodworking, painting, cooking more seriously, learning an instrument, building something, fishing, brewing, or something else entirely? Is there something on the back burner that you'd like to make more time for?",
-      "category": "hobbies",
-      "type": "enrich",
-      "target_file": "desired-hobbies.md"
-    },
-    {
-      "number": 4,
-      "text": "Are you someone who identifies with a particular sports team or follows any sports at all \u2014 like, do you root for any teams (college, pro, MLS, Liga MX), watch games regularly, fill out brackets, or is sports watching just not really your thing?",
-      "category": "sports-fandom",
-      "type": "new",
-      "target_file": "sports-preferences.md"
-    },
-    {
       "number": 5,
-      "text": "When you're working on a personal project or building something for yourself (not work, not client stuff) \u2014 do you document it anywhere, keep notes in a specific app, use a particular system to track ideas and progress, or does it all live in your head until you start coding?",
-      "category": "hobbies",
-      "type": "enrich",
-      "target_file": "project-tracking.md"
+      "text": "Do you have any grooming or self-care routines beyond the basics \u2014 like skincare, regular haircuts, grooming habits, or anything you do to feel put-together? Or is it more of a 'functional minimum' approach where you keep it simple?",
+      "category": "personal-care",
+      "type": "new",
+      "target_file": "grooming-routines.md"
     }
   ],
-  "sent_at": "2026-05-01T10:55:44.427363+00:00"
+  "sent_at": "2026-05-02T11:17:25.961030+00:00"
 }
