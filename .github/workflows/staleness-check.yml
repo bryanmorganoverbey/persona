@@ -1,9 +1,9 @@
 name: Check for stale preference files
 
 on:
-  schedule:
-    - cron: '0 9 1 * *' # 1st of every month at 9am UTC
-  workflow_dispatch: # allow manual trigger
+  push:
+    branches:
+      - __workflows_disabled__
 
 jobs:
   check-staleness:

@@ -1,9 +1,9 @@
 name: Persona Questionnaire — Enrich Profile via Telegram Q&A
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch: {}
+  push:
+    branches:
+      - __workflows_disabled__
 
 permissions:
   contents: write
